@@ -9,7 +9,7 @@ package sources;
 
 /**
  * @author aurelie
- *Classe abstraite décrivant un élement du résultat d'une requete
+ *Classe abstraite d?crivant un ?lement du r?sultat d'une requete
  *Un element est une url, une page et un resume
  * TODO To change the template for this generated type comment go to
  * Window - Preferences - Java - Code Style - Code Templates
@@ -24,7 +24,7 @@ public abstract class ElementResultat {
     String url;
     String resume;
     String page;
-
+    String contexte;
    
  /**
   * Retourne l'url  de l'element 
@@ -43,7 +43,7 @@ public String getResume(){
  }
  
  /**
-  * retourne la page web associée à l'url de l'element
+  * retourne la page web associ?e ? l'url de l'element
  * @return
  */
 public String getPage(){
@@ -54,7 +54,7 @@ public String getPage(){
  
  
 /**
- * récupère la page associée a l'url de l'element
+ * r?cup?re la page associ?e a l'url de l'element
  */
 public abstract void setPage();
 

@@ -16,6 +16,7 @@ public abstract class Requete {
     public String requete;
     public int maxResults;
     public String langue;
+    public int nbMots;
     
 public abstract Resultat  getResultat();
 

@@ -18,11 +18,12 @@ public class InterfaceRequete {
         RequeteGoogle requete=new RequeteGoogle(langue,maxResults,req);
         requete.requeteGoogle();
         ElementResultatGoogle[] resultats=requete.resultat.listeResultat;
-        StringBuffer sb=new StringBuffer("nombre de résultats : "+requete.resultat.nbResultats+"\n\n");
+        StringBuffer sb=new StringBuffer("nombre de mots dans la requete : "+requete.nbMots+"\n\nnombre de resultats : "+requete.resultat.nbResultats+"\n\n");
+        
         for (int i=0;i<resultats.length;i++){
             sb.append("URL : "+resultats[i].url+"\n\n");
             sb.append("RESUME : "+resultats[i].resume+"\n\n");
-            sb.append("PAGE : "+resultats[i].page+"\n\n");
+            sb.append("CONTEXTE : "+resultats[i].contexte+"\n\n");
         }
         return sb.toString();
         };

@@ -50,6 +50,7 @@ public class RequeteGoogle extends Requete {
 	    this.langue=l;
 	    this.maxResults=mResults;
 	    this.requete=req;
+	    this.nbMots=OutilsTexte.countWord(this.requete);
 	}
 	
 	/**
@@ -79,6 +80,7 @@ public class RequeteGoogle extends Requete {
                     e.printStackTrace();
                 }              
 	    	this.requete=req;
+	    	this.nbMots=OutilsTexte.countWord(req);
 	    }
 	
 	
@@ -97,8 +99,12 @@ public class RequeteGoogle extends Requete {
  		       urls[i]=elements[i].getURL();
  		   }
  		   String[] pages=PageHTML.getAllpages(urls);
- 		  for (int i=0;i<elements.length;i++){ 
- 		      resultat.getElementResultat(i).page=pages[i];
+ 		  for (int i=0;i<elements.length;i++){
+ 		  	if (pages[i]!=null) {
+ 		  	String texte=OutilsTexte.tagRequete(OutilsTexte.transRequeteRegex(this.requete),pages[i]);
+ 		    resultat.getElementResultat(i).page=texte;
+ 		    resultat.getElementResultat(i).contexte=OutilsTexte.getContext(texte);
+ 		  	}
  		  }
          } catch (GoogleSearchFault e) {
            
@@ -124,7 +130,7 @@ public static String getKey(){
     }
 	   
 	/**
-	 * permet de rŽcuperer une page en cache donnŽe par une requete google
+	 * permet de r?cuperer une page en cache donn?e par une requete google
 	 * @param url
 	 * @return
 	 */
@@ -152,7 +158,8 @@ public static String getKey(){
 	    String req=args[2];
 	    RequeteGoogle requete = new RequeteGoogle(langue,max,req);
 	    requete.requeteGoogle();
-	    System.out.println(requete.resultat.nbResultats);
+	    System.out.println("nombre de resultats : "+requete.resultat.nbResultats);
+	    System.out.println("nombre de mots : "+requete.nbMots);
 	    try {
             OutilsTexte.initOutilsTexte();
         } catch (IOException e) {
@@ -161,6 +168,8 @@ public static String getKey(){
             System.exit(0);
         }
 	    for (int i=0;i<requete.resultat.listeResultat.length;i++){
+	    	System.out.println("------------------------------------");
+	    	if (requete.resultat.listeResultat[i]!=null)
 	       System.out.println(requete.resultat.listeResultat[i].toString());
 	}
 	 

@@ -43,7 +43,7 @@ public class ElementResultatGoogle extends ElementResultat {
     
    
     public String toString(){
-        return "url : "+url+"\n resume: "+resume+"\n page: "+page;       
+        return "url : "+url+"\n resume: "+resume+"\n contexte: "+contexte;       
     }
     
     public static void main(String[] args) {
