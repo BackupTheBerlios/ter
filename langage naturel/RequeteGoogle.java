@@ -70,7 +70,7 @@ public class RequeteGoogle extends Requete {
 	    }
 	
 
-	 /* (non-Javadoc)
+	 /*permet de recuperer le resultat de la requete
      * @see Requete#getResultat()
      */
     public Resultat getResultat() {  

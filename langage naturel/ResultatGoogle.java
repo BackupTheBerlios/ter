@@ -19,7 +19,11 @@ public class ResultatGoogle extends Resultat {
     ResultatGoogle(int nbMaxResult){
         listeResultat = new ElementResultatGoogle[nbMaxResult];
         }
-     
+  /**
+   * permet d'ajouter un element au resultat
+   * @param element :element de type GoogleSearchResultElement
+   * @param index : indice dans le tableau des elements du resultats
+   */   
  public void addElementResultatGoogle(GoogleSearchResultElement element,int index){
      listeResultat[index]=new ElementResultatGoogle();
      listeResultat[index].url=element.getURL();
@@ -30,14 +34,14 @@ public class ResultatGoogle extends Resultat {
      return "";
  }
 
-/* (non-Javadoc)
+/*permet de recuperer un element du resultat c'est a dire un objet contenant une url, un resume et une page
  * @see Resultat#getElementResultat()
  */
 public ElementResultat getElementResultat(int index) {
     return listeResultat[index];
 }
 
-/* (non-Javadoc)
+/* permet de recuperer la liste des elements du resultat
  * @see Resultat#getListeElementsResultat()
  */
 public ElementResultat[] getListeElementsResultat() {

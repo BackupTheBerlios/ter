@@ -18,9 +18,7 @@ public class ElementResultatGoogle extends ElementResultat {
     
     
     public ElementResultatGoogle(){}
-    /**
-     * 
-     */
+  
     public ElementResultatGoogle(String lien,String res) {
         url =lien;
         resume=res;
