@@ -36,5 +36,12 @@ public class ResultatGoogle extends Resultat {
 public ElementResultat getElementResultat(int index) {
     return listeResultat[index];
 }
+
+/* (non-Javadoc)
+ * @see Resultat#getListeElementsResultat()
+ */
+public ElementResultat[] getListeElementsResultat() {
+    return listeResultat;
+}
  
 }

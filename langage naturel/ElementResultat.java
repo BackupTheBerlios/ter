@@ -30,7 +30,6 @@ public abstract class ElementResultat {
  
  public abstract String toString();
  
-public void setPage(String p){
-    page=p;
-}
+public abstract void setPage(String url);
+
 }

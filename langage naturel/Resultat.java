@@ -13,7 +13,6 @@
  */
 public abstract class Resultat {
     public int nbResultats=0;
-    public ElementResultat[] listeResultat;
     
     public void setNbResultat(int n){
         nbResultats=n;
@@ -24,4 +23,6 @@ public abstract class Resultat {
     }
     
     public abstract ElementResultat getElementResultat(int index);
+    
+    public abstract ElementResultat[] getListeElementsResultat();
 }

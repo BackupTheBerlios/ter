@@ -27,7 +27,6 @@ public class ElementResultatGoogle extends ElementResultat {
         // TODO Auto-generated constructor stub
     }
     public void setPage(String p){
-        page=p;
     }
     
     public String toString(){

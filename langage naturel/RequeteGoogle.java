@@ -20,7 +20,6 @@ public class RequeteGoogle extends Requete {
 	private static String key;
 	private	GoogleSearch search = new GoogleSearch();
 	public ResultatGoogle resultat;
-	public String requete;
 	/**
 	 * prend ma cle par defaut 
 	 *
@@ -92,7 +91,9 @@ public class RequeteGoogle extends Requete {
 	    System.out.println(requete.resultat.nbResultats);
 	    for (int i=0;i<requete.resultat.listeResultat.length;i++)
 	        System.out.println(requete.resultat.listeResultat[i].toString());
-	}	    	
+	}
+
+    	
 	    
 }
 	
