@@ -1,10 +1,18 @@
-Voici la liste des t?aches en cours :
--recuperer le "contexte" des r?sultats  de la requ?te. 
+Voici la liste des taches en cours :
+-recuperer le "contexte" des resultats  de la requete. 
 	-> recherche d'un algorithme de segmentation de texte en phrases. 
-	#j'ai regard?e des sources sur internet, mais elles sont, en g?ene?ral, trop 
-	#"?evolu?es" et c'est un peu sortir l'artillerie lourde pour ce que l'on 
-	#veut faire (?ca risque d'augmenter pas mal la complexit?e en temps du projet),  
-	#je vais essayer de trouver moi m?eme une solution et la tester 
-	#(r?epertorier les cas ?a exclure comme les abre?viations et les r?eels et 
-	#faire des expressions re?guli?eres), si le taux d'erreur est trop important, 
-	#il faudra s?urement  utilis?e un outil d?eja? fait.
+	#j'ai regarde des sources sur internet, mais elles sont, en general, trop 
+	#"evolues" et c'est un peu sortir l'artillerie lourde pour ce que l'on 
+	#veut faire (ca risque d'augmenter pas mal la complexite en temps du projet),  
+	#je vais essayer de trouver moi meme une solution et la tester 
+	#(repertorier les cas a exclure comme les abreviations et les reels et 
+	#faire des expressions regulieres), si le taux d'erreur est trop important, 
+	#il faudra surement  utiliser un outil deja fait.
+
+
+Svetlana :
+	-implementation des classes pour les requetes Yahoo.
+		#le probleme des interfaces a ete resolu.
+		#Une des fonctions de requete est interessante : 
+		#les requetes news->la probabilite que les news
+		#soient en anglais naturel est (surement) plus elevee.
