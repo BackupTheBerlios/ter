@@ -1,0 +1,10 @@
+Voici la liste des tâches en cours :
+-recuperer le "contexte" des résultats  de la requête. 
+	-> recherche d'un algorithme de segmentation de texte en phrases. 
+	#j'ai regardé des sources sur internet, mais elles sont, en général, trop 
+	#"évoluées" et c'est un peu sortir l'artillerie lourde pour ce que l'on 
+	#veut faire (ça risque d'augmenter pas mal la complexité en temps du projet),  
+	#je vais essayer de trouver moi même une solution et la tester 
+	#(répertorier les cas à exclure comme les abréviations et les réels et 
+	#faire des expressions régulières), si le taux d'erreur est trop important, 
+	#il faudra sûrement  utilisé un outil déjà fait
