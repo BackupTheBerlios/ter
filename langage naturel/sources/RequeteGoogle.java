@@ -97,7 +97,7 @@ public static String getKey(){
 	        	//System.out.println(requete.resultat.listeResultat[i].toString());
 	        	System.out.println("page :");
 	    		SegmenterGoogle sg=new SegmenterGoogle(requete.resultat.listeResultat[i]);
-	    		sg.sentencerGoogle();
+	    		sg.getTexteFromHtml();
 	    }
 	}
 

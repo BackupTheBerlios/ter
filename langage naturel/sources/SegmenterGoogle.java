@@ -6,9 +6,8 @@
  */
 package sources;
 
-import jregex.Matcher;
+
 import jregex.Pattern;
-import jregex.RETokenizer;
 import jregex.Replacer;
 
 import com.google.soap.search.GoogleSearch;
@@ -34,17 +33,30 @@ public class SegmenterGoogle extends Segmenter {
 			e.printStackTrace();
 		}
 	}
+
+public void getTexteFromHtml(){
+    Pattern p=new Pattern("(.*<body[^>]*>)|(.*<BODY[^>]*>)","s");
+    Replacer r=p.replacer("");
+    page=r.replace(page);
+     p=new Pattern("<[^>]*>","s");
+    r=p.replacer("");
+	page=r.replace(page);
+	p=new Pattern("(\\s\\s)+","s");
+	r=p.replacer("");
+	page=r.replace(page);
+	p=new Pattern("&nbsp|&#160|&#151|&#8482");
+	r=p.replacer(" ");
+	p=new Pattern("");
+	page=r.replace(page);
+	System.out.println(page);
 	
+}
+public void replaceUrlMailExtension(){
+    String extension="\\s(.)*[.](jpg|jpeg|gif)";
+    
+}
 public void sentencerGoogle(){
-	String tag ="<.*?>";
-	Pattern p=new Pattern(tag);
-	StringBuffer sb=new StringBuffer();
-	RETokenizer t=p.tokenizer(page);
-	while (t.hasMore()){
-		sb.append(t.nextToken());
-		sb.append(" ");	
-	}
-	System.out.println(sb.toString());
+   
 }
 	
 
