@@ -1,18 +1,4 @@
 Voici la liste des taches en cours :
 -recuperer le "contexte" des resultats  de la requete. 
-	-> recherche d'un algorithme de segmentation de texte en phrases. 
-	#j'ai regarde des sources sur internet, mais elles sont, en general, trop 
-	#"evolues" et c'est un peu sortir l'artillerie lourde pour ce que l'on 
-	#veut faire (ca risque d'augmenter pas mal la complexite en temps du projet),  
-	#je vais essayer de trouver moi meme une solution et la tester 
-	#(repertorier les cas a exclure comme les abreviations et les reels et 
-	#faire des expressions regulieres), si le taux d'erreur est trop important, 
-	#il faudra surement  utiliser un outil deja fait.
-
-
-Svetlana :
-	-implementation des classes pour les requetes Yahoo.
-		#le probleme des interfaces a ete resolu.
-		#Une des fonctions de requete est interessante : 
-		#les requetes news->la probabilite que les news
-		#soient en anglais naturel est (surement) plus elevee.
+	-> améliorer l'algorithme.
+-interface graphique

@@ -14,6 +14,8 @@ package sources;
  */
 public abstract class Requete {
     public String requete;
+    public int maxResults;
+    public String langue;
     
 public abstract Resultat  getResultat();
 
@@ -24,5 +26,8 @@ public void setRequete(String req){
 public String getRequete(){
     return requete;
 }
+
+public void getPageFromUrl(String url){}
+
 
 }

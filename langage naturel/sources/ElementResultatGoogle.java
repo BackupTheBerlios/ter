@@ -36,14 +36,12 @@ public class ElementResultatGoogle extends ElementResultat {
      * @see sources.ElementResultat#setPage()
      */
     public void setPage(){
-        String p=RequeteGoogle.getCachedPage(url);
-        OutilsTexte ot=new OutilsTexte();
-        p=ot.getTexteFromHtml(p);
-        p=ot.sentencer(p);
-        page=p;
-        
+        String code=OutilsTexte.getTexteFromHtml(page);
+        code=OutilsTexte.sentencer(page);
+        page=code;
     }
     
+   
     public String toString(){
         return "url : "+url+"\n resume: "+resume+"\n page: "+page;       
     }

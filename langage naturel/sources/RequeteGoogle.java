@@ -43,6 +43,15 @@ public class RequeteGoogle extends Requete {
 	    	key=userKey;
 	    search.setKey(key); 	
 	}
+	
+	RequeteGoogle(String l,int mResults, String req){
+	    key="ThsJGMdQFHJv1bi01gu0TtohJFclwDs/";
+	    search.setKey(key);
+	    this.langue=l;
+	    this.maxResults=mResults;
+	    this.requete=req;
+	}
+	
 	/**
 	 * 
 	 * @param langueRestrict null si pas de restriction la langue voulue sinon, 
@@ -53,9 +62,6 @@ public class RequeteGoogle extends Requete {
 	 */
 	public void requeteGoogle(String langueRestrict,int maxResult, String req){
 	    GoogleSearchResult resultatGoogle;
-	    		if (langueRestrict!=null) {
-	    		 //   	search.setLanguageRestricts(langueRestrict);
-	    		}
 	    		search.setMaxResults(maxResult);
 	    		search.setQueryString("\""+req+"\"");
 	    		try {
@@ -74,6 +80,34 @@ public class RequeteGoogle extends Requete {
                 }              
 	    	this.requete=req;
 	    }
+	
+	
+	public void requeteGoogle(){
+	    GoogleSearchResult resultatGoogle;
+		search.setMaxResults(maxResults);
+		search.setQueryString("\""+requete+"\"");
+		try {
+ 		   resultatGoogle=search.doSearch();
+ 		   resultat = new ResultatGoogle(maxResults);
+ 		   resultat.setNbResultat(resultatGoogle.getEstimatedTotalResultsCount());
+ 		   GoogleSearchResultElement[] elements = resultatGoogle.getResultElements();
+ 		   String[] urls=new String[elements.length];
+ 		   for (int i=0;i<elements.length;i++){ 
+ 		       resultat.addElementResultatGoogle(elements[i],i);
+ 		       urls[i]=elements[i].getURL();
+ 		   }
+ 		   String[] pages=PageHTML.getAllpages(urls);
+ 		  for (int i=0;i<elements.length;i++){ 
+ 		      resultat.getElementResultat(i).page=pages[i];
+ 		  }
+         } catch (GoogleSearchFault e) {
+           
+             e.printStackTrace();
+         }              
+	}
+
+	
+	
 	
 /**
  * permet de recuperer la cle courante pour l'utilisation de l'api google.
@@ -108,15 +142,16 @@ public static String getKey(){
 	}
 	
 
+
 	public static void main(String[] args) {
 	    if (args.length != 3) {
 	        	System.out.print("pas le bon nombre d'arguments");
 	    }
-	    RequeteGoogle requete = new RequeteGoogle();
 	    String langue=args[0];
 	    int max=Integer.parseInt(args[1]);
 	    String req=args[2];
-	    requete.requeteGoogle(langue,max,req);
+	    RequeteGoogle requete = new RequeteGoogle(langue,max,req);
+	    requete.requeteGoogle();
 	    System.out.println(requete.resultat.nbResultats);
 	    try {
             OutilsTexte.initOutilsTexte();
@@ -126,11 +161,10 @@ public static String getKey(){
             System.exit(0);
         }
 	    for (int i=0;i<requete.resultat.listeResultat.length;i++){
-	       requete.resultat.listeResultat[i].setPage();
-	       System.out.println(requete.resultat.listeResultat[i].toString());    		
-	}	    
+	       System.out.println(requete.resultat.listeResultat[i].toString());
+	}
+	 
 }
-	
 }
 
 	

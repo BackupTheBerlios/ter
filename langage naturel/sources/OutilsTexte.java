@@ -11,15 +11,12 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.util.Hashtable;
 import java.util.StringTokenizer;
-
-
 import jregex.Matcher;
 import jregex.Pattern;
 import jregex.Replacer;
 
-
-import com.sun.tools.javac.v8.util.Hashtable;
 
 /**
  * @author azara
@@ -80,16 +77,18 @@ public static void initOutilsTexte() throws IOException{
  * @param
  * @return page retourne la page sans les balises HTML et nettoiyee des caractères spéciaux
  */
-public String getTexteFromHtml(String page){
-    Pattern p=new Pattern("(.*<body[^>]*>)|(.*<BODY[^>]*>)","s");
-    Replacer r=new Replacer(p,"");
-    page=r.replace(page);
-    p= new Pattern("<[^>]*>");
-    r=new Replacer(p,"");
-    page=r.replace(page);
-    p=new Pattern("(\\s\\s)+","s");
-    r=new Replacer(p,"");
-    page=r.replace(page);
+public static String getTexteFromHtml(String page){
+    java.util.regex.Pattern p=java.util.regex.Pattern.compile("(<body[^>]*>)|(<BODY[^>]*>)");
+    java.util.regex.Matcher m=p.matcher(page);
+    if (m.find()) {
+        page=page.substring(m.end());
+    }
+    Pattern p1= new Pattern("<[^>]*>");
+    Replacer r1=new Replacer(p1,"");
+    page=r1.replace(page);
+    p1=new Pattern("(\\s\\s)+","s");
+    r1=new Replacer(p1,"");
+    page=r1.replace(page);
 	java.util.regex.Pattern pt=java.util.regex.Pattern.compile("(&#(\\d)*;)|&(\\w)*;");
 	java.util.regex.Matcher mt=pt.matcher(page);
 	StringBuffer sb=new StringBuffer();
@@ -108,7 +107,7 @@ public String getTexteFromHtml(String page){
 }
 
 
-private String analyseVoisinnage(String candidat){
+private static String analyseVoisinnage(String candidat){
     Pattern p=new Pattern("[.!?]");
     Matcher m=p.matcher(candidat);
     String prefixe=null;
@@ -133,7 +132,7 @@ private String analyseVoisinnage(String candidat){
     else 
         prefixe="";
     suffixe=candidat.substring(index+1,candidat.length());
-    String ls=getLastSuffix(suffixe);
+    String ls=OutilsTexte.getLastSuffix(suffixe);
     if (ls=="."){
         sb.append("</s>\n<s>");
         return sb.toString();
@@ -145,7 +144,7 @@ private String analyseVoisinnage(String candidat){
      return sb.toString();
 }
 
-private String getLastSuffix(String suffixe){
+private static String getLastSuffix(String suffixe){
     Pattern p=new Pattern("[.]");
     Matcher m=p.matcher(suffixe);
     if (!m.find())
@@ -165,8 +164,7 @@ private String getLastSuffix(String suffixe){
  * @param page 
  * @return un texte balisé
  */
-public String sentencer(String page){
- page=getTexteFromHtml(page);
+public static String sentencer(String page){
  Pattern p=new Pattern("(\\S)+","s");
  StringBuffer sb= new StringBuffer();
  sb.append("<s> ");
@@ -188,7 +186,7 @@ public static void main(String[] args){
         System.exit(0);
     }
     System.out.println("he is bac.jones.jpg Jones.His adress is http://www.macromedia.com.");
-    System.out.println(outils.sentencer("he is bac.jones.jpg Jones.His adress is http://www.macromedia.com. he works for C.J.A.B.."));
+    System.out.println(OutilsTexte.sentencer("he is bac.jones.jpg Jones.His adress is http://www.macromedia.com. he works for C.J.A.B.."));
 }
 
 }
