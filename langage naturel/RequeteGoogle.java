@@ -52,7 +52,7 @@ public class RequeteGoogle extends Requete {
 	    		 //   	search.setLanguageRestricts(langueRestrict);
 	    		}
 	    		search.setMaxResults(maxResult);
-	    		search.setQueryString(req);
+	    		search.setQueryString("\""+req+"\"");
 	    		try {
 	    		   resultatGoogle=search.doSearch();
 	    		   resultat = new ResultatGoogle(maxResult);
