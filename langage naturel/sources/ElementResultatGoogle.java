@@ -1,17 +1,17 @@
 package sources;
 
+
+
 /*
  * Created on 3 mars 2005
  *
- * TODO To change the template for this generated file go to
- * Window - Preferences - Java - Code Style - Code Templates
+ *
  */
 
 /**
  * @author aurelie
+ *Decrit un element d un resultat d une requete Google
  *
- * TODO To change the template for this generated type comment go to
- * Window - Preferences - Java - Code Style - Code Templates
  */
 public class ElementResultatGoogle extends ElementResultat {
   //  public String url;
@@ -21,18 +21,36 @@ public class ElementResultatGoogle extends ElementResultat {
     
     public ElementResultatGoogle(){}
   
+    /**
+     * Constructeur 
+     * @param lien : url donnee par GoogleResult
+     * @param res :  resume donne par GoogleResult
+     */
     public ElementResultatGoogle(String lien,String res) {
         url =lien;
         resume=res;
         // TODO Auto-generated constructor stub
     }
-    public void setPage(String p){
+    
+    /* (non-Javadoc)
+     * @see sources.ElementResultat#setPage()
+     */
+    public void setPage(){
+        String p=RequeteGoogle.getCachedPage(url);
+        OutilsTexte ot=new OutilsTexte();
+        p=ot.getTexteFromHtml(p);
+        p=ot.sentencer(p);
+        page=p;
+        
     }
     
     public String toString(){
-        return "url : "+url+"\n resume: "+resume+"\n";       
+        return "url : "+url+"\n resume: "+resume+"\n page: "+page;       
     }
     
     public static void main(String[] args) {
     }
+
+   
+
 }

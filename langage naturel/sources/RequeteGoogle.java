@@ -1,4 +1,8 @@
 package sources;
+
+
+import java.io.IOException;
+
 import com.google.soap.search.GoogleSearch;
 import com.google.soap.search.GoogleSearchFault;
 import com.google.soap.search.GoogleSearchResult;
@@ -71,6 +75,10 @@ public class RequeteGoogle extends Requete {
 	    	this.requete=req;
 	    }
 	
+/**
+ * permet de recuperer la cle courante pour l'utilisation de l'api google.
+ * @return
+ */
 public static String getKey(){
     return key;
 }
@@ -81,6 +89,23 @@ public static String getKey(){
         return resultat;
     }
 	   
+	/**
+	 * permet de récuperer une page en cache donnée par une requete google
+	 * @param url
+	 * @return
+	 */
+	public static String getCachedPage(String url){
+	    GoogleSearch cache = new GoogleSearch();
+	    cache.setKey(key);
+		String page=null;
+		try {
+			page= new String(cache.doGetCachedPage(url));
+		} catch (GoogleSearchFault e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return page;
+	}
 	
 
 	public static void main(String[] args) {
@@ -93,19 +118,20 @@ public static String getKey(){
 	    String req=args[2];
 	    requete.requeteGoogle(langue,max,req);
 	    System.out.println(requete.resultat.nbResultats);
+	    try {
+            OutilsTexte.initOutilsTexte();
+        } catch (IOException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+            System.exit(0);
+        }
 	    for (int i=0;i<requete.resultat.listeResultat.length;i++){
-	        	//System.out.println(requete.resultat.listeResultat[i].toString());
-	        	System.out.println("page :");
-	    		SegmenterGoogle sg=new SegmenterGoogle(requete.resultat.listeResultat[i]);
-	    		sg.getTexteFromHtml();
-	    }
-	}
-
-    	
-	    
+	       requete.resultat.listeResultat[i].setPage();
+	       System.out.println(requete.resultat.listeResultat[i].toString());    		
+	}	    
 }
 	
-
+}
 
 	
 	
