@@ -14,9 +14,9 @@ package sources;
  * Window - Preferences - Java - Code Style - Code Templates
  */
 public class ElementResultatGoogle extends ElementResultat {
-    public String url;
-    public String resume;
-    public String page;
+  //  public String url;
+  //  public String resume;
+  //  public String page;
     
     
     public ElementResultatGoogle(){}

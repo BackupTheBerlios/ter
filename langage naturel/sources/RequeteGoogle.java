@@ -25,6 +25,7 @@ public class RequeteGoogle extends Requete {
 	 * prend ma cle par defaut 
 	 *
 	 */
+
 	RequeteGoogle(){
 	    key="ThsJGMdQFHJv1bi01gu0TtohJFclwDs/";
 	    search.setKey(key);
@@ -67,14 +68,16 @@ public class RequeteGoogle extends Requete {
                     // TODO Auto-generated catch block
                     e.printStackTrace();
                 }              
-	    	
+	    	this.requete=req;
 	    }
 	
-
+public static String getKey(){
+    return key;
+}
 	 /*permet de recuperer le resultat de la requete
      * @see Requete#getResultat()
      */
-    public Resultat getResultat() {  
+    public Resultat getResultat() {
         return resultat;
     }
 	   
@@ -90,8 +93,12 @@ public class RequeteGoogle extends Requete {
 	    String req=args[2];
 	    requete.requeteGoogle(langue,max,req);
 	    System.out.println(requete.resultat.nbResultats);
-	    for (int i=0;i<requete.resultat.listeResultat.length;i++)
-	        System.out.println(requete.resultat.listeResultat[i].toString());
+	    for (int i=0;i<requete.resultat.listeResultat.length;i++){
+	        	//System.out.println(requete.resultat.listeResultat[i].toString());
+	        	System.out.println("page :");
+//	    		SegmenterGoogle sg=new SegmenterGoogle(requete.resultat.listeResultat[i]);
+//	    		sg.getRequeteContexte(requete.getRequete());
+	    }
 	}
 
     	
