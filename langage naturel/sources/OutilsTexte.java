@@ -120,7 +120,7 @@ private String analyseVoisinnage(String candidat){
     }
     if (abbrev.get(candidat)!=null)
         	return candidat;
-    if (candidat.matches("([A-Z].)+")) {
+    if (candidat.matches("(([A-Z0-9].)+)|([a-z0-9].)+")) {
     		return candidat;
     }
     index=m.start();
