@@ -1,0 +1,5 @@
+tags
+quand un mot est mal place :<mal_place mot="mot">"le segment"</mal_place>
+quand un mot est manquant :<mot_manquant mot="mot">le segment"</mot_manquant>
+quand tu sais que ce n'est pas naturel mais que tu ne sais pas vraiment pourquoi : <?>"le segment"</?>
+<mal_employe mot="mot">"le segment"</mal employe>
