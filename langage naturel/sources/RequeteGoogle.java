@@ -92,27 +92,24 @@ public class RequeteGoogle extends Requete {
  		   resultatGoogle=search.doSearch();
  		   resultat = new ResultatGoogle(maxResults);
  		   resultat.setNbResultat(resultatGoogle.getEstimatedTotalResultsCount());
- 		   GoogleSearchResultElement[] elements = resultatGoogle.getResultElements();
- 		   String[] urls=new String[elements.length];
+ 		   GoogleSearchResultElement[] elements = resultatGoogle.getResultElements();		   
  		   for (int i=0;i<elements.length;i++){ 
  		       resultat.addElementResultatGoogle(elements[i],i);
- 		       urls[i]=elements[i].getURL();
  		   }
- 		   String[] pages=PageHTML.getAllpages(urls);
- 		  for (int i=0;i<elements.length;i++){
- 		  	if (pages[i]!=null) {
- 		  	String texte=OutilsTexte.tagRequete(OutilsTexte.transRequeteRegex(this.requete),pages[i]);
- 		    resultat.getElementResultat(i).page=texte;
- 		    resultat.getElementResultat(i).contexte=OutilsTexte.getContext(texte);
- 		  	}
- 		  }
          } catch (GoogleSearchFault e) {
            
              e.printStackTrace();
          }              
 	}
 
-	
+public void getPages(){
+	Resultat res=this.getResultat();
+	if (res==null){
+		System.out.println("il faut lancer une requete avant");
+	}
+	else 
+		PageHTML.getAllpages(res);		
+}
 	
 	
 /**
@@ -158,6 +155,7 @@ public static String getKey(){
 	    String req=args[2];
 	    RequeteGoogle requete = new RequeteGoogle(langue,max,req);
 	    requete.requeteGoogle();
+	    requete.getPages();
 	    System.out.println("nombre de resultats : "+requete.resultat.nbResultats);
 	    System.out.println("nombre de mots : "+requete.nbMots);
 	    try {

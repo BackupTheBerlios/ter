@@ -30,15 +30,16 @@ public class PageHTML extends Thread {
     public URL url=null;
     public String codeHTML = null;
     public static int compteur;
-    public static String[] t;
-    public int id;
+   // public static String[] t;
+   // public int id;
+    public  ElementResultat eR;
     /**
      * @param arg0
      */
-    public PageHTML(String adress,int num) {
-        id=num;
+    public PageHTML(ElementResultat eRes) {
         try {
-            url=new URL(adress);
+            url=new URL(eRes.url);
+            eR=eRes;
         } catch (MalformedURLException e) {
             // TODO Auto-generated catch block
             e.printStackTrace();
@@ -52,8 +53,9 @@ public  String getHTMLcode() throws IOException, InterruptedException{
     StringBuffer code=new StringBuffer();
     reader = new InputStreamReader(url.openStream());
     BufferedReader entree=new BufferedReader(reader);
-    while ((ligne = entree.readLine()) !=null)
-        code.append(ligne+"\n");    
+    while ((ligne = entree.readLine()) !=null){
+        code.append(ligne+"\n"); 
+    }
   return code.toString();
 }
 
@@ -64,37 +66,30 @@ public  void run() {
     statut=en_cours;
     try {
        codeHTML=getHTMLcode();
-       codeHTML=OutilsTexte.getTexteFromHtml(codeHTML);
-       codeHTML=OutilsTexte.sentencer(codeHTML);
-      t[id]=codeHTML;
+       //codeHTML=OutilsTexte.getTexteFromHtml(codeHTML);
+       //codeHTML=OutilsTexte.sentencer(codeHTML);
+       eR.page=codeHTML;
     } catch (IOException e) {
+    	e.printStackTrace();
     } catch (InterruptedException e) {
         e.printStackTrace();
     }
     statut=finis;
-   PageHTML.compteur--;   
+    compteur--;
 }
 
 
-public static String[] getAllpages(String[] urls){
-t=new String[urls.length];
-compteur=urls.length;
-for (int i=0;i<urls.length;i++){
-    PageHTML p = new PageHTML(urls[i],i);
-    p.start();
+public static void getAllpages(Resultat r){
+ ElementResultat[] elemResult=r.getListeElementsResultat();
+	compteur=elemResult.length;
+for (int i=0;i<elemResult.length;i++){
+	PageHTML p=new PageHTML(elemResult[i]);
+	p.start();
 }
-while (compteur>0);
-return t;
+while(compteur!=0);
 }
 
 public static void main(String[] args) throws IOException{
-  String[] urls = {"http://www.google.fr","http://www.vacheland.com","http://www.kochonddflkland.com"};
-  String[] t = PageHTML.getAllpages(urls);
-  for (int i=0;i<t.length;i++){
-      System.out.println("==================================================================");
-      System.out.println("\n\n\n\n\n");
-      System.out.println(t[i]);
-  }
 }
 
 }
