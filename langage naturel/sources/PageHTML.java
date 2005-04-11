@@ -30,16 +30,16 @@ public class PageHTML extends Thread {
     public URL url=null;
     public String codeHTML = null;
     public static int compteur;
-   // public static String[] t;
-   // public int id;
     public  ElementResultat eR;
+    public  String req=null;
     /**
      * @param arg0
      */
-    public PageHTML(ElementResultat eRes) {
+    public PageHTML(ElementResultat eRes,String reqRegex) {
         try {
             url=new URL(eRes.url);
             eR=eRes;
+            req=reqRegex;
         } catch (MalformedURLException e) {
             // TODO Auto-generated catch block
             e.printStackTrace();
@@ -65,10 +65,8 @@ public  String getHTMLcode() throws IOException, InterruptedException{
 public  void run() {
     statut=en_cours;
     try {
-       codeHTML=getHTMLcode();
-       //codeHTML=OutilsTexte.getTexteFromHtml(codeHTML);
-       //codeHTML=OutilsTexte.sentencer(codeHTML);
-       eR.page=codeHTML;
+       codeHTML=getHTMLcode();       
+       eR.contexte=OutilsTexte.getContext(req,codeHTML);
     } catch (IOException e) {
     	e.printStackTrace();
     } catch (InterruptedException e) {
@@ -79,11 +77,11 @@ public  void run() {
 }
 
 
-public static void getAllpages(Resultat r){
+public static void getAllpages(Resultat r,String reqRegex){
  ElementResultat[] elemResult=r.getListeElementsResultat();
 	compteur=elemResult.length;
 for (int i=0;i<elemResult.length;i++){
-	PageHTML p=new PageHTML(elemResult[i]);
+	PageHTML p=new PageHTML(elemResult[i],reqRegex);
 	p.start();
 }
 while(compteur!=0);

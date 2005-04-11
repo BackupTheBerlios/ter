@@ -1,4 +1,3 @@
 Voici la liste des taches en cours :
--recuperer le "contexte" des resultats  de la requete. 
-	-> améliorer l'algorithme.
--interface graphique
+-améliorer l'algorithme de récupération de contexte
+

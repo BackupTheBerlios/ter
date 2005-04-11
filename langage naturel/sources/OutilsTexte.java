@@ -16,7 +16,7 @@ import java.util.StringTokenizer;
 import jregex.Matcher;
 import jregex.Pattern;
 import jregex.REFlags;
-import jregex.RETokenizer;
+//import jregex.RETokenizer;
 import jregex.Replacer;
 
 
@@ -80,11 +80,6 @@ public static void initOutilsTexte() throws IOException{
  * @return page retourne la page sans les balises HTML et nettoiyee des caract?res sp?ciaux
  */
 public static String getTexteFromHtml(String page){
-    java.util.regex.Pattern p=java.util.regex.Pattern.compile("(<body[^>]*>)|(<BODY[^>]*>)");
-    java.util.regex.Matcher m=p.matcher(page);
-    if (m.find()) {
-        page=page.substring(m.end());
-    }
     Pattern p1= new Pattern("<[^>]*>");
     Replacer r1=new Replacer(p1,"");
     page=r1.replace(page);
@@ -179,11 +174,11 @@ return sb.toString();
 }
 
 
-public static String transRequeteRegex(String reg){
+public static String transRequeteRegex(String requete,String regex){
 	StringBuffer sb = new StringBuffer();
-	StringTokenizer st = new StringTokenizer(reg);
+	StringTokenizer st = new StringTokenizer(requete);
 	while (st.hasMoreTokens()){
-		sb.append(st.nextToken()+"(\\W)*");	
+		sb.append(st.nextToken()+regex);	
 	}
 	return sb.toString();
 }
@@ -200,6 +195,12 @@ public static String tagRequete(String reg,String texte){
 	return texte;
 }
 
+
+/**
+ * étant donné une phrase, renvoie le nombre de mots que contient cette phrase
+ * @param texte
+ * @return
+ */
 public static int countWord(String texte){
 	Pattern p=new Pattern("\\w+");
 	Matcher m=p.matcher(texte);
@@ -209,19 +210,149 @@ public static int countWord(String texte){
 	return cpt;
 }
 
-public static String getContext(String texte){
-	String tagPhrase="<s>|</s>";
-	String tagRequete="<req>(.)*</req>";
-	Pattern p=new Pattern(tagPhrase);
-	Pattern req=new Pattern(tagRequete);
-	RETokenizer tok =p.tokenizer(texte);
-	while (tok.hasMore()){
-		String contexte=tok.nextToken();
-		Matcher m=req.matcher(contexte);
-		if( m.find())
-			return contexte;		
+
+
+/**
+ * Etant donne une requete sous forme d'expression reguliere et un texte
+ * renvoie la phrase qui contient l'expression reguliere.
+ * @param reqRegex
+ * @param texte
+ * @return
+ */
+public static String getContext(String reqRegex,String texte){
+	Pattern p=new Pattern(reqRegex,REFlags.IGNORE_CASE);
+	Matcher m=p.matcher(texte);
+	String contexte=null;
+	if (m.find()){
+		int start=OutilsTexte.getStartIndexOfSentence(m.start(),texte.toString());
+		int end=OutilsTexte.getEndIndexOfSentence(m.end(),texte.toString());
+		contexte=texte.substring(start,end);
+		contexte=OutilsTexte.getTexteFromHtml(contexte);
 	}
-	return null;
+return contexte;	
+}
+
+private static boolean analyseVoisinnageBis(String candidat){
+    Pattern p=new Pattern("[.!?]");
+    Matcher m=p.matcher(candidat);
+    String prefixe=null;
+    String suffixe=null;
+    StringBuffer sb=new StringBuffer(candidat);
+    int index;
+    if (!m.find()){
+    		System.out.println(candidat+" : pas de points");
+        return false;
+    }
+    if (abbrev.get(candidat)!=null){
+    		System.out.println(candidat+" : est une abbreviation");
+        	return false;
+    }
+    if (candidat.matches("(([A-Z0-9]\\.)+)|([a-z0-9]\\.)+")) {
+    		System.out.println(candidat+" : est un reel ou une abbreviation");
+    		return false;
+    }
+    index=m.start();
+    if (index==(candidat.length()-1)){
+    		System.out.println(candidat+" : est une fin de phrase");
+        return true;
+    }
+    if (index>0)
+        prefixe=candidat.substring(0,index);
+    else 
+        prefixe="";
+    suffixe=candidat.substring(index+1,candidat.length());
+    String ls=OutilsTexte.getLastSuffix(suffixe);
+    if (ls=="."){
+    		System.out.println(candidat+" : le suffixe est un point c'est une fin de phrase");
+        return true;
+    }
+    if (suffix.get(ls)!=null){
+    		System.out.println(candidat+" : le suffixe est un extansion connue ce n'est pas une fin de phrase");
+        return false;
+    }
+    	System.out.println(candidat+" : je suppose que c'est une fin de phrase ");
+     return true;
+}
+
+/**
+ * etant donne un indice dans une chaine de caractere, 
+ * renvoie l'indice de la premiere lettre de la phrase dans laquelle l'indice est contenu.
+ * @param indice
+ * @param texte
+ * @return
+ */
+public static int getStartIndexOfSentence(int indice,String texte){
+	int ind=indice;
+	while(ind>0){
+		char current=texte.charAt(ind);
+		if (current=='!' || current=='?' || current=='.'){
+			String candidat=texte.substring(getStartIndex(ind,texte),getEndIndex(ind,texte));
+			if( OutilsTexte.analyseVoisinnageBis(candidat))
+				return ind+1;
+		}
+			ind--;
+	}
+	return ind;
+}
+
+
+
+/**
+ * etant donne un indice dans une chaine de caractere, 
+ * renvoie l'indice de la derniere lettre de la phrase dans laquelle l'indice est contenu.
+ * @param indice
+ * @param texte
+ * @return
+ */
+public static int getEndIndexOfSentence(int indice,String texte){
+	int ind=indice;
+	while(ind<texte.length()){
+		char current=texte.charAt(ind);
+		if (current=='!' || current=='?' || current=='.'){
+			String candidat=texte.substring(getStartIndex(ind,texte),getEndIndex(ind,texte));
+			if( OutilsTexte.analyseVoisinnageBis(candidat))
+				return ind+1;
+		}
+			ind++;
+	}
+	return ind;
+}
+
+/**
+ * étant donné un indice dans une chaine de caractère renvoie l'indice de la premiere lettre
+ * dans lequel l'indice donné est contenu
+ * @return l'indice
+ */
+public static int getStartIndex(int indice,String texte){
+	int ind=indice;
+	while (ind>0) {
+		char current=texte.charAt(ind);
+		if (current==' ' || current=='\n' || current=='\r' || current=='\f' || current=='\t'){
+			return ind +1;
+		}
+		else
+			ind--;
+	}
+	return ind;
+}
+
+/**
+ * étant donné un indice dans une chaine de caractère, renvoie la dernière lettre du mot contenant cet indice.
+ * @param indice
+ * @param texte
+ * @return
+ */
+public static int getEndIndex(int indice,String texte){
+	int ind=indice;
+	while (ind<texte.length()) {
+		char current=texte.charAt(ind);
+		if (current==' ' || current=='\n' || current=='\r' || current=='\f' || current=='\t'){
+			return ind;
+		}
+		else
+			ind++;
+	}
+	return ind;
 }
 
 public static void main(String[] args){
@@ -233,17 +364,23 @@ public static void main(String[] args){
         e.printStackTrace();
         System.exit(0);
     }
-    System.out.println("he is bac.jones.jpg Jones.His adress is http://www.macromedia.com.");
-    System.out.println(OutilsTexte.sentencer("he is bac.jones.jpg Jones.His adress is http://www.macromedia.com. he works for C.J.A.B.."));
-    String texte ="<s>Le chien est noir et marron. </s><s>le chat est gris et blanc avec une tache dans le coup.</s><s>la souris est blanche.</s>";
-    String reg =OutilsTexte.transRequeteRegex("le chat est gris");
-    System.out.println(reg);
-    texte=OutilsTexte.tagRequete(reg,texte);
-    System.out.println(texte);
-    String contexte=OutilsTexte.getContext(texte);
-    System.out.println(contexte);
-    int count=OutilsTexte.countWord("le chat est gris");
-    System.out.println("le nombre de mots est : "+count);
+    StringBuffer exemple=new StringBuffer();
+    String ligne=null;
+    InputStream is=ClassLoader.getSystemResourceAsStream("ressources/exemple.html");
+    BufferedReader in=new BufferedReader(new InputStreamReader(is)); 
+    try {
+		ligne=in.readLine();
+		while (ligne!=null){
+			exemple.append(ligne+"\n");
+			ligne=in.readLine();
+		}
+	} catch (IOException e1) {
+		// TODO Auto-generated catch block
+		e1.printStackTrace();
+	}
+	String requete="renonçer à ses mesures";
+	String reqRegex=OutilsTexte.transRequeteRegex(requete,"\\W*");
+	System.out.println(OutilsTexte.getContext(reqRegex,exemple.toString()));
 }
 
 }

@@ -102,13 +102,15 @@ public class RequeteGoogle extends Requete {
          }              
 	}
 
-public void getPages(){
+public void getPages(String reqRegex){
 	Resultat res=this.getResultat();
 	if (res==null){
 		System.out.println("il faut lancer une requete avant");
 	}
-	else 
-		PageHTML.getAllpages(res);		
+	else {
+		
+		PageHTML.getAllpages(res,reqRegex);
+	}
 }
 	
 	
@@ -155,7 +157,7 @@ public static String getKey(){
 	    String req=args[2];
 	    RequeteGoogle requete = new RequeteGoogle(langue,max,req);
 	    requete.requeteGoogle();
-	    requete.getPages();
+	    requete.getPages(OutilsTexte.transRequeteRegex(requete.requete,"\\W"));
 	    System.out.println("nombre de resultats : "+requete.resultat.nbResultats);
 	    System.out.println("nombre de mots : "+requete.nbMots);
 	    try {
