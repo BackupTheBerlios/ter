@@ -10,6 +10,7 @@ import java.awt.Container;
 import java.awt.Dimension;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.IOException;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
@@ -120,6 +121,12 @@ public class InterfaceGraphique extends JFrame implements ActionListener{
         }
     }
     public static void main(String[] args){
+    		try {
+				OutilsTexte.initOutilsTexte();
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
        InterfaceGraphique iG = new InterfaceGraphique();
     iG.setVisible(true);
     }

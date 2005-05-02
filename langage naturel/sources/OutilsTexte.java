@@ -203,7 +203,7 @@ private static boolean analyseVoisinnageBis(String candidat){
   //  		return true;
   //  }
     if (abbrev.get(candidat)!=null){
- //  		System.out.println(candidat+" : est une abbreviation");
+  		System.out.println(candidat+" : est une abbreviation");
         	return false;
     }
     if (candidat.matches("(([A-Z0-9]\\.)+)|([a-z0-9]\\.)+")) {
