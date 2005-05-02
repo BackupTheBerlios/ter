@@ -36,14 +36,17 @@ public class ElementResultatGoogle extends ElementResultat {
      * @see sources.ElementResultat#setPage()
      */
     public void setPage(){
-        String code=OutilsTexte.getTexteFromHtml(page);
-        code=OutilsTexte.sentencer(page);
-        page=code;
     }
     
    
     public String toString(){
-        return "url : "+url+"\n resume: "+resume+"\n contexte: "+contexte;       
+    		StringBuffer sb = new StringBuffer();
+    		sb.append("url : "+url+"\n");
+    		sb.append("resume : "+resume+"\n");
+    		for (int i=0;i<contexte.size();i++){
+    			sb.append("contexte "+i+": "+(String)contexte.get(i)+"\n");
+    		}
+        return sb.toString();       
     }
     
     public static void main(String[] args) {

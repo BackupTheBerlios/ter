@@ -1,6 +1,7 @@
 package sources;
 
 
+import java.io.FileNotFoundException;
 import java.io.IOException;
 
 import com.google.soap.search.GoogleSearch;
@@ -102,14 +103,14 @@ public class RequeteGoogle extends Requete {
          }              
 	}
 
-public void getPages(String reqRegex){
+public void getContexts(String reqRegex){
 	Resultat res=this.getResultat();
 	if (res==null){
 		System.out.println("il faut lancer une requete avant");
 	}
 	else {
 		
-		PageHTML.getAllpages(res,reqRegex);
+		PageHTML.getAllContexts(res,reqRegex);
 	}
 }
 	
@@ -157,7 +158,7 @@ public static String getKey(){
 	    String req=args[2];
 	    RequeteGoogle requete = new RequeteGoogle(langue,max,req);
 	    requete.requeteGoogle();
-	    requete.getPages(OutilsTexte.transRequeteRegex(requete.requete,"\\W"));
+	    requete.getContexts(OutilsTexte.transRequeteRegex(requete.requete,"\\W"));
 	    System.out.println("nombre de resultats : "+requete.resultat.nbResultats);
 	    System.out.println("nombre de mots : "+requete.nbMots);
 	    try {
@@ -172,6 +173,21 @@ public static String getKey(){
 	    	if (requete.resultat.listeResultat[i]!=null)
 	       System.out.println(requete.resultat.listeResultat[i].toString());
 	}
+	try {
+		InterfaceTagger.initTagger();
+	} catch (IOException e2) {
+			// TODO Auto-generated catch block	
+		e2.printStackTrace();
+	}
+try {
+	FichierXML.generateXMLfile(requete.requete,requete.resultat);
+} catch (FileNotFoundException e1) {
+	// TODO Auto-generated catch block
+	e1.printStackTrace();
+} catch (IOException e1) {
+	// TODO Auto-generated catch block
+	e1.printStackTrace();
+}	    
 	 
 }
 }

@@ -11,6 +11,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.util.ArrayList;
 import java.util.Hashtable;
 import java.util.StringTokenizer;
 import jregex.Matcher;
@@ -80,7 +81,7 @@ public static void initOutilsTexte() throws IOException{
  * @return page retourne la page sans les balises HTML et nettoiyee des caract?res sp?ciaux
  */
 public static String getTexteFromHtml(String page){
-    Pattern p1= new Pattern("<[^>]*>");
+    Pattern p1= new Pattern("(<[^>]*>)|(\\[[^\\]]*\\])");
     Replacer r1=new Replacer(p1,"");
     page=r1.replace(page);
     p1=new Pattern("(\\s\\s)+","s");
@@ -103,44 +104,6 @@ public static String getTexteFromHtml(String page){
 	return page;
 }
 
-
-private static String analyseVoisinnage(String candidat){
-    Pattern p=new Pattern("[.!?]");
-    Matcher m=p.matcher(candidat);
-    String prefixe=null;
-    String suffixe=null;
-    StringBuffer sb=new StringBuffer(candidat);
-    int index;
-    if (!m.find()){
-        return candidat;
-    }
-    if (abbrev.get(candidat)!=null)
-        	return candidat;
-    if (candidat.matches("(([A-Z0-9].)+)|([a-z0-9].)+")) {
-    		return candidat;
-    }
-    index=m.start();
-    if (index==(candidat.length()-1)){
-        sb.insert(index+1,"</s>\n<s>");
-        return sb.toString();
-    }
-    if (index>0)
-        prefixe=candidat.substring(0,index);
-    else 
-        prefixe="";
-    suffixe=candidat.substring(index+1,candidat.length());
-    String ls=OutilsTexte.getLastSuffix(suffixe);
-    if (ls=="."){
-        sb.append("</s>\n<s>");
-        return sb.toString();
-    }
-    if (suffix.get(ls)!=null){
-        return candidat;
-    }
-    sb.insert(index+1,"</s>\n<s>");
-     return sb.toString();
-}
-
 private static String getLastSuffix(String suffixe){
     Pattern p=new Pattern("[.]");
     Matcher m=p.matcher(suffixe);
@@ -155,25 +118,13 @@ private static String getLastSuffix(String suffixe){
     }  
 }   
 
-
 /**
- * D?coupe un texte en phrases. Les phrases sont balis?es par <s>...</s>
- * @param page 
- * @return un texte balis?
+ * transforme une chaine de caractere en ajoutant entre chaque mots de la chaine une 
+ * expression reguliere donnee en parametre .
+ * @param requete
+ * @param regex
+ * @return
  */
-public static String sentencer(String page){
- Pattern p=new Pattern("(\\S)+","s");
- StringBuffer sb= new StringBuffer();
- sb.append("<s> ");
- Matcher m=p.matcher(page);
- while (m.find()){
-    sb.append(analyseVoisinnage(m.group(0))+" ");
- }
- sb.append("</s>");
-return sb.toString();
-}
-
-
 public static String transRequeteRegex(String requete,String regex){
 	StringBuffer sb = new StringBuffer();
 	StringTokenizer st = new StringTokenizer(requete);
@@ -219,17 +170,21 @@ public static int countWord(String texte){
  * @param texte
  * @return
  */
-public static String getContext(String reqRegex,String texte){
+public static ArrayList getContext(String reqRegex,String texte){
+	ArrayList contextes=new ArrayList();
 	Pattern p=new Pattern(reqRegex,REFlags.IGNORE_CASE);
 	Matcher m=p.matcher(texte);
 	String contexte=null;
-	if (m.find()){
+	while (m.find()){
 		int start=OutilsTexte.getStartIndexOfSentence(m.start(),texte.toString());
 		int end=OutilsTexte.getEndIndexOfSentence(m.end(),texte.toString());
 		contexte=texte.substring(start,end);
-		contexte=OutilsTexte.getTexteFromHtml(contexte);
+//		contexte=OutilsTexte.getTexteFromHtml(contexte);
+		contextes.add(contexte);
+//		System.out.println(contexte);
+//		System.out.println((String)contextes.get(contextes.size()-1));
 	}
-return contexte;	
+return contextes;	
 }
 
 private static boolean analyseVoisinnageBis(String candidat){
@@ -240,20 +195,24 @@ private static boolean analyseVoisinnageBis(String candidat){
     StringBuffer sb=new StringBuffer(candidat);
     int index;
     if (!m.find()){
-    		System.out.println(candidat+" : pas de points");
+ //   		System.out.println(candidat+" : pas de points");
         return false;
     }
+  //  if (candidat.matches("(\\.\\.\\.)|!|\\?")){
+  //  		System.out.println("... ou ! ou  ?");
+  //  		return true;
+  //  }
     if (abbrev.get(candidat)!=null){
-    		System.out.println(candidat+" : est une abbreviation");
+ //  		System.out.println(candidat+" : est une abbreviation");
         	return false;
     }
     if (candidat.matches("(([A-Z0-9]\\.)+)|([a-z0-9]\\.)+")) {
-    		System.out.println(candidat+" : est un reel ou une abbreviation");
+//    		System.out.println(candidat+" : est un reel ou une abbreviation");
     		return false;
     }
     index=m.start();
     if (index==(candidat.length()-1)){
-    		System.out.println(candidat+" : est une fin de phrase");
+//    		System.out.println(candidat+" : est une fin de phrase");
         return true;
     }
     if (index>0)
@@ -263,14 +222,14 @@ private static boolean analyseVoisinnageBis(String candidat){
     suffixe=candidat.substring(index+1,candidat.length());
     String ls=OutilsTexte.getLastSuffix(suffixe);
     if (ls=="."){
-    		System.out.println(candidat+" : le suffixe est un point c'est une fin de phrase");
+//    		System.out.println(candidat+" : le suffixe est un point c'est une fin de phrase");
         return true;
     }
     if (suffix.get(ls)!=null){
-    		System.out.println(candidat+" : le suffixe est un extansion connue ce n'est pas une fin de phrase");
+//    		System.out.println(candidat+" : le suffixe est un extansion connue ce n'est pas une fin de phrase");
         return false;
     }
-    	System.out.println(candidat+" : je suppose que c'est une fin de phrase ");
+//    	System.out.println(candidat+" : je suppose que c'est une fin de phrase ");
      return true;
 }
 
@@ -353,6 +312,25 @@ public static int getEndIndex(int indice,String texte){
 			ind++;
 	}
 	return ind;
+}
+
+/**
+ * prend en parametre une chaine de parametre et renvoie une liste de mots et de ponctuation
+ * composant cette chaine de caractere
+ * @param enonce
+ * @return
+ */
+public static ArrayList segmenter(String enonce){
+	ArrayList tokens=new ArrayList();
+	Pattern del=new Pattern("\\w+|[?,;.:/%£$&'()!¤\"]");
+	Matcher m=del.matcher(enonce);
+	String tmp;
+	while (m.find()){
+		tmp=m.group(0);
+		//	System.out.println(tmp);
+			tokens.add(tmp);
+	}
+return tokens;	
 }
 
 public static void main(String[] args){

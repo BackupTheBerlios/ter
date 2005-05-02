@@ -110,7 +110,8 @@ public class InterfaceGraphique extends JFrame implements ActionListener{
             try {
                 nbResults=Integer.parseInt(chxmresults.getText());
                 if (google.isSelected()){
-                    resultats.setText(iR.launchRequeteGoogle("lan-en",nbResults,requete.getText()));
+                		String reqTmp=requete.getText();
+                    resultats.setText(iR.launchRequeteGoogle("lan-en",nbResults,reqTmp,"\\W"));
                       }
             }
             catch (NumberFormatException e1) {

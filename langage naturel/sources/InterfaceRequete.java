@@ -14,9 +14,20 @@ package sources;
  */
 public class InterfaceRequete {
     
-    public String launchRequeteGoogle(String langue,int maxResults,String req){
+    /**
+     * lance la requete google et renvoie une chaine de caractere contenant l'url,
+     * le resume et le contexte de la requete
+     * @param langue
+     * @param maxResults
+     * @param req
+     * @param reqRegex il s'agit de l'expression reguliere que l'on doit trouver entre les mots
+     * de la requete. Par exemple : \W prend en compte les ponctuations et les blancs.
+     * @return
+     */
+    public String launchRequeteGoogle(String langue,int maxResults,String req,String reqRegex){
         RequeteGoogle requete=new RequeteGoogle(langue,maxResults,req);
         requete.requeteGoogle();
+        requete.getContexts(OutilsTexte.transRequeteRegex(req,reqRegex));
         ElementResultatGoogle[] resultats=requete.resultat.listeResultat;
         StringBuffer sb=new StringBuffer("nombre de mots dans la requete : "+requete.nbMots+"\n\nnombre de resultats : "+requete.resultat.nbResultats+"\n\n");
         
@@ -32,7 +43,7 @@ public class InterfaceRequete {
 
     public static void main(String[] args){
         InterfaceRequete iR=new InterfaceRequete();
-       System.out.println(iR.launchRequeteGoogle("lan-en",10,"long black hair"));
+       System.out.println(iR.launchRequeteGoogle("lan-en",10,"long black hair",OutilsTexte.transRequeteRegex("long black hair","\\W")));
     }
     
 }

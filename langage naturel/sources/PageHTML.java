@@ -47,6 +47,13 @@ public class PageHTML extends Thread {
     }
 
     
+/**
+ * recupere la source de la page HTML dont l'url est l'attribut url 
+ * url est specifiee par l'intermediaire du constructeur de la classe
+ * @return
+ * @throws IOException
+ * @throws InterruptedException
+ */
 public  String getHTMLcode() throws IOException, InterruptedException{
     String ligne;
     InputStreamReader reader=null;
@@ -65,7 +72,8 @@ public  String getHTMLcode() throws IOException, InterruptedException{
 public  void run() {
     statut=en_cours;
     try {
-       codeHTML=getHTMLcode();       
+       codeHTML=getHTMLcode();
+       codeHTML=OutilsTexte.getTexteFromHtml(codeHTML);
        eR.contexte=OutilsTexte.getContext(req,codeHTML);
     } catch (IOException e) {
     	e.printStackTrace();
@@ -77,7 +85,13 @@ public  void run() {
 }
 
 
-public static void getAllpages(Resultat r,String reqRegex){
+/**
+ * Récupère en parallèle les contextes dans lesquels apparait l'expression reguliere donnee
+ * en parametre
+ * @param r
+ * @param reqRegex
+ */
+public static void getAllContexts(Resultat r,String reqRegex){
  ElementResultat[] elemResult=r.getListeElementsResultat();
 	compteur=elemResult.length;
 for (int i=0;i<elemResult.length;i++){

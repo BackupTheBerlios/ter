@@ -1,5 +1,7 @@
 package sources;
 
+import java.util.ArrayList;
+
 /*
  * Created on 3 mars 2005
  *
@@ -24,7 +26,7 @@ public abstract class ElementResultat {
     String url;
     String resume;
     String page;
-    String contexte;
+    ArrayList contexte=new ArrayList();
    
  /**
   * Retourne l'url  de l'element 

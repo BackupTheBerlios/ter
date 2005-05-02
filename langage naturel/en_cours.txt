@@ -1,3 +1,0 @@
-Voici la liste des taches en cours :
--améliorer l'algorithme de récupération de contexte
-
