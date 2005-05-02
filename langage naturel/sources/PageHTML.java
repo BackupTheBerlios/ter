@@ -85,7 +85,10 @@ public  void run() {
     	e.printStackTrace();
     } catch (InterruptedException e) {
         e.printStackTrace();
-    }
+    } catch (InitOutilsTexteException e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+	}
     statut=finis;
     compteur--;
   //  System.out.println(compteur);

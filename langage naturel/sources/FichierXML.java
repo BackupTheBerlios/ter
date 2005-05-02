@@ -29,7 +29,13 @@ public static void generateXMLfile(String requete,Resultat resultat) throws File
 	Element tokens = new Element("tokens");
 	racine.addContent(tokens);		      
 	ArrayList toks=OutilsTexte.segmenter(requete); 
-	String[] tags =InterfaceTagger.tag(toks);
+	String[] tags=null;
+	try {
+		tags = InterfaceTagger.tag(toks);
+	} catch (InitTaggerException e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+	}
 	for (int i=0;i<toks.size();i++){
 		Element token =new Element("token");
 		Attribute tag=new Attribute("tag",tags[i]);

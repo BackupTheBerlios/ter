@@ -36,12 +36,14 @@ public class OutilsTexte {
 	private static Hashtable abbrev= new Hashtable();
 	private static Hashtable suffix=new Hashtable();
 	private static Hashtable latin1=new Hashtable();
+	public static boolean init=false;
 	public OutilsTexte(){}
 
 /**
  *charge les dictionnaires. A mettre au debut du programme et ne pas le relancer ? chaque fois
  */
 public static void initOutilsTexte() throws IOException{
+	init=true;
 	String mot=null;
     InputStream is=ClassLoader.getSystemResourceAsStream(URLABBREV);
   BufferedReader in=new BufferedReader(new InputStreamReader(is));
@@ -79,8 +81,12 @@ public static void initOutilsTexte() throws IOException{
  * remplac?.
  * @param
  * @return page retourne la page sans les balises HTML et nettoiyee des caract?res sp?ciaux
+ * @throws InitOutilsTexteException
  */
-public static String getTexteFromHtml(String page){
+public static String getTexteFromHtml(String page) throws InitOutilsTexteException{
+	if (!init){
+		throw new InitOutilsTexteException("l'initialisation n'a pas été faite");
+	}
     Pattern p1= new Pattern("(<[^>]*>)|(\\[[^\\]]*\\])");
     Replacer r1=new Replacer(p1,"");
     page=r1.replace(page);
@@ -169,8 +175,12 @@ public static int countWord(String texte){
  * @param reqRegex
  * @param texte
  * @return
+ * @throws InitOutilsTexteException
  */
-public static ArrayList getContext(String reqRegex,String texte){
+public static ArrayList getContext(String reqRegex,String texte) throws InitOutilsTexteException{
+	if (!init){
+		throw new InitOutilsTexteException("l'initialisation n'a pas ete effectuee");
+	}
 	ArrayList contextes=new ArrayList();
 	Pattern p=new Pattern(reqRegex,REFlags.IGNORE_CASE);
 	Matcher m=p.matcher(texte);
@@ -333,7 +343,7 @@ public static ArrayList segmenter(String enonce){
 return tokens;	
 }
 
-public static void main(String[] args){
+public static void main(String[] args) throws InitOutilsTexteException{
     OutilsTexte outils= new OutilsTexte();
     try {
         OutilsTexte.initOutilsTexte();

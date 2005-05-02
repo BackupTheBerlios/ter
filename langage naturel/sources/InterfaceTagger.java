@@ -9,8 +9,6 @@ package sources;
 import java.io.IOException;
 import java.util.ArrayList;
 
-import jregex.Matcher;
-import jregex.Pattern;
 import qtag.Tagger;
 
 /**
@@ -40,13 +38,12 @@ public static void initTagger() throws IOException{
  * la classe OutilsTexte
  * @param enonce
  * @return
+ * @throws InitTaggerException
  */
-public static String[] tag(ArrayList enonce){
+public static String[] tag(ArrayList enonce) throws InitTaggerException{
 	String[] s=null;
-	if (!init){
-		System.out.println("il faut d'abord lancer la méthode initTagger() de la classe InterfaceTagger");
-		System.exit(1);
-	}
+	if (!init)
+	 throw new InitTaggerException("il faut d'abord lancer la methode initTagger de la classe InterfaceTagger");
 	else {
 	s=tagger.tag(enonce);
 	}
@@ -54,9 +51,14 @@ public static String[] tag(ArrayList enonce){
 }
 
 public static void main(String[] args) throws IOException{
-String[] tags;
+String[] tags=null;
 InterfaceTagger.initTagger();
-tags=InterfaceTagger.tag(OutilsTexte.segmenter("hello! it is nice to see you again"));
+try {
+	tags=InterfaceTagger.tag(OutilsTexte.segmenter("hello! it is nice to see you again"));
+} catch (InitTaggerException e) {
+	// TODO Auto-generated catch block
+	e.printStackTrace();
+}
 for (int i=0;i<tags.length;i++)
 	System.out.println(tags[i]);
 }
