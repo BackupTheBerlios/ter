@@ -72,9 +72,15 @@ public  String getHTMLcode() throws IOException, InterruptedException{
 public  void run() {
     statut=en_cours;
     try {
+    	//	System.out.println("debut getCode");
        codeHTML=getHTMLcode();
+     //  System.out.println("fin getCode");
+     //  System.out.println("debut netoyage");
        codeHTML=OutilsTexte.getTexteFromHtml(codeHTML);
+     //  System.out.println("fin netoyage");
+     //  System.out.println("debut contextes");
        eR.contexte=OutilsTexte.getContext(req,codeHTML);
+     //  System.out.println("fin contextes");
     } catch (IOException e) {
     	e.printStackTrace();
     } catch (InterruptedException e) {
@@ -82,6 +88,7 @@ public  void run() {
     }
     statut=finis;
     compteur--;
+  //  System.out.println(compteur);
 }
 
 

@@ -358,7 +358,9 @@ public static void main(String[] args){
 	}
 	String requete="renonçer à ses mesures";
 	String reqRegex=OutilsTexte.transRequeteRegex(requete,"\\W*");
-	System.out.println(OutilsTexte.getContext(reqRegex,exemple.toString()));
+	String page=OutilsTexte.getTexteFromHtml(exemple.toString());
+	System.out.println(OutilsTexte.getContext(reqRegex,page));
+	
 }
 
 }

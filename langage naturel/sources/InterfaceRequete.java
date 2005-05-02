@@ -34,7 +34,8 @@ public class InterfaceRequete {
         for (int i=0;i<resultats.length;i++){
             sb.append("URL : "+resultats[i].url+"\n\n");
             sb.append("RESUME : "+resultats[i].resume+"\n\n");
-            sb.append("CONTEXTE : "+resultats[i].contexte+"\n\n");
+        for (int j=0;j<resultats[i].contexte.size();j++)
+            sb.append("CONTEXTE : "+(String)resultats[i].contexte.get(j)+"\n\n");
         }
         return sb.toString();
         };
