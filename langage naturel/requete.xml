@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<requete enonce="for comparing string">
+  <tokens>
+    <token tag="CS">for</token>
+    <token tag="VBG">comparing</token>
+    <token tag="NN">string</token>
+  </tokens>
+  <contextes>
+    <contexte numELem="0">Use the Value parameter for comparing string values or use the Data parameter for comparing raw binary data.</contexte>
+    <contexte numELem="1">CompareMode PropertySets and returns the comparison mode for comparing string keys in a Dictionary object.</contexte>
+    <contexte numELem="2">int
+getCompareMode()
+Returns the comparison mode for comparing string keys in a Dictionary object.</contexte>
+    <contexte numELem="2">void
+setCompareMode(intcm)
+Sets and returns the comparison mode for comparing string keys in a Dictionary object.</contexte>
+    <contexte numELem="2">Method Detail
+getCompareModepublic int getCompareMode()Returns the comparison mode for comparing string keys in a Dictionary object.</contexte>
+    <contexte numELem="2">ExceptionSets and returns the comparison mode for comparing string keys in a Dictionary object.</contexte>
+    <contexte numELem="4">=) for comparing String *values*: use someString.</contexte>
+    <contexte numELem="4">=)
+ for comparing String *values*: use someString.</contexte>
+    <contexte numELem="5">Dictionary
+DescriptionSets and returns the comparison method for comparing string keys in theDictionary object.</contexte>
+    <contexte numELem="5">CompareMode = vCompareMode
+ReturnsCompareMethod- Comparison method for comparing string keys in a Dictionary object.</contexte>
+    <contexte numELem="6">EnumMemberof Multi Use CompareMethod object
+DescriptionComparison method for comparing string keys in a Dictionary object.</contexte>
+    <contexte numELem="8">The first operand must be one of the integer valued variables and the second	must be a numeric constant, i.e. all integer comparisons are of the format(variable operator numeric constant)There are four different operators available for comparing string	values.</contexte>
+    <contexte numELem="9">In this assignment, you will design and implement a class named Soundexthat provides useful methods for comparing string values using soundex.</contexte>
+  </contextes>
+</requete>
+
