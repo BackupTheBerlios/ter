@@ -1,33 +1,2431 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<requete enonce="for comparing string">
+<requete enonce="hello world">
   <tokens>
-    <token tag="CS">for</token>
-    <token tag="VBG">comparing</token>
-    <token tag="NN">string</token>
+    <token tag="NN">hello</token>
+    <token tag="NN">world</token>
   </tokens>
   <contextes>
-    <contexte numELem="0">Use the Value parameter for comparing string values or use the Data parameter for comparing raw binary data.</contexte>
-    <contexte numELem="1">CompareMode PropertySets and returns the comparison mode for comparing string keys in a Dictionary object.</contexte>
-    <contexte numELem="2">int
-getCompareMode()
-Returns the comparison mode for comparing string keys in a Dictionary object.</contexte>
-    <contexte numELem="2">void
-setCompareMode(intcm)
-Sets and returns the comparison mode for comparing string keys in a Dictionary object.</contexte>
-    <contexte numELem="2">Method Detail
-getCompareModepublic int getCompareMode()Returns the comparison mode for comparing string keys in a Dictionary object.</contexte>
-    <contexte numELem="2">ExceptionSets and returns the comparison mode for comparing string keys in a Dictionary object.</contexte>
-    <contexte numELem="4">=) for comparing String *values*: use someString.</contexte>
-    <contexte numELem="4">=)
- for comparing String *values*: use someString.</contexte>
-    <contexte numELem="5">Dictionary
-DescriptionSets and returns the comparison method for comparing string keys in theDictionary object.</contexte>
-    <contexte numELem="5">CompareMode = vCompareMode
-ReturnsCompareMethod- Comparison method for comparing string keys in a Dictionary object.</contexte>
-    <contexte numELem="6">EnumMemberof Multi Use CompareMethod object
-DescriptionComparison method for comparing string keys in a Dictionary object.</contexte>
-    <contexte numELem="8">The first operand must be one of the integer valued variables and the second	must be a numeric constant, i.e. all integer comparisons are of the format(variable operator numeric constant)There are four different operators available for comparing string	values.</contexte>
-    <contexte numELem="9">In this assignment, you will design and implement a class named Soundexthat provides useful methods for comparing string values using soundex.</contexte>
+    <contexte numELem="0">Hello World!
+Welcome to the ACM "Hello World" project.</contexte>
+    <contexte numELem="0">Welcome to the ACM "Hello World" project.</contexte>
+    <contexte numELem="0">Everyone has seen the
+Hello World program used as a first exposure to a new language or
+environment.</contexte>
+    <contexte numELem="1">The Hello World Project    HomeMessage ArchiveImage GalleryMedia ServicePeoplePartnersContactQuestion and AnswersEditorial Guidelines</contexte>
+    <contexte numELem="2">The Hello World Collection
+The Hello World Collection"Hello World" is the first program one usually writes when
+learning a new programming language.</contexte>
+    <contexte numELem="2">The Hello World Collection
+The Hello World Collection"Hello World" is the first program one usually writes when
+learning a new programming language.</contexte>
+    <contexte numELem="2">The Hello World Collection
+The Hello World Collection"Hello World" is the first program one usually writes when
+learning a new programming language.</contexte>
+    <contexte numELem="2">This collection includes 171 Hello World programs in many more-or-less
+well known languages.</contexte>
+    <contexte numELem="2">*Hello world in ABAP/4 *
+WRITE: 'Hello world'.</contexte>
+    <contexte numELem="2">*Hello world in ABAP/4 *
+WRITE: 'Hello world'.</contexte>
+    <contexte numELem="2">Back to indexActionscript-Flash5
+// Hello World in Actionscript (up to Flash 5, IDE only)trace ("Hello World");
+Back to indexActionscript-FlashMX
+// Hello World in Actionscript (Flash MX onwards)
+_root.</contexte>
+    <contexte numELem="2">Back to indexActionscript-Flash5
+// Hello World in Actionscript (up to Flash 5, IDE only)trace ("Hello World");
+Back to indexActionscript-FlashMX
+// Hello World in Actionscript (Flash MX onwards)
+_root.</contexte>
+    <contexte numELem="2">Back to indexActionscript-Flash5
+// Hello World in Actionscript (up to Flash 5, IDE only)trace ("Hello World");
+Back to indexActionscript-FlashMX
+// Hello World in Actionscript (Flash MX onwards)
+_root.</contexte>
+    <contexte numELem="2">text = "Hello World!";
+mytext.</contexte>
+    <contexte numELem="2">setTextFormat(myformat);
+Back to indexAda
+-- Hello World in Adawith TEXT_IO; use TEXT_IO;
+procedure Hello is pragma MAIN;
+begin PUT ("Hello World!</contexte>
+    <contexte numELem="2">setTextFormat(myformat);
+Back to indexAda
+-- Hello World in Adawith TEXT_IO; use TEXT_IO;
+procedure Hello is pragma MAIN;
+begin PUT ("Hello World!");
+end Hello;
+Back to indexAlgol-60
+'BEGIN''COMMENT' Hello World in Algol 60; OUTPUT(4,'(''('Hello World!</contexte>
+    <contexte numELem="2">");
+end Hello;
+Back to indexAlgol-60
+'BEGIN''COMMENT' Hello World in Algol 60; OUTPUT(4,'(''('Hello World!</contexte>
+    <contexte numELem="2">");
+end Hello;
+Back to indexAlgol-60
+'BEGIN''COMMENT' Hello World in Algol 60; OUTPUT(4,'(''('Hello World!')',/')')
+'END'
+Back to indexAlgol-68
+( # Hello World in Algol 68 # print(("Hello World!</contexte>
+    <contexte numELem="2">')',/')')
+'END'
+Back to indexAlgol-68
+( # Hello World in Algol 68 # print(("Hello World!</contexte>
+    <contexte numELem="2">')',/')')
+'END'
+Back to indexAlgol-68
+( # Hello World in Algol 68 # print(("Hello World!",newline)))
+Back to indexAmiga-E
+- Hello World in Amiga-EPROC main() IS WriteF('Hello World\n')
+Back to indexAPL
+Hello World for APL.</contexte>
+    <contexte numELem="2">",newline)))
+Back to indexAmiga-E
+- Hello World in Amiga-EPROC main() IS WriteF('Hello World\n')
+Back to indexAPL
+Hello World for APL.</contexte>
+    <contexte numELem="2">",newline)))
+Back to indexAmiga-E
+- Hello World in Amiga-EPROC main() IS WriteF('Hello World\n')
+Back to indexAPL
+Hello World for APL.</contexte>
+    <contexte numELem="2">",newline)))
+Back to indexAmiga-E
+- Hello World in Amiga-EPROC main() IS WriteF('Hello World\n')
+Back to indexAPL
+Hello World for APL.</contexte>
+    <contexte numELem="2">-'Hello World!'
+Back to indexAppleScript
+Hello World in AppleScripttell application "Finder" display dialog "Hello World"
+end tell
+Back to indexASP-JavaScript
+Hello World for Microsoft ASP (in JavaScript)%@ language="javascript" %
+htmlbody
+%
+Response.</contexte>
+    <contexte numELem="2">'
+Back to indexAppleScript
+Hello World in AppleScripttell application "Finder" display dialog "Hello World"
+end tell
+Back to indexASP-JavaScript
+Hello World for Microsoft ASP (in JavaScript)%@ language="javascript" %
+htmlbody
+%
+Response.</contexte>
+    <contexte numELem="2">'
+Back to indexAppleScript
+Hello World in AppleScripttell application "Finder" display dialog "Hello World"
+end tell
+Back to indexASP-JavaScript
+Hello World for Microsoft ASP (in JavaScript)%@ language="javascript" %
+htmlbody
+%
+Response.</contexte>
+    <contexte numELem="2">'
+Back to indexAppleScript
+Hello World in AppleScripttell application "Finder" display dialog "Hello World"
+end tell
+Back to indexASP-JavaScript
+Hello World for Microsoft ASP (in JavaScript)%@ language="javascript" %
+htmlbody
+%
+Response.</contexte>
+    <contexte numELem="2">Write('Hello World!');
+%
+/body/html
+Back to indexASP-VBS
+Hello World for Microsoft ASP (in VBScript)%@ language="vbscript" %
+htmlbody
+%
+Response.</contexte>
+    <contexte numELem="2">');
+%
+/body/html
+Back to indexASP-VBS
+Hello World for Microsoft ASP (in VBScript)%@ language="vbscript" %
+htmlbody
+%
+Response.</contexte>
+    <contexte numELem="2">write "Hello World!"
+%
+/body/html
+Back to indexAssembler-6502
+; Hello World for 6502 Assembler (C64)ldy #0
+beq in
+loop:
+jsr $ffd2
+iny
+in:
+lda hello,y
+bne loop
+rts
+hello: .</contexte>
+    <contexte numELem="2">"
+%
+/body/html
+Back to indexAssembler-6502
+; Hello World for 6502 Assembler (C64)ldy #0
+beq in
+loop:
+jsr $ffd2
+iny
+in:
+lda hello,y
+bne loop
+rts
+hello: .</contexte>
+    <contexte numELem="2">tx "Hello World!".by 13,10,0
+Back to indexAssembler-68000-Amiga
+; Hello World in 68000 Assembler for dos.</contexte>
+    <contexte numELem="2">tx "Hello World!".by 13,10,0
+Back to indexAssembler-68000-Amiga
+; Hello World in 68000 Assembler for dos.</contexte>
+    <contexte numELem="2">b'Hello World!',$A,0
+Back to indexAssembler-68000-AtariST
+; Hello World in 68000 Assembler (Atari ST) move.</contexte>
+    <contexte numELem="2">',$A,0
+Back to indexAssembler-68000-AtariST
+; Hello World in 68000 Assembler (Atari ST) move.</contexte>
+    <contexte numELem="2">b "Hello World!",$0d,$0a,0
+Back to indexAssembler-68008
+; Hello World in 68008 Assembler (Sinclar QL) move.</contexte>
+    <contexte numELem="2">",$0d,$0a,0
+Back to indexAssembler-68008
+; Hello World in 68008 Assembler (Sinclar QL) move.</contexte>
+    <contexte numELem="2">b 'Hello World!',10end
+Back to indexAssembler-IBM-370
+ITLE 'Hello World for IBM Assembler/370 (VM/CMS)'
+HELLOSTART
+BALR12,0
+USING *,12
+*
+WRTERM 'Hello World!</contexte>
+    <contexte numELem="2">',10end
+Back to indexAssembler-IBM-370
+ITLE 'Hello World for IBM Assembler/370 (VM/CMS)'
+HELLOSTART
+BALR12,0
+USING *,12
+*
+WRTERM 'Hello World!</contexte>
+    <contexte numELem="2">',10end
+Back to indexAssembler-IBM-370
+ITLE 'Hello World for IBM Assembler/370 (VM/CMS)'
+HELLOSTART
+BALR12,0
+USING *,12
+*
+WRTERM 'Hello World!'
+*
+SR15,15
+BR14
+*
+END HELLO
+Back to indexAssembler-Intel
+; Hello World for Intel Assembler (MSDOS)mov ax,cs
+mov ds,ax
+mov ah,9
+mov dx, offset Hello
+int 21h
+xor ax,ax
+int 21hHello: db "Hello World!</contexte>
+    <contexte numELem="2">'
+*
+SR15,15
+BR14
+*
+END HELLO
+Back to indexAssembler-Intel
+; Hello World for Intel Assembler (MSDOS)mov ax,cs
+mov ds,ax
+mov ah,9
+mov dx, offset Hello
+int 21h
+xor ax,ax
+int 21hHello: db "Hello World!</contexte>
+    <contexte numELem="2">'
+*
+SR15,15
+BR14
+*
+END HELLO
+Back to indexAssembler-Intel
+; Hello World for Intel Assembler (MSDOS)mov ax,cs
+mov ds,ax
+mov ah,9
+mov dx, offset Hello
+int 21h
+xor ax,ax
+int 21hHello: db "Hello World!",13,10,"$"
+Back to indexAssembler-PDP11
+; Hello World in Assembler for the DEC PDP-11 with the
+;	RSX-11M-PLUS operating system
+; .</contexte>
+    <contexte numELem="2">",13,10,"$"
+Back to indexAssembler-PDP11
+; Hello World in Assembler for the DEC PDP-11 with the
+;	RSX-11M-PLUS operating system
+; .</contexte>
+    <contexte numELem="2">ascii / Hello World!/ len=.</contexte>
+    <contexte numELem="2">end start
+Back to indexAssembler-Z80-Console
+; This is a "Hello World" program for Z80 and TMS9918 / TMS9928 / TMS9929 /
+; V9938 or V9958 VDP.</contexte>
+    <contexte numELem="2">;
+; This version of Hello World was written by Timo "NYYRIKKI" Soilamaa
+; 17.</contexte>
+    <contexte numELem="2">NOP
+DJNZ COPYCHARS; Let's set write address to start of name table
+XOR A
+OUT (C),A
+LD A,#40
+OUT (C),A; Let's put characters to screen
+LD HL,ORDER
+LD B,ORDER_END-ORDER
+COPYORDER:
+LD A,(HL)
+OUT (DATAP),A
+INC HLJR OVERNMI
+NOP
+NOP; Here is address #66, that is entry for NMI
+RETN ;Return from NMIOVERNMI:
+DJNZ COPYORDER; The end
+HALT; Character set:
+; --------------
+ORDER:
+DEFB 1,2,3,3,4,0,5,4,6,3,7
+ORDER_END:CHARS:; H
+DEFB %10001000
+DEFB %10001000
+DEFB %10001000
+DEFB %11111000
+DEFB %10001000
+DEFB %10001000
+DEFB %10001000
+DEFB %00000000
+; e
+DEFB %00000000
+DEFB %00000000
+DEFB %01110000
+DEFB %10001000
+DEFB %11111000
+DEFB %10000000
+DEFB %01110000
+DEFB %00000000
+; l
+DEFB %01100000
+DEFB %00100000
+DEFB %00100000
+DEFB %00100000
+DEFB %00100000
+DEFB %00100000
+DEFB %01110000
+DEFB %00000000
+; o
+DEFB %00000000
+DEFB %00000000
+DEFB %01110000
+DEFB %10001000
+DEFB %10001000
+DEFB %10001000
+DEFB %01110000
+DEFB %00000000
+; W
+DEFB %10001000
+DEFB %10001000
+DEFB %10001000
+DEFB %10101000
+DEFB %10101000
+DEFB %11011000
+DEFB %10001000
+DEFB %00000000; r
+DEFB %00000000
+DEFB %00000000
+DEFB %10110000
+DEFB %11001000
+DEFB %10000000
+DEFB %10000000
+DEFB %10000000
+DEFB %00000000
+; d
+DEFB %00001000
+DEFB %00001000
+DEFB %01101000
+DEFB %10011000
+DEFB %10001000
+DEFB %10011000
+DEFB %01101000
+DEFB %00000000
+chars_end:Back to indexAssembler-ZX81
+; Hello World in Assembler for the ZX81 (Zilog Z80)CALL SPRINT DEFM HELLO WORLD.</contexte>
+    <contexte numELem="2">NOP
+DJNZ COPYCHARS; Let's set write address to start of name table
+XOR A
+OUT (C),A
+LD A,#40
+OUT (C),A; Let's put characters to screen
+LD HL,ORDER
+LD B,ORDER_END-ORDER
+COPYORDER:
+LD A,(HL)
+OUT (DATAP),A
+INC HLJR OVERNMI
+NOP
+NOP; Here is address #66, that is entry for NMI
+RETN ;Return from NMIOVERNMI:
+DJNZ COPYORDER; The end
+HALT; Character set:
+; --------------
+ORDER:
+DEFB 1,2,3,3,4,0,5,4,6,3,7
+ORDER_END:CHARS:; H
+DEFB %10001000
+DEFB %10001000
+DEFB %10001000
+DEFB %11111000
+DEFB %10001000
+DEFB %10001000
+DEFB %10001000
+DEFB %00000000
+; e
+DEFB %00000000
+DEFB %00000000
+DEFB %01110000
+DEFB %10001000
+DEFB %11111000
+DEFB %10000000
+DEFB %01110000
+DEFB %00000000
+; l
+DEFB %01100000
+DEFB %00100000
+DEFB %00100000
+DEFB %00100000
+DEFB %00100000
+DEFB %00100000
+DEFB %01110000
+DEFB %00000000
+; o
+DEFB %00000000
+DEFB %00000000
+DEFB %01110000
+DEFB %10001000
+DEFB %10001000
+DEFB %10001000
+DEFB %01110000
+DEFB %00000000
+; W
+DEFB %10001000
+DEFB %10001000
+DEFB %10001000
+DEFB %10101000
+DEFB %10101000
+DEFB %11011000
+DEFB %10001000
+DEFB %00000000; r
+DEFB %00000000
+DEFB %00000000
+DEFB %10110000
+DEFB %11001000
+DEFB %10000000
+DEFB %10000000
+DEFB %10000000
+DEFB %00000000
+; d
+DEFB %00001000
+DEFB %00001000
+DEFB %01101000
+DEFB %10011000
+DEFB %10001000
+DEFB %10011000
+DEFB %01101000
+DEFB %00000000
+chars_end:Back to indexAssembler-ZX81
+; Hello World in Assembler for the ZX81 (Zilog Z80)CALL SPRINT DEFM HELLO WORLD. DEFB FF RET
+SPRINTPOP HL LD A,(HL) INC HL PUSH HL CP FF RET Z CALL PRINT JR SPRINT
+Back to indexAviSynth
+Hello World for AviSynth Video Editor.</contexte>
+    <contexte numELem="2">DEFB FF RET
+SPRINTPOP HL LD A,(HL) INC HL PUSH HL CP FF RET Z CALL PRINT JR SPRINT
+Back to indexAviSynth
+Hello World for AviSynth Video Editor.</contexte>
+    <contexte numELem="2">wav")
+AudioDub(video, sound_track)
+subtitle("Hello World!")
+Back to indexawk
+# Hello World in awk
+BEGIN { print "Hello World!</contexte>
+    <contexte numELem="2">")
+Back to indexawk
+# Hello World in awk
+BEGIN { print "Hello World!</contexte>
+    <contexte numELem="2">")
+Back to indexawk
+# Hello World in awk
+BEGIN { print "Hello World!" exit
+}
+Back to indexAxel
+Hello World in AXEL (lip-synched speech).</contexte>
+    <contexte numELem="2">" exit
+}
+Back to indexAxel
+Hello World in AXEL (lip-synched speech).</contexte>
+    <contexte numELem="2">htmBack to indexB
+/* Hello World in B */main() { extern a, b, c; putchar (a); putchar (b); putchar (c); putchar ('!</contexte>
+    <contexte numELem="2">*n');
+}a 'hell' ;
+b 'o, w' ;
+c 'orld' ;
+Back to indexBAL
+Hello World in IBM mainframe Basic Assembler Language (BAL)HELLOCSECTSTM R14,R12,12(R13)LRR12,R15USING HELLO,R12LAR10,SAVEAREASTR13,4(R10)STR10,8(R13)LRR13,R10
+*WTO 'HELLO WORLD',ROUTCDE=1
+*L R13,4(R13)LMR14,R12,12(R13)SRR15,R15BCR B'1111',R14
+*
+SAVEAREA DS18FLTORG
+R0 EQU 0
+R1 EQU 1
+R2 EQU 2
+R3 EQU 3
+R4 EQU 4
+R5 EQU 5
+R6 EQU 6
+R7 EQU 7
+R8 EQU 8
+R9 EQU 9
+R10EQU 10
+R11EQU 11
+R12EQU 12
+R13EQU 13
+R14EQU 14
+R15EQU 15END HELLO
+Back to indexBASIC
+10 REM Hello World in BASIC
+20 PRINT "Hello World!</contexte>
+    <contexte numELem="2">*n');
+}a 'hell' ;
+b 'o, w' ;
+c 'orld' ;
+Back to indexBAL
+Hello World in IBM mainframe Basic Assembler Language (BAL)HELLOCSECTSTM R14,R12,12(R13)LRR12,R15USING HELLO,R12LAR10,SAVEAREASTR13,4(R10)STR10,8(R13)LRR13,R10
+*WTO 'HELLO WORLD',ROUTCDE=1
+*L R13,4(R13)LMR14,R12,12(R13)SRR15,R15BCR B'1111',R14
+*
+SAVEAREA DS18FLTORG
+R0 EQU 0
+R1 EQU 1
+R2 EQU 2
+R3 EQU 3
+R4 EQU 4
+R5 EQU 5
+R6 EQU 6
+R7 EQU 7
+R8 EQU 8
+R9 EQU 9
+R10EQU 10
+R11EQU 11
+R12EQU 12
+R13EQU 13
+R14EQU 14
+R15EQU 15END HELLO
+Back to indexBASIC
+10 REM Hello World in BASIC
+20 PRINT "Hello World!</contexte>
+    <contexte numELem="2">*n');
+}a 'hell' ;
+b 'o, w' ;
+c 'orld' ;
+Back to indexBAL
+Hello World in IBM mainframe Basic Assembler Language (BAL)HELLOCSECTSTM R14,R12,12(R13)LRR12,R15USING HELLO,R12LAR10,SAVEAREASTR13,4(R10)STR10,8(R13)LRR13,R10
+*WTO 'HELLO WORLD',ROUTCDE=1
+*L R13,4(R13)LMR14,R12,12(R13)SRR15,R15BCR B'1111',R14
+*
+SAVEAREA DS18FLTORG
+R0 EQU 0
+R1 EQU 1
+R2 EQU 2
+R3 EQU 3
+R4 EQU 4
+R5 EQU 5
+R6 EQU 6
+R7 EQU 7
+R8 EQU 8
+R9 EQU 9
+R10EQU 10
+R11EQU 11
+R12EQU 12
+R13EQU 13
+R14EQU 14
+R15EQU 15END HELLO
+Back to indexBASIC
+10 REM Hello World in BASIC
+20 PRINT "Hello World!</contexte>
+    <contexte numELem="2">*n');
+}a 'hell' ;
+b 'o, w' ;
+c 'orld' ;
+Back to indexBAL
+Hello World in IBM mainframe Basic Assembler Language (BAL)HELLOCSECTSTM R14,R12,12(R13)LRR12,R15USING HELLO,R12LAR10,SAVEAREASTR13,4(R10)STR10,8(R13)LRR13,R10
+*WTO 'HELLO WORLD',ROUTCDE=1
+*L R13,4(R13)LMR14,R12,12(R13)SRR15,R15BCR B'1111',R14
+*
+SAVEAREA DS18FLTORG
+R0 EQU 0
+R1 EQU 1
+R2 EQU 2
+R3 EQU 3
+R4 EQU 4
+R5 EQU 5
+R6 EQU 6
+R7 EQU 7
+R8 EQU 8
+R9 EQU 9
+R10EQU 10
+R11EQU 11
+R12EQU 12
+R13EQU 13
+R14EQU 14
+R15EQU 15END HELLO
+Back to indexBASIC
+10 REM Hello World in BASIC
+20 PRINT "Hello World!"
+Back to indexbc
+#!</contexte>
+    <contexte numELem="2">/usr/bin/bc -q
+# Hello World for the Unix "bc" calculatorprint "Hello World!</contexte>
+    <contexte numELem="2">/usr/bin/bc -q
+# Hello World for the Unix "bc" calculatorprint "Hello World!\n"
+Back to indexBCPL
+// Hello world in BCLP
+GET "libhdr"LET start() = VALOF
+$( writes("Hello world*N")RESULTIS 0
+$)
+Back to indexBeta
+{ *** Hello World in BETA ***}
+(# do'Hello World!</contexte>
+    <contexte numELem="2">\n"
+Back to indexBCPL
+// Hello world in BCLP
+GET "libhdr"LET start() = VALOF
+$( writes("Hello world*N")RESULTIS 0
+$)
+Back to indexBeta
+{ *** Hello World in BETA ***}
+(# do'Hello World!</contexte>
+    <contexte numELem="2">\n"
+Back to indexBCPL
+// Hello world in BCLP
+GET "libhdr"LET start() = VALOF
+$( writes("Hello world*N")RESULTIS 0
+$)
+Back to indexBeta
+{ *** Hello World in BETA ***}
+(# do'Hello World!</contexte>
+    <contexte numELem="2">\n"
+Back to indexBCPL
+// Hello world in BCLP
+GET "libhdr"LET start() = VALOF
+$( writes("Hello world*N")RESULTIS 0
+$)
+Back to indexBeta
+{ *** Hello World in BETA ***}
+(# do'Hello World!</contexte>
+    <contexte numELem="2">\n"
+Back to indexBCPL
+// Hello world in BCLP
+GET "libhdr"LET start() = VALOF
+$( writes("Hello world*N")RESULTIS 0
+$)
+Back to indexBeta
+{ *** Hello World in BETA ***}
+(# do'Hello World!'-putLine
+#)
+Back to indexBrainFxxx
+Hello World in BrainF***, posted by Dmitri Katchalov dmitrik@my-deja.com
+on comp.</contexte>
+    <contexte numELem="2">'-putLine
+#)
+Back to indexBrainFxxx
+Hello World in BrainF***, posted by Dmitri Katchalov dmitrik@my-deja.com
+on comp.</contexte>
+    <contexte numELem="2">Back to indexBS2000
+/BEGIN-PROCEDURE LOGGING=N
+/REMARK "HELLO WORLD" IN BS2000 (SDF)
+/ASSIGN-SYSDTA TO-FILE=*SYSCMD
+/WRITE-TEXT 'HELLO WORLD!</contexte>
+    <contexte numELem="2">Back to indexBS2000
+/BEGIN-PROCEDURE LOGGING=N
+/REMARK "HELLO WORLD" IN BS2000 (SDF)
+/ASSIGN-SYSDTA TO-FILE=*SYSCMD
+/WRITE-TEXT 'HELLO WORLD!'
+/SET-JOB-STEP
+/ASSIGN-SYSDTA TO-FILE=*PRIMARY
+/END-PROCEDURE
+Back to indexC++
+// Hello World in C++#include iostream.</contexte>
+    <contexte numELem="2">'
+/SET-JOB-STEP
+/ASSIGN-SYSDTA TO-FILE=*PRIMARY
+/END-PROCEDURE
+Back to indexC++
+// Hello World in C++#include iostream.</contexte>
+    <contexte numELem="2">hmain()
+{ cout  "Hello World!"  endl; return 0;
+}
+Back to indexC++-ISO
+// Hello World in ISO C++#include iostreamint main()
+{ std::cout  "Hello World!</contexte>
+    <contexte numELem="2">"  endl; return 0;
+}
+Back to indexC++-ISO
+// Hello World in ISO C++#include iostreamint main()
+{ std::cout  "Hello World!</contexte>
+    <contexte numELem="2">"  endl; return 0;
+}
+Back to indexC++-ISO
+// Hello World in ISO C++#include iostreamint main()
+{ std::cout  "Hello World!"  std::endl;
+}
+Back to indexC++-MFC
+// Hello World in C++ for Microsoft Foundation Classes
+// (Microsoft Visual C++).</contexte>
+    <contexte numELem="2">"  std::endl;
+}
+Back to indexC++-MFC
+// Hello World in C++ for Microsoft Foundation Classes
+// (Microsoft Visual C++).</contexte>
+    <contexte numELem="2">hclass CHello : public CFrameWnd
+{
+public: CHello() { Create(NULL,_T("Hello World!"),WS_OVERLAPPEDWINDOW,rectDefault); }
+};class CHelloApp : public CWinApp
+{
+public: virtual BOOL InitInstance();
+};BOOL CHelloApp::InitInstance()
+{ m_pMainWnd = new CHello(); m_pMainWnd-ShowWindow(m_nCmdShow); m_pMainWnd-UpdateWindow(); return TRUE;
+}CHelloApp theApp;
+Back to indexC++-Qt
+// Hello World in C++ for the Qt framework#include qapplication.h
+#include qlabel.</contexte>
+    <contexte numELem="2">"),WS_OVERLAPPEDWINDOW,rectDefault); }
+};class CHelloApp : public CWinApp
+{
+public: virtual BOOL InitInstance();
+};BOOL CHelloApp::InitInstance()
+{ m_pMainWnd = new CHello(); m_pMainWnd-ShowWindow(m_nCmdShow); m_pMainWnd-UpdateWindow(); return TRUE;
+}CHelloApp theApp;
+Back to indexC++-Qt
+// Hello World in C++ for the Qt framework#include qapplication.h
+#include qlabel.</contexte>
+    <contexte numELem="2">hint main(int argc, char *argv)
+{ QApplication a(argc, argv); QLabel l("Hello World!", 0); l.</contexte>
+    <contexte numELem="2">exec());
+}
+Back to indexC-Ansi
+/* Hello World in C, Ansi-style */#include stdio.h
+#include stdlib.</contexte>
+    <contexte numELem="2">hint main(void)
+{ puts("Hello World!"); return EXIT_SUCCESS;
+}
+Back to indexC-Curses
+/* Hello World in C for Curses */#include curses.h
+main()
+{ initscr(); addstr("Hello World!</contexte>
+    <contexte numELem="2">"); return EXIT_SUCCESS;
+}
+Back to indexC-Curses
+/* Hello World in C for Curses */#include curses.h
+main()
+{ initscr(); addstr("Hello World!</contexte>
+    <contexte numELem="2">"); return EXIT_SUCCESS;
+}
+Back to indexC-Curses
+/* Hello World in C for Curses */#include curses.h
+main()
+{ initscr(); addstr("Hello World!\n"); refresh(); endwin(); return 0;
+}
+Back to indexC-GEM
+/* Hello World for C with GEM */#include aes.h
+main()
+{ appl_init(); form_alert(1,""); appl_exit(); return 0;
+}
+Back to indexC-Intuition
+/* Hello World in C for Intution (Amiga GUI) */#include intuition/intuition.</contexte>
+    <contexte numELem="2">\n"); refresh(); endwin(); return 0;
+}
+Back to indexC-GEM
+/* Hello World for C with GEM */#include aes.h
+main()
+{ appl_init(); form_alert(1,""); appl_exit(); return 0;
+}
+Back to indexC-Intuition
+/* Hello World in C for Intution (Amiga GUI) */#include intuition/intuition.</contexte>
+    <contexte numELem="2">\n"); refresh(); endwin(); return 0;
+}
+Back to indexC-GEM
+/* Hello World for C with GEM */#include aes.h
+main()
+{ appl_init(); form_alert(1,""); appl_exit(); return 0;
+}
+Back to indexC-Intuition
+/* Hello World in C for Intution (Amiga GUI) */#include intuition/intuition.</contexte>
+    <contexte numELem="2">hstruct IntuitionBase *IntuitionBase = NULL;struct IntuiText hello_text = {-1,-1,JAM1,0,0,NULL,"Hello World!",NULL };
+struct IntuiText ok_text= {-1,-1,JAM1,0,0,NULL,"Ok",NULL };void main(void)
+{IntuitionBase = (struct IntuitionBase *)OpenLibrary("intuition.</contexte>
+    <contexte numELem="2">library", 0);AutoRequest(NULL, &amp;hello_text, NULL, &amp;ok_text, NULL, NULL, 100, 50);CloseLibrary(IntuitionBase);
+}
+Back to indexC-K+R
+/* Hello World in C, K&amp;R-style */main()
+{ puts("Hello World!</contexte>
+    <contexte numELem="2">library", 0);AutoRequest(NULL, &amp;hello_text, NULL, &amp;ok_text, NULL, NULL, 100, 50);CloseLibrary(IntuitionBase);
+}
+Back to indexC-K+R
+/* Hello World in C, K&amp;R-style */main()
+{ puts("Hello World!"); return 0;
+}
+Back to indexC-Objective
+/* Hello World in Objective-C.</contexte>
+    <contexte numELem="2">"); return 0;
+}
+Back to indexC-Objective
+/* Hello World in Objective-C.</contexte>
+    <contexte numELem="2">*/#include stdio.h
+#include objpak.h
+int main(int argc,char **argv)
+{ id set = ; argv++;while (--argc) ]; ); }]; return 0;
+}
+Back to indexC-PresManager
+/* Hello World for C with PresentationManager / OS/2 2.</contexte>
+    <contexte numELem="2">hint main( void )
+{HMQ hmq; hmq = WinCreateMsgQueue( 0, 0 ); WinMessageBox( HWND_DESKTOP, HWND_DESKTOP, (PSZ)"Hello World!", (PSZ)"", 0, MB_OK ); WinDestroyMsgQueue( hmq ); return 0;
+}
+Back to indexC-Sharp
+// Hello World in Microsoft C# ("C-Sharp").</contexte>
+    <contexte numELem="2">", (PSZ)"", 0, MB_OK ); WinDestroyMsgQueue( hmq ); return 0;
+}
+Back to indexC-Sharp
+// Hello World in Microsoft C# ("C-Sharp").</contexte>
+    <contexte numELem="2">"); return 0; }
+}
+Back to indexC-Windows
+/* Hello world in C for MS-Windows */#include windows.</contexte>
+    <contexte numELem="2">hint PASCAL WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR CmdLine, int Show)
+{ MessageBox(GetActiveWindow(), "Hello World!", "Hello Windows World", MB_OK); return 0;
+}
+Back to indexC-X11-Athena
+/* Hello World in C with X11 using Athena widgets */#include X11/Intrinsic.h
+#include X11/StringDefs.h
+#include X11/Xaw/Label.</contexte>
+    <contexte numELem="2">", "Hello Windows World", MB_OK); return 0;
+}
+Back to indexC-X11-Athena
+/* Hello World in C with X11 using Athena widgets */#include X11/Intrinsic.h
+#include X11/StringDefs.h
+#include X11/Xaw/Label.</contexte>
+    <contexte numELem="2">hmain(int argc,char **argv)
+{ XtAppContext app_context; Widget toplevel,hello;toplevel = XtVaAppInitialize(&amp;app_context,"XHello",NULL,0, &amp;argc,argv,NULL,NULL); hello = XtVaCreateManagedWidget("Hello World!",labelWidgetClass, toplevel,(void*)0);XtRealizeWidget(toplevel);XtAppMainLoop(app_context); return 0;
+}
+Back to indexCAML-Light
+(* Hello World in CAML Light *)let hello =print_string "Hello World!</contexte>
+    <contexte numELem="2">",labelWidgetClass, toplevel,(void*)0);XtRealizeWidget(toplevel);XtAppMainLoop(app_context); return 0;
+}
+Back to indexCAML-Light
+(* Hello World in CAML Light *)let hello =print_string "Hello World!</contexte>
+    <contexte numELem="2">",labelWidgetClass, toplevel,(void*)0);XtRealizeWidget(toplevel);XtAppMainLoop(app_context); return 0;
+}
+Back to indexCAML-Light
+(* Hello World in CAML Light *)let hello =print_string "Hello World!";
+;;
+Back to indexClean
+// Hello World in Cleanmodule helloStart :: String
+Start = "Hello World!</contexte>
+    <contexte numELem="2">";
+;;
+Back to indexClean
+// Hello World in Cleanmodule helloStart :: String
+Start = "Hello World!</contexte>
+    <contexte numELem="2">";
+;;
+Back to indexClean
+// Hello World in Cleanmodule helloStart :: String
+Start = "Hello World!\n"
+Back to indexClipper
+// Hello World in Clipper@ "Hello World"
+Back to indexCobol* Hello World in Cobol*****************************
+IDENTIFICATION DIVISION.</contexte>
+    <contexte numELem="2">\n"
+Back to indexClipper
+// Hello World in Clipper@ "Hello World"
+Back to indexCobol* Hello World in Cobol*****************************
+IDENTIFICATION DIVISION.</contexte>
+    <contexte numELem="2">\n"
+Back to indexClipper
+// Hello World in Clipper@ "Hello World"
+Back to indexCobol* Hello World in Cobol*****************************
+IDENTIFICATION DIVISION.</contexte>
+    <contexte numELem="2">\n"
+Back to indexClipper
+// Hello World in Clipper@ "Hello World"
+Back to indexCobol* Hello World in Cobol*****************************
+IDENTIFICATION DIVISION.</contexte>
+    <contexte numELem="2">DISPLAY "Hello World!"
+STOP RUN.</contexte>
+    <contexte numELem="2">****************************
+Back to indexCommandScript
+#Hello World in Command Script 3.</contexte>
+    <contexte numELem="2">Name: "Hello World"#Block(Main).</contexte>
+    <contexte numELem="2">Start echo "Hello World!"
+#Block(Main).</contexte>
+    <contexte numELem="2">End
+Back to indexD
+// Hello World in Dvoid main()
+{ printf("Hello World!</contexte>
+    <contexte numELem="2">End
+Back to indexD
+// Hello World in Dvoid main()
+{ printf("Hello World!\n");
+}
+Back to indexdBase
+* Hello World in dBase IV?</contexte>
+    <contexte numELem="2">\n");
+}
+Back to indexdBase
+* Hello World in dBase IV?</contexte>
+    <contexte numELem="2">"Hello World!"
+Back to indexDelphi
+// Hello World in Delphi
+Program Hello_World;{$APPTYPE CONSOLE}Uses Dialogs;Begin WriteLn('Hello World');
+End.</contexte>
+    <contexte numELem="2">"
+Back to indexDelphi
+// Hello World in Delphi
+Program Hello_World;{$APPTYPE CONSOLE}Uses Dialogs;Begin WriteLn('Hello World');
+End.</contexte>
+    <contexte numELem="2">"
+Back to indexDelphi
+// Hello World in Delphi
+Program Hello_World;{$APPTYPE CONSOLE}Uses Dialogs;Begin WriteLn('Hello World');
+End.</contexte>
+    <contexte numELem="2">Back to indexDylan
+module:	hello-world
+author:	Homer
+copyright:(c) 1994 Homer
+version:1.</contexte>
+    <contexte numELem="2">0// Hello World in DYLANdefine method main (#rest args) princ("Hello world!</contexte>
+    <contexte numELem="2">0// Hello World in DYLANdefine method main (#rest args) princ("Hello world!");
+end;main();
+Back to indexDynaMorph
+!</contexte>
+    <contexte numELem="2">Hello World in DynaMorph 
+#setString foo {Hello World!</contexte>
+    <contexte numELem="2">Hello World in DynaMorph 
+#setString foo {Hello World!}#
+html
+headtitleDynaMorph/title
+/head
+body
+#getString foo#
+/body
+/html
+Back to indexEiffel
+indexing "Hello World in Eiffel"class HELLOcreationrunfeature run islocalio : BASIC_IO;do!</contexte>
+    <contexte numELem="2">}#
+html
+headtitleDynaMorph/title
+/head
+body
+#getString foo#
+/body
+/html
+Back to indexEiffel
+indexing "Hello World in Eiffel"class HELLOcreationrunfeature run islocalio : BASIC_IO;do!</contexte>
+    <contexte numELem="2">put_string("Hello World!");io.</contexte>
+    <contexte numELem="2">put_newline;end; -- runend; -- class HELLO
+Back to indexElan
+(* Hello World in ELAN *)putline ("Hello World!</contexte>
+    <contexte numELem="2">put_newline;end; -- runend; -- class HELLO
+Back to indexElan
+(* Hello World in ELAN *)putline ("Hello World!");
+Back to indexErlang
+%% Hello World in Erlang-module(hello).</contexte>
+    <contexte numELem="2">");
+Back to indexErlang
+%% Hello World in Erlang-module(hello).</contexte>
+    <contexte numELem="2">format("Hello World!\n").</contexte>
+    <contexte numELem="2">Back to indexEuphoria
+-- Hello World in Euphoriaprocedure Hello() print ("Hello World!</contexte>
+    <contexte numELem="2">Back to indexEuphoria
+-- Hello World in Euphoriaprocedure Hello() print ("Hello World!")end procedure
+Back to indexFocal
+1.</contexte>
+    <contexte numELem="2">01 COMMENT HELLO WORLD IN FOCAL
+1.</contexte>
+    <contexte numELem="2">02 TYPE "HELLO WORLD", !</contexte>
+    <contexte numELem="2">03 QUIT
+Back to indexForth
+: Hello World in Forth .</contexte>
+    <contexte numELem="2">" Hello World!" cr
+;
+Back to indexFortran
+C Hello World in FortranPROGRAM HELLO WRITE (*,100) STOP 100 FORMAT (' Hello World!</contexte>
+    <contexte numELem="2">" cr
+;
+Back to indexFortran
+C Hello World in FortranPROGRAM HELLO WRITE (*,100) STOP 100 FORMAT (' Hello World!</contexte>
+    <contexte numELem="2">" cr
+;
+Back to indexFortran
+C Hello World in FortranPROGRAM HELLO WRITE (*,100) STOP 100 FORMAT (' Hello World! ' /) END
+Back to indexFortran77
+C Hello World in Fortran 77PROGRAM HELLO PRINT*, 'Hello World!</contexte>
+    <contexte numELem="2">' /) END
+Back to indexFortran77
+C Hello World in Fortran 77PROGRAM HELLO PRINT*, 'Hello World!</contexte>
+    <contexte numELem="2">' /) END
+Back to indexFortran77
+C Hello World in Fortran 77PROGRAM HELLO PRINT*, 'Hello World!' END
+Back to indexFortranIVPROGRAM HELLO
+c
+CHello World in Fortran IV (supposedly for a TR440)
+cWRITE (6,'('' Hello World!</contexte>
+    <contexte numELem="2">' END
+Back to indexFortranIVPROGRAM HELLO
+c
+CHello World in Fortran IV (supposedly for a TR440)
+cWRITE (6,'('' Hello World!</contexte>
+    <contexte numELem="2">' END
+Back to indexFortranIVPROGRAM HELLO
+c
+CHello World in Fortran IV (supposedly for a TR440)
+cWRITE (6,'('' Hello World!'')')END
+Back to indexFrink
+// Hello World in Frinkprintln
+Back to indexGofer
+-- Hello World in Gofer
+-- Simple versionhelloWorld:: String
+helloWorld = "Hello World!</contexte>
+    <contexte numELem="2">'')')END
+Back to indexFrink
+// Hello World in Frinkprintln
+Back to indexGofer
+-- Hello World in Gofer
+-- Simple versionhelloWorld:: String
+helloWorld = "Hello World!</contexte>
+    <contexte numELem="2">'')')END
+Back to indexFrink
+// Hello World in Frinkprintln
+Back to indexGofer
+-- Hello World in Gofer
+-- Simple versionhelloWorld:: String
+helloWorld = "Hello World!</contexte>
+    <contexte numELem="2">'')')END
+Back to indexFrink
+// Hello World in Frinkprintln
+Back to indexGofer
+-- Hello World in Gofer
+-- Simple versionhelloWorld:: String
+helloWorld = "Hello World!\n"
+-- Hello World in Gofer
+-- Dialog versionhelloWorld :: Dialogue
+helloWorld resps =Back to indexGynkoSoft
+; Hello World in GynkoSoft
+; Simple version
+0.</contexte>
+    <contexte numELem="2">\n"
+-- Hello World in Gofer
+-- Dialog versionhelloWorld :: Dialogue
+helloWorld resps =Back to indexGynkoSoft
+; Hello World in GynkoSoft
+; Simple version
+0.</contexte>
+    <contexte numELem="2">\n"
+-- Hello World in Gofer
+-- Dialog versionhelloWorld :: Dialogue
+helloWorld resps =Back to indexGynkoSoft
+; Hello World in GynkoSoft
+; Simple version
+0.</contexte>
+    <contexte numELem="2">"
+; Hello World in GynkoSoft
+; Dialog box output
+0.</contexte>
+    <contexte numELem="2">"
+Back to indexHaskell
+-- Hello World in Haskellmodule Hello where
+hello::String
+hello = "Hello World!</contexte>
+    <contexte numELem="2">"
+Back to indexHaskell
+-- Hello World in Haskellmodule Hello where
+hello::String
+hello = "Hello World!"Back to indexHDX
+# Hello World as bdehaldia.exe external commandproc hdx_info {} { set ::Titel "&amp;Hello World" set ::Menu GMA
+}proc hdx_run {} { tk_messageBox -type ok -message "Hello World!</contexte>
+    <contexte numELem="2">"Back to indexHDX
+# Hello World as bdehaldia.exe external commandproc hdx_info {} { set ::Titel "&amp;Hello World" set ::Menu GMA
+}proc hdx_run {} { tk_messageBox -type ok -message "Hello World!</contexte>
+    <contexte numELem="2">"Back to indexHDX
+# Hello World as bdehaldia.exe external commandproc hdx_info {} { set ::Titel "&amp;Hello World" set ::Menu GMA
+}proc hdx_run {} { tk_messageBox -type ok -message "Hello World!</contexte>
+    <contexte numELem="2">"Back to indexHDX
+# Hello World as bdehaldia.exe external commandproc hdx_info {} { set ::Titel "&amp;Hello World" set ::Menu GMA
+}proc hdx_run {} { tk_messageBox -type ok -message "Hello World!" destroy .</contexte>
+    <contexte numELem="2">}
+Back to indexHP-41C
+Hello World for the HP 41C.</contexte>
+    <contexte numELem="2">01 LBL "HELLO"
+02 "HELLO WORLD"
+03 AVIEW
+Back to indexHP-48
+
+@ Hello World for the HP-48
+@  and  are one char each
+"HELLO WORLD"
+
+Back to indexHTML
+HTML
+!</contexte>
+    <contexte numELem="2">01 LBL "HELLO"
+02 "HELLO WORLD"
+03 AVIEW
+Back to indexHP-48
+
+@ Hello World for the HP-48
+@  and  are one char each
+"HELLO WORLD"
+
+Back to indexHTML
+HTML
+!</contexte>
+    <contexte numELem="2">01 LBL "HELLO"
+02 "HELLO WORLD"
+03 AVIEW
+Back to indexHP-48
+
+@ Hello World for the HP-48
+@  and  are one char each
+"HELLO WORLD"
+
+Back to indexHTML
+HTML
+!</contexte>
+    <contexte numELem="2">-- Hello World in HTML --
+HEAD
+TITLEHello World!</contexte>
+    <contexte numELem="2">-- Hello World in HTML --
+HEAD
+TITLEHello World!/TITLE
+/HEAD
+BODY
+Hello World!</contexte>
+    <contexte numELem="2">/TITLE
+/HEAD
+BODY
+Hello World!
+/BODY
+/HTML
+Back to indexHuman
+Hello World in human languages.</contexte>
+    <contexte numELem="2">/BODY
+/HTML
+Back to indexHuman
+Hello World in human languages.</contexte>
+    <contexte numELem="2">English:Hello World!
+French:	Salut le Monde!</contexte>
+    <contexte numELem="2">" upside-down
+Back to indexIBM-Exec
+Hello World for IBM EXEC (under VM/CMS)&amp;CONTROL
+*
+&amp;TYPE Hello World!</contexte>
+    <contexte numELem="2">" upside-down
+Back to indexIBM-Exec
+Hello World for IBM EXEC (under VM/CMS)&amp;CONTROL
+*
+&amp;TYPE Hello World!
+*
+&amp;EXIT 0
+Back to indexIBM-Exec2
+Hello World for IBM EXEC2 (under VM/CMS)&amp;TRACE OFF
+*
+&amp;TYPE Hello World!</contexte>
+    <contexte numELem="2">*
+&amp;EXIT 0
+Back to indexIBM-Exec2
+Hello World for IBM EXEC2 (under VM/CMS)&amp;TRACE OFF
+*
+&amp;TYPE Hello World!</contexte>
+    <contexte numELem="2">*
+&amp;EXIT 0
+Back to indexIBM-Exec2
+Hello World for IBM EXEC2 (under VM/CMS)&amp;TRACE OFF
+*
+&amp;TYPE Hello World!
+*
+&amp;EXIT 0
+Back to indexici
+# Hello World in ici (http://www.</contexte>
+    <contexte numELem="2">*
+&amp;EXIT 0
+Back to indexici
+# Hello World in ici (http://www.</contexte>
+    <contexte numELem="2">au/~atrn/ici/)
+printf("Hello World!\n");
+Back to indexIcon
+# Hello world in Icon (http://www.</contexte>
+    <contexte numELem="2">\n");
+Back to indexIcon
+# Hello world in Icon (http://www.</contexte>
+    <contexte numELem="2">edu/icon/)procedure main() write("Hello world")
+end
+Back to indexInformix-4GL
+# Hello World in Informix 4GLMAINDISPLAY "Hello World"END MAIN
+Back to indexInstallScript
+// Hello World in InstallScript
+// (Scripting language of InstallShield, a Windows install generator)programMessageBox("Hello World!</contexte>
+    <contexte numELem="2">edu/icon/)procedure main() write("Hello world")
+end
+Back to indexInformix-4GL
+# Hello World in Informix 4GLMAINDISPLAY "Hello World"END MAIN
+Back to indexInstallScript
+// Hello World in InstallScript
+// (Scripting language of InstallShield, a Windows install generator)programMessageBox("Hello World!</contexte>
+    <contexte numELem="2">edu/icon/)procedure main() write("Hello world")
+end
+Back to indexInformix-4GL
+# Hello World in Informix 4GLMAINDISPLAY "Hello World"END MAIN
+Back to indexInstallScript
+// Hello World in InstallScript
+// (Scripting language of InstallShield, a Windows install generator)programMessageBox("Hello World!</contexte>
+    <contexte numELem="2">edu/icon/)procedure main() write("Hello world")
+end
+Back to indexInformix-4GL
+# Hello World in Informix 4GLMAINDISPLAY "Hello World"END MAIN
+Back to indexInstallScript
+// Hello World in InstallScript
+// (Scripting language of InstallShield, a Windows install generator)programMessageBox("Hello World!</contexte>
+    <contexte numELem="2">edu/icon/)procedure main() write("Hello world")
+end
+Back to indexInformix-4GL
+# Hello World in Informix 4GLMAINDISPLAY "Hello World"END MAIN
+Back to indexInstallScript
+// Hello World in InstallScript
+// (Scripting language of InstallShield, a Windows install generator)programMessageBox("Hello World!",INFORMATION);
+endprogram
+Back to indexIntercal HELLO WORLD IN INTERCAL NOT FORTRANHELLO WORLD
+Back to indexJava
+// Hello World in Javaclass HelloWorld { static public void main( String args ) { System.</contexte>
+    <contexte numELem="2">",INFORMATION);
+endprogram
+Back to indexIntercal HELLO WORLD IN INTERCAL NOT FORTRANHELLO WORLD
+Back to indexJava
+// Hello World in Javaclass HelloWorld { static public void main( String args ) { System.</contexte>
+    <contexte numELem="2">",INFORMATION);
+endprogram
+Back to indexIntercal HELLO WORLD IN INTERCAL NOT FORTRANHELLO WORLD
+Back to indexJava
+// Hello World in Javaclass HelloWorld { static public void main( String args ) { System.</contexte>
+    <contexte numELem="2">",INFORMATION);
+endprogram
+Back to indexIntercal HELLO WORLD IN INTERCAL NOT FORTRANHELLO WORLD
+Back to indexJava
+// Hello World in Javaclass HelloWorld { static public void main( String args ) { System.</contexte>
+    <contexte numELem="2">println( "Hello World!" ); }
+}
+Back to indexJava-Mobile
+// Hello World on a mobile Java devicepackage helloworld;import javax.</contexte>
+    <contexte numELem="2">" ); }
+}
+Back to indexJava-Mobile
+// Hello World on a mobile Java devicepackage helloworld;import javax.</contexte>
+    <contexte numELem="2">*;public class HelloWorld extends MIDlet {public HelloWorld() { Form form = new Form("Hello World"); form.</contexte>
+    <contexte numELem="2">append("Hello world!"); Display.</contexte>
+    <contexte numELem="2">-- Hello World for Java Server Pages --%@ page language='java' %
+%="Hello World!</contexte>
+    <contexte numELem="2">-- Hello World for Java Server Pages --%@ page language='java' %
+%="Hello World!" %
+Back to indexJava-Servlet
+import javax.</contexte>
+    <contexte numELem="2">*;//
+// Hello World Java Servlet
+//
+public class HelloWorld extends HttpServlet {
+public void service(HttpServletRequest request,
+HttpServletResponse response)
+throws IOException {response.</contexte>
+    <contexte numELem="2">println("Hello World!");
+out.</contexte>
+    <contexte numELem="2">println("/body/html");
+}
+}
+Back to indexJavaScript
+html
+body
+script language="JavaScript" type="text/javascript"
+// Hello World in JavaScript
+document.</contexte>
+    <contexte numELem="2">write('Hello World');
+/script
+/body
+/html
+Back to indexJCL
+//HERIBJOB,'HERIBERT OTTEN',PRTY=12
+//* Hello World for MVS
+//HALLOEXEC PGM=IEBGENER
+//SYSPRINT DD SYSOUT=*
+//SYSUT2 DD SYSOUT=T
+//SYSUT1 DD *
+Hello World!</contexte>
+    <contexte numELem="2">write('Hello World');
+/script
+/body
+/html
+Back to indexJCL
+//HERIBJOB,'HERIBERT OTTEN',PRTY=12
+//* Hello World for MVS
+//HALLOEXEC PGM=IEBGENER
+//SYSPRINT DD SYSOUT=*
+//SYSUT2 DD SYSOUT=T
+//SYSUT1 DD *
+Hello World!</contexte>
+    <contexte numELem="2">write('Hello World');
+/script
+/body
+/html
+Back to indexJCL
+//HERIBJOB,'HERIBERT OTTEN',PRTY=12
+//* Hello World for MVS
+//HALLOEXEC PGM=IEBGENER
+//SYSPRINT DD SYSOUT=*
+//SYSUT2 DD SYSOUT=T
+//SYSUT1 DD *
+Hello World!
+/*
+//
+Back to indexJudoScript
+// Hello World in JudoScript (a Java scripting layer).</contexte>
+    <contexte numELem="2">/*
+//
+Back to indexJudoScript
+// Hello World in JudoScript (a Java scripting layer).</contexte>
+    <contexte numELem="2">"Hello World";
+Back to indexLimbo
+Hello World in Limbo.</contexte>
+    <contexte numELem="2">"Hello World";
+Back to indexLimbo
+Hello World in Limbo.</contexte>
+    <contexte numELem="2">m";Cmd : module { init : fn (ctxt : ref Draw-Context, args : list of string);
+};init(nil : ref Draw-Context, nil : list of string)
+{ sys := load Sys Sys-PATH; sys-print("Hello World\n");
+}
+Back to indexLingo
+Hello World in Lingo (Macromedia Director)on startmovie alert "Hello World"end
+Back to indexLisp
+;;; Hello World in Common Lisp(defun helloworld () (print "Hello World!</contexte>
+    <contexte numELem="2">m";Cmd : module { init : fn (ctxt : ref Draw-Context, args : list of string);
+};init(nil : ref Draw-Context, nil : list of string)
+{ sys := load Sys Sys-PATH; sys-print("Hello World\n");
+}
+Back to indexLingo
+Hello World in Lingo (Macromedia Director)on startmovie alert "Hello World"end
+Back to indexLisp
+;;; Hello World in Common Lisp(defun helloworld () (print "Hello World!</contexte>
+    <contexte numELem="2">m";Cmd : module { init : fn (ctxt : ref Draw-Context, args : list of string);
+};init(nil : ref Draw-Context, nil : list of string)
+{ sys := load Sys Sys-PATH; sys-print("Hello World\n");
+}
+Back to indexLingo
+Hello World in Lingo (Macromedia Director)on startmovie alert "Hello World"end
+Back to indexLisp
+;;; Hello World in Common Lisp(defun helloworld () (print "Hello World!</contexte>
+    <contexte numELem="2">m";Cmd : module { init : fn (ctxt : ref Draw-Context, args : list of string);
+};init(nil : ref Draw-Context, nil : list of string)
+{ sys := load Sys Sys-PATH; sys-print("Hello World\n");
+}
+Back to indexLingo
+Hello World in Lingo (Macromedia Director)on startmovie alert "Hello World"end
+Back to indexLisp
+;;; Hello World in Common Lisp(defun helloworld () (print "Hello World!</contexte>
+    <contexte numELem="2">m";Cmd : module { init : fn (ctxt : ref Draw-Context, args : list of string);
+};init(nil : ref Draw-Context, nil : list of string)
+{ sys := load Sys Sys-PATH; sys-print("Hello World\n");
+}
+Back to indexLingo
+Hello World in Lingo (Macromedia Director)on startmovie alert "Hello World"end
+Back to indexLisp
+;;; Hello World in Common Lisp(defun helloworld () (print "Hello World!")
+)
+Back to indexLogo
+; Hello World in LogoDRUCKEZEILEBack to indexLogo-graphical
+; Hello World in LOGO, graphical output.</contexte>
+    <contexte numELem="2">")
+)
+Back to indexLogo
+; Hello World in LogoDRUCKEZEILEBack to indexLogo-graphical
+; Hello World in LOGO, graphical output.</contexte>
+    <contexte numELem="2">")
+)
+Back to indexLogo
+; Hello World in LogoDRUCKEZEILEBack to indexLogo-graphical
+; Hello World in LOGO, graphical output.</contexte>
+    <contexte numELem="2">go 20 , left 180,
+go 40 , left 180,
+go 20 , right 90,
+go 20 , left 90 ,
+go 20 , left 180,
+go 40 , left 90 ,
+go 20 , left 90 ,
+go 20 , right 90 ,
+go 20 , right 90 ,
+go 10 , right 90 ,
+go 20 , left 90 ,
+go 10 , left 90 ,
+go 30 , left 90 ,
+go 40 , left 180,
+go 40 , left 90 ,
+go 20 , left 90 ,
+go 40 , left 180,
+go 40 , left 90 ,
+go 40 , left 90 ,
+go 20 , left 90 ,
+go 20 , left 90 ,
+go 20 , left 90 ,
+go 60 , left 90 ,
+go 40 , left 180,
+go 40 , left 90 ,
+go 20 , left 90 ,
+go 20 , left 180,
+go 20 , left 90 ,
+go 20 , left 90 ,
+go 40 , left 180,
+go 40 , left 90 ,
+go 40 , left 90 ,
+go 20 , left 90 ,
+go 20 , left 90 ,
+go 20 , left 90 ,
+go 40 , left 90 ,
+go 20 , right 90,
+go 20 , right 90,
+go 5 , left 90,
+go 5 , left 90,
+go 25 , left 180,
+go 40 , left 90 ,
+go 40 , left 90 ,
+go 20 , left 90 ,
+go 20 , left 90 ,
+go 20 , left 90 ,
+go 20 , left 90 ,
+go 40 , left 180,
+go 40 ,
+Back to indexlua
+# Hello World in luaprint "Hello world"
+Back to indexMACRO10
+TITLE HELLO WORLD
+; HELLO WORLD IN MACRO 10 FOR TOPS-10
+ENTRY OUTPUT
+SEARCH UUOSYMLAB:ASCIZ /HELLO WORLD
+/
+OUTPUT: OUTSTR LAB; OUTPUT MESSAGE MONRT.</contexte>
+    <contexte numELem="2">go 20 , left 180,
+go 40 , left 180,
+go 20 , right 90,
+go 20 , left 90 ,
+go 20 , left 180,
+go 40 , left 90 ,
+go 20 , left 90 ,
+go 20 , right 90 ,
+go 20 , right 90 ,
+go 10 , right 90 ,
+go 20 , left 90 ,
+go 10 , left 90 ,
+go 30 , left 90 ,
+go 40 , left 180,
+go 40 , left 90 ,
+go 20 , left 90 ,
+go 40 , left 180,
+go 40 , left 90 ,
+go 40 , left 90 ,
+go 20 , left 90 ,
+go 20 , left 90 ,
+go 20 , left 90 ,
+go 60 , left 90 ,
+go 40 , left 180,
+go 40 , left 90 ,
+go 20 , left 90 ,
+go 20 , left 180,
+go 20 , left 90 ,
+go 20 , left 90 ,
+go 40 , left 180,
+go 40 , left 90 ,
+go 40 , left 90 ,
+go 20 , left 90 ,
+go 20 , left 90 ,
+go 20 , left 90 ,
+go 40 , left 90 ,
+go 20 , right 90,
+go 20 , right 90,
+go 5 , left 90,
+go 5 , left 90,
+go 25 , left 180,
+go 40 , left 90 ,
+go 40 , left 90 ,
+go 20 , left 90 ,
+go 20 , left 90 ,
+go 20 , left 90 ,
+go 20 , left 90 ,
+go 40 , left 180,
+go 40 ,
+Back to indexlua
+# Hello World in luaprint "Hello world"
+Back to indexMACRO10
+TITLE HELLO WORLD
+; HELLO WORLD IN MACRO 10 FOR TOPS-10
+ENTRY OUTPUT
+SEARCH UUOSYMLAB:ASCIZ /HELLO WORLD
+/
+OUTPUT: OUTSTR LAB; OUTPUT MESSAGE MONRT.</contexte>
+    <contexte numELem="2">go 20 , left 180,
+go 40 , left 180,
+go 20 , right 90,
+go 20 , left 90 ,
+go 20 , left 180,
+go 40 , left 90 ,
+go 20 , left 90 ,
+go 20 , right 90 ,
+go 20 , right 90 ,
+go 10 , right 90 ,
+go 20 , left 90 ,
+go 10 , left 90 ,
+go 30 , left 90 ,
+go 40 , left 180,
+go 40 , left 90 ,
+go 20 , left 90 ,
+go 40 , left 180,
+go 40 , left 90 ,
+go 40 , left 90 ,
+go 20 , left 90 ,
+go 20 , left 90 ,
+go 20 , left 90 ,
+go 60 , left 90 ,
+go 40 , left 180,
+go 40 , left 90 ,
+go 20 , left 90 ,
+go 20 , left 180,
+go 20 , left 90 ,
+go 20 , left 90 ,
+go 40 , left 180,
+go 40 , left 90 ,
+go 40 , left 90 ,
+go 20 , left 90 ,
+go 20 , left 90 ,
+go 20 , left 90 ,
+go 40 , left 90 ,
+go 20 , right 90,
+go 20 , right 90,
+go 5 , left 90,
+go 5 , left 90,
+go 25 , left 180,
+go 40 , left 90 ,
+go 40 , left 90 ,
+go 20 , left 90 ,
+go 20 , left 90 ,
+go 20 , left 90 ,
+go 20 , left 90 ,
+go 40 , left 180,
+go 40 ,
+Back to indexlua
+# Hello World in luaprint "Hello world"
+Back to indexMACRO10
+TITLE HELLO WORLD
+; HELLO WORLD IN MACRO 10 FOR TOPS-10
+ENTRY OUTPUT
+SEARCH UUOSYMLAB:ASCIZ /HELLO WORLD
+/
+OUTPUT: OUTSTR LAB; OUTPUT MESSAGE MONRT.</contexte>
+    <contexte numELem="2">go 20 , left 180,
+go 40 , left 180,
+go 20 , right 90,
+go 20 , left 90 ,
+go 20 , left 180,
+go 40 , left 90 ,
+go 20 , left 90 ,
+go 20 , right 90 ,
+go 20 , right 90 ,
+go 10 , right 90 ,
+go 20 , left 90 ,
+go 10 , left 90 ,
+go 30 , left 90 ,
+go 40 , left 180,
+go 40 , left 90 ,
+go 20 , left 90 ,
+go 40 , left 180,
+go 40 , left 90 ,
+go 40 , left 90 ,
+go 20 , left 90 ,
+go 20 , left 90 ,
+go 20 , left 90 ,
+go 60 , left 90 ,
+go 40 , left 180,
+go 40 , left 90 ,
+go 20 , left 90 ,
+go 20 , left 180,
+go 20 , left 90 ,
+go 20 , left 90 ,
+go 40 , left 180,
+go 40 , left 90 ,
+go 40 , left 90 ,
+go 20 , left 90 ,
+go 20 , left 90 ,
+go 20 , left 90 ,
+go 40 , left 90 ,
+go 20 , right 90,
+go 20 , right 90,
+go 5 , left 90,
+go 5 , left 90,
+go 25 , left 180,
+go 40 , left 90 ,
+go 40 , left 90 ,
+go 20 , left 90 ,
+go 20 , left 90 ,
+go 20 , left 90 ,
+go 20 , left 90 ,
+go 40 , left 180,
+go 40 ,
+Back to indexlua
+# Hello World in luaprint "Hello world"
+Back to indexMACRO10
+TITLE HELLO WORLD
+; HELLO WORLD IN MACRO 10 FOR TOPS-10
+ENTRY OUTPUT
+SEARCH UUOSYMLAB:ASCIZ /HELLO WORLD
+/
+OUTPUT: OUTSTR LAB; OUTPUT MESSAGE MONRT.</contexte>
+    <contexte numELem="2">go 20 , left 180,
+go 40 , left 180,
+go 20 , right 90,
+go 20 , left 90 ,
+go 20 , left 180,
+go 40 , left 90 ,
+go 20 , left 90 ,
+go 20 , right 90 ,
+go 20 , right 90 ,
+go 10 , right 90 ,
+go 20 , left 90 ,
+go 10 , left 90 ,
+go 30 , left 90 ,
+go 40 , left 180,
+go 40 , left 90 ,
+go 20 , left 90 ,
+go 40 , left 180,
+go 40 , left 90 ,
+go 40 , left 90 ,
+go 20 , left 90 ,
+go 20 , left 90 ,
+go 20 , left 90 ,
+go 60 , left 90 ,
+go 40 , left 180,
+go 40 , left 90 ,
+go 20 , left 90 ,
+go 20 , left 180,
+go 20 , left 90 ,
+go 20 , left 90 ,
+go 40 , left 180,
+go 40 , left 90 ,
+go 40 , left 90 ,
+go 20 , left 90 ,
+go 20 , left 90 ,
+go 20 , left 90 ,
+go 40 , left 90 ,
+go 20 , right 90,
+go 20 , right 90,
+go 5 , left 90,
+go 5 , left 90,
+go 25 , left 180,
+go 40 , left 90 ,
+go 40 , left 90 ,
+go 20 , left 90 ,
+go 20 , left 90 ,
+go 20 , left 90 ,
+go 20 , left 90 ,
+go 40 , left 180,
+go 40 ,
+Back to indexlua
+# Hello World in luaprint "Hello world"
+Back to indexMACRO10
+TITLE HELLO WORLD
+; HELLO WORLD IN MACRO 10 FOR TOPS-10
+ENTRY OUTPUT
+SEARCH UUOSYMLAB:ASCIZ /HELLO WORLD
+/
+OUTPUT: OUTSTR LAB; OUTPUT MESSAGE MONRT.</contexte>
+    <contexte numELem="2">; RETURN TO MONITOR END OUTPUT
+Back to indexmIRC
+; Hello World! for mIRCecho Hello World!</contexte>
+    <contexte numELem="2">for mIRCecho Hello World!
+Back to indexModula-2
+(* Hello World in Modula-2 *)MODULE HelloWorld;
+FROM InOut IMPORT WriteString,WriteLn;
+BEGIN WriteString("Hello World!</contexte>
+    <contexte numELem="2">Back to indexModula-2
+(* Hello World in Modula-2 *)MODULE HelloWorld;
+FROM InOut IMPORT WriteString,WriteLn;
+BEGIN WriteString("Hello World!</contexte>
+    <contexte numELem="2">Back to indexModula-2
+(* Hello World in Modula-2 *)MODULE HelloWorld;
+FROM InOut IMPORT WriteString,WriteLn;
+BEGIN WriteString("Hello World!"); WriteLn;
+END HelloWorld.</contexte>
+    <contexte numELem="2">Back to indexMSDOS
+@ECHO OFF
+REM Hello World for DOS batchECHO Hello World!</contexte>
+    <contexte numELem="2">Back to indexMSDOS
+@ECHO OFF
+REM Hello World for DOS batchECHO Hello World!
+Back to indexMSIL
+//Hello World in MSIL (.</contexte>
+    <contexte numELem="2">Back to indexMSIL
+//Hello World in MSIL (.</contexte>
+    <contexte numELem="2">entrypoint ldstr "Hello World!" call void System.</contexte>
+    <contexte numELem="2">Console::WriteLine(string) ret}
+}
+Back to indexMumps
+; Hello World in Mumps-Mw !</contexte>
+    <contexte numELem="2">,"Hello World"
+Back to indexNatural* Hello World in Natural (by Software AG)FORMAT AD=MDISPLAY 'Hello World!</contexte>
+    <contexte numELem="2">,"Hello World"
+Back to indexNatural* Hello World in Natural (by Software AG)FORMAT AD=MDISPLAY 'Hello World!</contexte>
+    <contexte numELem="2">,"Hello World"
+Back to indexNatural* Hello World in Natural (by Software AG)FORMAT AD=MDISPLAY 'Hello World!'ENDBack to indexNewtonScript
+// Hello World in NewtonScriptbaseview :={viewBounds: {left: -3, top: 71, right: 138, bottom: 137}, viewFlags: 581, declareSelf: 'base, _proto: protoFloatNGo, debug: "baseview"};textview := * child of baseview *{text: "Hello World!</contexte>
+    <contexte numELem="2">'ENDBack to indexNewtonScript
+// Hello World in NewtonScriptbaseview :={viewBounds: {left: -3, top: 71, right: 138, bottom: 137}, viewFlags: 581, declareSelf: 'base, _proto: protoFloatNGo, debug: "baseview"};textview := * child of baseview *{text: "Hello World!</contexte>
+    <contexte numELem="2">'ENDBack to indexNewtonScript
+// Hello World in NewtonScriptbaseview :={viewBounds: {left: -3, top: 71, right: 138, bottom: 137}, viewFlags: 581, declareSelf: 'base, _proto: protoFloatNGo, debug: "baseview"};textview := * child of baseview *{text: "Hello World!", viewBounds: {left: 33, top: 24, right: 113, bottom: 46}, viewFlags: 579, _proto: protoStaticText, debug: "textview"};
+Back to indexOberon.</contexte>
+    <contexte numELem="2">oberon
+MODULE HelloWorld;(* Hello World in Oberon for the Oberon System *)IMPORT Oberon, Texts;VAR W: Texts.</contexte>
+    <contexte numELem="2">WriteString(W,"Hello World!"); Texts.</contexte>
+    <contexte numELem="2">std
+(* Hello World in Oberon for standard operating systems *)MODULE HelloWorld;
+IMPORT Out;
+BEGIN Out.</contexte>
+    <contexte numELem="2">String("Hello World!"); Out.</contexte>
+    <contexte numELem="2">Ln;
+END HelloWorld;
+Back to indexOccam
+PROGRAM Hello
+-- Hello world in Occam
+#USE ioconvSEQ write.</contexte>
+    <contexte numELem="2">string(screen,"Hello World!")
+Back to indexOctave
+#Hello World in Octave (http://www.</contexte>
+    <contexte numELem="2">")
+Back to indexOctave
+#Hello World in Octave (http://www.</contexte>
+    <contexte numELem="2">org/)
+printf("Hello World\n");
+Back to indexOpenVMS
+$!</contexte>
+    <contexte numELem="2">Hello World in OpenVMS DCL$ write sys$output "Hello World"
+Back to indexOPL.</contexte>
+    <contexte numELem="2">Hello World in OpenVMS DCL$ write sys$output "Hello World"
+Back to indexOPL.</contexte>
+    <contexte numELem="2">dialog
+REM Hello World for OPL (Psion Organizer 3a)
+REM More complex version with menues and dialog boxesPROC HELLO: LOCAL M% DO REM Display menu bar mINIT mCARD "Sprache","Deutsch",%d,"English",%e mCARD "Extras","Beenden",%x,"Info",%i M%=MENU REM process choosen function IF M%=%d REM Display german dialog box REM with an ENTER button to continue dBOX:(" ","Hallo Welt"," ","weiter",13) ELSEIF M%=%e REM Display english dialog box REM with an ENTER button to continue dBOX:(" ","Hello World"," ","continue",13) ELSEIF M%=%i REM Display copyright information ;-) dBOX:("Info","(C) Klaus M¸ller 0196","FrankfurtMain, Germany","",13) ENDIF UNTIL M%=%x
+ENDPPROC dBOX:(Z1$,Z2$,Z3$,Z4$,BUTTON%) dINIT Z1$ dTEXT ""," ",0 dTEXT "",Z2$",$102 dTEXT "",Z3$,$202 dBUTTONS Z4$,BUTTON% DIALOG
+ENDP
+Back to indexOPL.</contexte>
+    <contexte numELem="2">dialog
+REM Hello World for OPL (Psion Organizer 3a)
+REM More complex version with menues and dialog boxesPROC HELLO: LOCAL M% DO REM Display menu bar mINIT mCARD "Sprache","Deutsch",%d,"English",%e mCARD "Extras","Beenden",%x,"Info",%i M%=MENU REM process choosen function IF M%=%d REM Display german dialog box REM with an ENTER button to continue dBOX:(" ","Hallo Welt"," ","weiter",13) ELSEIF M%=%e REM Display english dialog box REM with an ENTER button to continue dBOX:(" ","Hello World"," ","continue",13) ELSEIF M%=%i REM Display copyright information ;-) dBOX:("Info","(C) Klaus M¸ller 0196","FrankfurtMain, Germany","",13) ENDIF UNTIL M%=%x
+ENDPPROC dBOX:(Z1$,Z2$,Z3$,Z4$,BUTTON%) dINIT Z1$ dTEXT ""," ",0 dTEXT "",Z2$",$102 dTEXT "",Z3$,$202 dBUTTONS Z4$,BUTTON% DIALOG
+ENDP
+Back to indexOPL.</contexte>
+    <contexte numELem="2">simple
+REM Hello World for OPL (Psion Organizer 3a)
+REM Simple versionPROC HELLO: PRINT "Hello World!</contexte>
+    <contexte numELem="2">simple
+REM Hello World for OPL (Psion Organizer 3a)
+REM Simple versionPROC HELLO: PRINT "Hello World!" GET
+ENDP
+Back to indexOZ
+Hello World in OZ, shell version:Type the text
+{Browse 'Hello World!</contexte>
+    <contexte numELem="2">" GET
+ENDP
+Back to indexOZ
+Hello World in OZ, shell version:Type the text
+{Browse 'Hello World!</contexte>
+    <contexte numELem="2">" GET
+ENDP
+Back to indexOZ
+Hello World in OZ, shell version:Type the text
+{Browse 'Hello World!'}
+to a buffer in OZ mode and feed it for execution (e.</contexte>
+    <contexte numELem="2">A window titled Oz Browser will pop
+up showing the atom 'Hello World!'.</contexte>
+    <contexte numELem="2">Back to indexPascal
+{Hello World in Pascal}program HelloWorld(output);
+begin WriteLn('Hello World!</contexte>
+    <contexte numELem="2">Back to indexPascal
+{Hello World in Pascal}program HelloWorld(output);
+begin WriteLn('Hello World!');
+end.</contexte>
+    <contexte numELem="2">Back to indexPascal-Windows
+{ Hello World in Borland Pascal 7 for MS-Windows}PROGRAM HelloWorld;USES WinCRT;BEGIN InitWinCRT; WriteLn('Hello World!</contexte>
+    <contexte numELem="2">Back to indexPascal-Windows
+{ Hello World in Borland Pascal 7 for MS-Windows}PROGRAM HelloWorld;USES WinCRT;BEGIN InitWinCRT; WriteLn('Hello World!'); ReadLn; DoneWinCRT;
+END.</contexte>
+    <contexte numELem="2">Back to indexPerl
+# Hello world in perlprint "Hello World!</contexte>
+    <contexte numELem="2">Back to indexPerl
+# Hello world in perlprint "Hello World!\n";
+Back to indexPHP
+?php // Hello World in PHP echo 'Hello World!</contexte>
+    <contexte numELem="2">\n";
+Back to indexPHP
+?php // Hello World in PHP echo 'Hello World!</contexte>
+    <contexte numELem="2">\n";
+Back to indexPHP
+?php // Hello World in PHP echo 'Hello World!';
+?</contexte>
+    <contexte numELem="2">Back to indexPike
+// Hello world in Pike (pike.</contexte>
+    <contexte numELem="2">com)int main(){ write("Hello World!\n");
+}
+Back to indexPL-SQL
+-- Hello World in Oracle PL/SQLset serveroutput on
+Declaretxt varchar2(11);
+begintxt:='Hello World';dbms_output.</contexte>
+    <contexte numELem="2">\n");
+}
+Back to indexPL-SQL
+-- Hello World in Oracle PL/SQLset serveroutput on
+Declaretxt varchar2(11);
+begintxt:='Hello World';dbms_output.</contexte>
+    <contexte numELem="2">\n");
+}
+Back to indexPL-SQL
+-- Hello World in Oracle PL/SQLset serveroutput on
+Declaretxt varchar2(11);
+begintxt:='Hello World';dbms_output.</contexte>
+    <contexte numELem="2">put_line(txt);
+end;
+/
+Back to indexPL1
+/* Hello World in PL1 */Hello: procedure options(main)put list('Hello World!</contexte>
+    <contexte numELem="2">put_line(txt);
+end;
+/
+Back to indexPL1
+/* Hello World in PL1 */Hello: procedure options(main)put list('Hello World!');put skip;
+end Hello
+Back to indexPocket
+Hello World for standard pocket calculators (7-segment display).</contexte>
+    <contexte numELem="2">');put skip;
+end Hello
+Back to indexPocket
+Hello World for standard pocket calculators (7-segment display).</contexte>
+    <contexte numELem="2">07734
+Back to indexPostscript
+% Hello World in Postscript
+%!</contexte>
+    <contexte numELem="2">PS
+/Palatino-Roman findfont
+100 scalefont
+setfont
+100 100 moveto
+(Hello World!) show
+showpage
+Back to indexPOV-Ray
+// Hello World for the Persistence of Vision Raytracer#include "skies.</contexte>
+    <contexte numELem="2">) show
+showpage
+Back to indexPOV-Ray
+// Hello World for the Persistence of Vision Raytracer#include "skies.</contexte>
+    <contexte numELem="2">ttf" "Hello World!" .</contexte>
+    <contexte numELem="2">5*x
+}
+Back to indexProfan
+' Hello World in Profan (http://www.</contexte>
+    <contexte numELem="2">de/)cls
+print "Hello World!"
+waitkey
+Back to indexProgress
+/* Hello World in Progress */message "Hello World" view-as alert-box.</contexte>
+    <contexte numELem="2">"
+waitkey
+Back to indexProgress
+/* Hello World in Progress */message "Hello World" view-as alert-box.</contexte>
+    <contexte numELem="2">"
+waitkey
+Back to indexProgress
+/* Hello World in Progress */message "Hello World" view-as alert-box.</contexte>
+    <contexte numELem="2">Back to indexProlog
+% Hello World in Prologhello :- display('Hello World!</contexte>
+    <contexte numELem="2">Back to indexProlog
+% Hello World in Prologhello :- display('Hello World!') , nl .</contexte>
+    <contexte numELem="2">Back to indexPureBasic-Console
+; Hello World in PureBasic (console program)OpenConsole()ConsoleTitle ("Hello World!</contexte>
+    <contexte numELem="2">Back to indexPureBasic-Console
+; Hello World in PureBasic (console program)OpenConsole()ConsoleTitle ("Hello World!")PrintN ("Hello World!</contexte>
+    <contexte numELem="2">")PrintN ("Hello World!")
+CloseConsole()
+Back to indexPureBasic-Messagebox
+; Hello World in PureBasic (message box)MessageRequester("Hello World Messagebox","Hello World!</contexte>
+    <contexte numELem="2">")
+CloseConsole()
+Back to indexPureBasic-Messagebox
+; Hello World in PureBasic (message box)MessageRequester("Hello World Messagebox","Hello World!</contexte>
+    <contexte numELem="2">")
+CloseConsole()
+Back to indexPureBasic-Messagebox
+; Hello World in PureBasic (message box)MessageRequester("Hello World Messagebox","Hello World!</contexte>
+    <contexte numELem="2">")
+CloseConsole()
+Back to indexPureBasic-Messagebox
+; Hello World in PureBasic (message box)MessageRequester("Hello World Messagebox","Hello World!")
+Back to indexPureBasic-Window
+; Hello World in PureBasic (Window)If OpenWindow(0, 216, 0, 268, 133,#PB_Window_SystemMenu | #PB_Window_TitleBar | #PB_Window_ScreenCentered , "Hello World Window")If CreateGadgetList(WindowID())TextGadget(1, 100, 60, 60, 20, "Hello World!</contexte>
+    <contexte numELem="2">")
+Back to indexPureBasic-Window
+; Hello World in PureBasic (Window)If OpenWindow(0, 216, 0, 268, 133,#PB_Window_SystemMenu | #PB_Window_TitleBar | #PB_Window_ScreenCentered , "Hello World Window")If CreateGadgetList(WindowID())TextGadget(1, 100, 60, 60, 20, "Hello World!</contexte>
+    <contexte numELem="2">")
+Back to indexPureBasic-Window
+; Hello World in PureBasic (Window)If OpenWindow(0, 216, 0, 268, 133,#PB_Window_SystemMenu | #PB_Window_TitleBar | #PB_Window_ScreenCentered , "Hello World Window")If CreateGadgetList(WindowID())TextGadget(1, 100, 60, 60, 20, "Hello World!</contexte>
+    <contexte numELem="2">")
+Back to indexPureBasic-Window
+; Hello World in PureBasic (Window)If OpenWindow(0, 216, 0, 268, 133,#PB_Window_SystemMenu | #PB_Window_TitleBar | #PB_Window_ScreenCentered , "Hello World Window")If CreateGadgetList(WindowID())TextGadget(1, 100, 60, 60, 20, "Hello World!")EndIf
+EndIfRepeat; Message Loop
+Until WaitWindowEvent() = #PB_EventCloseWindow
+Back to indexPython
+# Hello World in Python
+print "Hello World"
+Back to indexQuickBASIC
+REM Hello World in QuickBASIC
+PRINT "Hello World!</contexte>
+    <contexte numELem="2">")EndIf
+EndIfRepeat; Message Loop
+Until WaitWindowEvent() = #PB_EventCloseWindow
+Back to indexPython
+# Hello World in Python
+print "Hello World"
+Back to indexQuickBASIC
+REM Hello World in QuickBASIC
+PRINT "Hello World!</contexte>
+    <contexte numELem="2">")EndIf
+EndIfRepeat; Message Loop
+Until WaitWindowEvent() = #PB_EventCloseWindow
+Back to indexPython
+# Hello World in Python
+print "Hello World"
+Back to indexQuickBASIC
+REM Hello World in QuickBASIC
+PRINT "Hello World!</contexte>
+    <contexte numELem="2">")EndIf
+EndIfRepeat; Message Loop
+Until WaitWindowEvent() = #PB_EventCloseWindow
+Back to indexPython
+# Hello World in Python
+print "Hello World"
+Back to indexQuickBASIC
+REM Hello World in QuickBASIC
+PRINT "Hello World!</contexte>
+    <contexte numELem="2">")EndIf
+EndIfRepeat; Message Loop
+Until WaitWindowEvent() = #PB_EventCloseWindow
+Back to indexPython
+# Hello World in Python
+print "Hello World"
+Back to indexQuickBASIC
+REM Hello World in QuickBASIC
+PRINT "Hello World!"
+END
+Back to indexREALbasic
+' Hello World in REALbasic (http://www.</contexte>
+    <contexte numELem="2">"
+END
+Back to indexREALbasic
+' Hello World in REALbasic (http://www.</contexte>
+    <contexte numELem="2">com/)msgBox "Hello World!"
+Back to indexRebol-view
+Hello World in Rebol-view.</contexte>
+    <contexte numELem="2">"
+Back to indexRebol-view
+Hello World in Rebol-view.</contexte>
+    <contexte numELem="2">rebol
+view layout
+Back to indexRedcode
+; Hello World in Redcode
+; Should work with any MARS = ICWS-86
+; (with 128x64 gfx core support, of course!</contexte>
+    <contexte numELem="2">)
+;
+Start MOV 0,2455 MOV 0,2458 MOV 0,2459 MOV 0,2459 MOV 0,2459 MOV 0,2459 MOV 0,2459 MOV 0,2460 MOV 0,2465 MOV 0,2471 MOV 0,2471 MOV 0,2471 MOV 0,2479 MOV 0,2482 MOV 0,2484 MOV 0,2484 MOV 0,2484 MOV 0,2486 MOV 0,2486 MOV 0,2486 MOV 0,2486 MOV 0,2488 MOV 0,2493 MOV 0,2493 MOV 0,2493 MOV 0,2493 MOV 0,2497 MOV 0,2556 MOV 0,2559 MOV 0,2560 MOV 0,2565 MOV 0,2570 MOV 0,2575 MOV 0,2578 MOV 0,2585 MOV 0,2588 MOV 0,2589 MOV 0,2592 MOV 0,2593 MOV 0,2596 MOV 0,2597 MOV 0,2603 MOV 0,2605 MOV 0,2608 MOV 0,2667 MOV 0,2670 MOV 0,2671 MOV 0,2676 MOV 0,2681 MOV 0,2686 MOV 0,2689 MOV 0,2696 MOV 0,2699 MOV 0,2700 MOV 0,2703 MOV 0,2704 MOV 0,2707 MOV 0,2708 MOV 0,2714 MOV 0,2716 MOV 0,2719 MOV 0,2778 MOV 0,2778 MOV 0,2778 MOV 0,2778 MOV 0,2778 MOV 0,2779 MOV 0,2779 MOV 0,2779 MOV 0,2782 MOV 0,2787 MOV 0,2792 MOV 0,2795 MOV 0,2802 MOV 0,2805 MOV 0,2806 MOV 0,2809 MOV 0,2810 MOV 0,2810 MOV 0,2810 MOV 0,2810 MOV 0,2812 MOV 0,2818 MOV 0,2820 MOV 0,2823 MOV 0,2882 MOV 0,2885 MOV 0,2886 MOV 0,2891 MOV 0,2896 MOV 0,2901 MOV 0,2904 MOV 0,2911 MOV 0,2912 MOV 0,2913 MOV 0,2914 MOV 0,2917 MOV 0,2918 MOV 0,2919 MOV 0,2922 MOV 0,2928 MOV 0,2930 MOV 0,2933 MOV 0,2992 MOV 0,2995 MOV 0,2996 MOV 0,3001 MOV 0,3006 MOV 0,3011 MOV 0,3014 MOV 0,3021 MOV 0,3022 MOV 0,3023 MOV 0,3024 MOV 0,3027 MOV 0,3028 MOV 0,3030 MOV 0,3032 MOV 0,3038 MOV 0,3040 MOV 0,3103 MOV 0,3106 MOV 0,3107 MOV 0,3107 MOV 0,3107 MOV 0,3107 MOV 0,3107 MOV 0,3108 MOV 0,3108 MOV 0,3108 MOV 0,3108 MOV 0,3108 MOV 0,3109 MOV 0,3109 MOV 0,3109 MOV 0,3109 MOV 0,3109 MOV 0,3111 MOV 0,3111 MOV 0,3111 MOV 0,3120 MOV 0,3121 MOV 0,3124 MOV 0,3124 MOV 0,3124 MOV 0,3126 MOV 0,3129 MOV 0,3130 MOV 0,3130 MOV 0,3130 MOV 0,3130 MOV 0,3130 MOV 0,3131 MOV 0,3131 MOV 0,3131 MOV 0,3131 MOV 0,3135 JMP 0
+Back to indexRexx
+/* Hello World in Rexx */SAY "Hello World!</contexte>
+    <contexte numELem="2">)
+;
+Start MOV 0,2455 MOV 0,2458 MOV 0,2459 MOV 0,2459 MOV 0,2459 MOV 0,2459 MOV 0,2459 MOV 0,2460 MOV 0,2465 MOV 0,2471 MOV 0,2471 MOV 0,2471 MOV 0,2479 MOV 0,2482 MOV 0,2484 MOV 0,2484 MOV 0,2484 MOV 0,2486 MOV 0,2486 MOV 0,2486 MOV 0,2486 MOV 0,2488 MOV 0,2493 MOV 0,2493 MOV 0,2493 MOV 0,2493 MOV 0,2497 MOV 0,2556 MOV 0,2559 MOV 0,2560 MOV 0,2565 MOV 0,2570 MOV 0,2575 MOV 0,2578 MOV 0,2585 MOV 0,2588 MOV 0,2589 MOV 0,2592 MOV 0,2593 MOV 0,2596 MOV 0,2597 MOV 0,2603 MOV 0,2605 MOV 0,2608 MOV 0,2667 MOV 0,2670 MOV 0,2671 MOV 0,2676 MOV 0,2681 MOV 0,2686 MOV 0,2689 MOV 0,2696 MOV 0,2699 MOV 0,2700 MOV 0,2703 MOV 0,2704 MOV 0,2707 MOV 0,2708 MOV 0,2714 MOV 0,2716 MOV 0,2719 MOV 0,2778 MOV 0,2778 MOV 0,2778 MOV 0,2778 MOV 0,2778 MOV 0,2779 MOV 0,2779 MOV 0,2779 MOV 0,2782 MOV 0,2787 MOV 0,2792 MOV 0,2795 MOV 0,2802 MOV 0,2805 MOV 0,2806 MOV 0,2809 MOV 0,2810 MOV 0,2810 MOV 0,2810 MOV 0,2810 MOV 0,2812 MOV 0,2818 MOV 0,2820 MOV 0,2823 MOV 0,2882 MOV 0,2885 MOV 0,2886 MOV 0,2891 MOV 0,2896 MOV 0,2901 MOV 0,2904 MOV 0,2911 MOV 0,2912 MOV 0,2913 MOV 0,2914 MOV 0,2917 MOV 0,2918 MOV 0,2919 MOV 0,2922 MOV 0,2928 MOV 0,2930 MOV 0,2933 MOV 0,2992 MOV 0,2995 MOV 0,2996 MOV 0,3001 MOV 0,3006 MOV 0,3011 MOV 0,3014 MOV 0,3021 MOV 0,3022 MOV 0,3023 MOV 0,3024 MOV 0,3027 MOV 0,3028 MOV 0,3030 MOV 0,3032 MOV 0,3038 MOV 0,3040 MOV 0,3103 MOV 0,3106 MOV 0,3107 MOV 0,3107 MOV 0,3107 MOV 0,3107 MOV 0,3107 MOV 0,3108 MOV 0,3108 MOV 0,3108 MOV 0,3108 MOV 0,3108 MOV 0,3109 MOV 0,3109 MOV 0,3109 MOV 0,3109 MOV 0,3109 MOV 0,3111 MOV 0,3111 MOV 0,3111 MOV 0,3120 MOV 0,3121 MOV 0,3124 MOV 0,3124 MOV 0,3124 MOV 0,3126 MOV 0,3129 MOV 0,3130 MOV 0,3130 MOV 0,3130 MOV 0,3130 MOV 0,3130 MOV 0,3131 MOV 0,3131 MOV 0,3131 MOV 0,3131 MOV 0,3135 JMP 0
+Back to indexRexx
+/* Hello World in Rexx */SAY "Hello World!"
+Back to indexRexx.</contexte>
+    <contexte numELem="2">simple
+/* Hello World in Rexx, simple version (writes to standard output) */say 'Hello World!</contexte>
+    <contexte numELem="2">simple
+/* Hello World in Rexx, simple version (writes to standard output) */say 'Hello World!'
+exit
+Back to indexRexx.</contexte>
+    <contexte numELem="2">window
+/* Hallo World in Rexx, opens window */call RxFuncAdd 'SysLoadFuncs', 'RexxUtil', 'SysLoadFuncs'
+call SysLoadFuncs
+call RxMessageBox 'Hello World!', 'Hello World Window', 'OK', 'EXCLAMATION'
+exit
+Back to indexRuby
+# Hello World in Ruby
+STDOUT  "Hello World!</contexte>
+    <contexte numELem="2">', 'Hello World Window', 'OK', 'EXCLAMATION'
+exit
+Back to indexRuby
+# Hello World in Ruby
+STDOUT  "Hello World!</contexte>
+    <contexte numELem="2">', 'Hello World Window', 'OK', 'EXCLAMATION'
+exit
+Back to indexRuby
+# Hello World in Ruby
+STDOUT  "Hello World!</contexte>
+    <contexte numELem="2">', 'Hello World Window', 'OK', 'EXCLAMATION'
+exit
+Back to indexRuby
+# Hello World in Ruby
+STDOUT  "Hello World!"
+Back to indexSAL
+// Hello World in SALproc main() MsgBox("Hello from SAL", "Hello, World!</contexte>
+    <contexte numELem="2">"
+Back to indexSAL
+// Hello World in SALproc main() MsgBox("Hello from SAL", "Hello, World!</contexte>
+    <contexte numELem="2">")
+end
+Back to indexSather
+-- Hello World in Satherclass HELLO ismain is #OUT + "Hello World!</contexte>
+    <contexte numELem="2">")
+end
+Back to indexSather
+-- Hello World in Satherclass HELLO ismain is #OUT + "Hello World!\n" end end
+Back to indexScheme
+;;; Hello World in Scheme(define helloworld(lambda () (display "Hello World") (newline)))
+Back to indexSelf
+(|"Hello World in Self"hello = (| | 'Hello World!</contexte>
+    <contexte numELem="2">\n" end end
+Back to indexScheme
+;;; Hello World in Scheme(define helloworld(lambda () (display "Hello World") (newline)))
+Back to indexSelf
+(|"Hello World in Self"hello = (| | 'Hello World!</contexte>
+    <contexte numELem="2">\n" end end
+Back to indexScheme
+;;; Hello World in Scheme(define helloworld(lambda () (display "Hello World") (newline)))
+Back to indexSelf
+(|"Hello World in Self"hello = (| | 'Hello World!</contexte>
+    <contexte numELem="2">\n" end end
+Back to indexScheme
+;;; Hello World in Scheme(define helloworld(lambda () (display "Hello World") (newline)))
+Back to indexSelf
+(|"Hello World in Self"hello = (| | 'Hello World!</contexte>
+    <contexte numELem="2">\n" end end
+Back to indexScheme
+;;; Hello World in Scheme(define helloworld(lambda () (display "Hello World") (newline)))
+Back to indexSelf
+(|"Hello World in Self"hello = (| | 'Hello World!' print)
+|)
+Back to indexSenseTalk
+Hello World in SenseTalk.</contexte>
+    <contexte numELem="2">' print)
+|)
+Back to indexSenseTalk
+Hello World in SenseTalk.</contexte>
+    <contexte numELem="2">on run put "Hello World!" end run Back to indexSetl2
+-- Hello World in Setl2procedure Hello();print "Hello World!</contexte>
+    <contexte numELem="2">" end run Back to indexSetl2
+-- Hello World in Setl2procedure Hello();print "Hello World!</contexte>
+    <contexte numELem="2">" end run Back to indexSetl2
+-- Hello World in Setl2procedure Hello();print "Hello World!";
+end Hello;
+Back to indexShakespeare
+The Infamous Hello World Program in Shakespeare.</contexte>
+    <contexte numELem="2">";
+end Hello;
+Back to indexShakespeare
+The Infamous Hello World Program in Shakespeare.</contexte>
+    <contexte numELem="2">Back to indexShellscript
+# Hello World for the Unix shells (sh, ksh, csh, bash, .</contexte>
+    <contexte numELem="2">)echo "Hello World!"
+Back to indexSIMPLE{::DATA:Data part
+@0:T
+Hello World$$M
+$$@
+}
+Back to indexSimula
+!</contexte>
+    <contexte numELem="2">"
+Back to indexSIMPLE{::DATA:Data part
+@0:T
+Hello World$$M
+$$@
+}
+Back to indexSimula
+!</contexte>
+    <contexte numELem="2">Hello World in Simula;BEGIN OutText("Hello World!</contexte>
+    <contexte numELem="2">Hello World in Simula;BEGIN OutText("Hello World!"); OutImage;
+END
+Back to indexSmalltalk.</contexte>
+    <contexte numELem="2">simple
+"Hello World in Smalltalk (simple version)"Transcript show: 'Hello World!</contexte>
+    <contexte numELem="2">simple
+"Hello World in Smalltalk (simple version)"Transcript show: 'Hello World!'.</contexte>
+    <contexte numELem="2">window
+"Hello World in Smalltalk (in an own window)"
+"(to be entered in a special browser)"VisualComponent subclass: #HelloWorldViewinstanceVariableNames: ''classVariableNames: ''poolDictionaries: ''category: 'test'displayOn: aGraphicsContext	'Hello World!</contexte>
+    <contexte numELem="2">window
+"Hello World in Smalltalk (in an own window)"
+"(to be entered in a special browser)"VisualComponent subclass: #HelloWorldViewinstanceVariableNames: ''classVariableNames: ''poolDictionaries: ''category: 'test'displayOn: aGraphicsContext	'Hello World!' asComposedText displayOn: aGraphicsContext.</contexte>
+    <contexte numELem="2">window label: 'Hello World Demo:'.</contexte>
+    <contexte numELem="2">Back to indexSML
+(* Hello World in SML *)fun hello() = output(std_out, "Hello World!</contexte>
+    <contexte numELem="2">Back to indexSML
+(* Hello World in SML *)fun hello() = output(std_out, "Hello World!");
+Back to indexSnobol
+* Hello World in SnobolOUTPUT = "Hello World!</contexte>
+    <contexte numELem="2">");
+Back to indexSnobol
+* Hello World in SnobolOUTPUT = "Hello World!</contexte>
+    <contexte numELem="2">");
+Back to indexSnobol
+* Hello World in SnobolOUTPUT = "Hello World!"
+Back to indexSpiral
+Hello World in Spiral.</contexte>
+    <contexte numELem="2">"
+Back to indexSpiral
+Hello World in Spiral.</contexte>
+    <contexte numELem="2">* ** * * *
+* * * * * # * # * @X * ** * * *
+* * * * * # * # * v* ** * * *
+* * * * * # * # * * ** * ** * * *
+*** * # * # * ** *** ** *** *
+*** * #v* ^ * *** ** ********
+** * ** ** *v * * * ** ********** *v^***** **************Back to indexSPLHELLO: PROCEDURE OPTIONS(MAIN);
+*/* Hello World in SPL4 (Siemens) */
+*DCL PRINTC ENTRY;
+*CALL PRINTC('Hello World!</contexte>
+    <contexte numELem="2">* ** * * *
+* * * * * # * # * @X * ** * * *
+* * * * * # * # * v* ** * * *
+* * * * * # * # * * ** * ** * * *
+*** * # * # * ** *** ** *** *
+*** * #v* ^ * *** ** ********
+** * ** ** *v * * * ** ********** *v^***** **************Back to indexSPLHELLO: PROCEDURE OPTIONS(MAIN);
+*/* Hello World in SPL4 (Siemens) */
+*DCL PRINTC ENTRY;
+*CALL PRINTC('Hello World!', 12);RETURN;
+*END HELLO;
+Back to indexSQL-Oracle
+# Hello World in SQL for OracleSELECT 'Hello World' FROM dual;
+Back to indexSQL
+# Hello World in SQLSELECT 'Hello World';
+Back to indexST-Guide
+## Hello World for ST-Guide@node "Hello World!</contexte>
+    <contexte numELem="2">', 12);RETURN;
+*END HELLO;
+Back to indexSQL-Oracle
+# Hello World in SQL for OracleSELECT 'Hello World' FROM dual;
+Back to indexSQL
+# Hello World in SQLSELECT 'Hello World';
+Back to indexST-Guide
+## Hello World for ST-Guide@node "Hello World!</contexte>
+    <contexte numELem="2">', 12);RETURN;
+*END HELLO;
+Back to indexSQL-Oracle
+# Hello World in SQL for OracleSELECT 'Hello World' FROM dual;
+Back to indexSQL
+# Hello World in SQLSELECT 'Hello World';
+Back to indexST-Guide
+## Hello World for ST-Guide@node "Hello World!</contexte>
+    <contexte numELem="2">', 12);RETURN;
+*END HELLO;
+Back to indexSQL-Oracle
+# Hello World in SQL for OracleSELECT 'Hello World' FROM dual;
+Back to indexSQL
+# Hello World in SQLSELECT 'Hello World';
+Back to indexST-Guide
+## Hello World for ST-Guide@node "Hello World!</contexte>
+    <contexte numELem="2">', 12);RETURN;
+*END HELLO;
+Back to indexSQL-Oracle
+# Hello World in SQL for OracleSELECT 'Hello World' FROM dual;
+Back to indexSQL
+# Hello World in SQLSELECT 'Hello World';
+Back to indexST-Guide
+## Hello World for ST-Guide@node "Hello World!</contexte>
+    <contexte numELem="2">', 12);RETURN;
+*END HELLO;
+Back to indexSQL-Oracle
+# Hello World in SQL for OracleSELECT 'Hello World' FROM dual;
+Back to indexSQL
+# Hello World in SQLSELECT 'Hello World';
+Back to indexST-Guide
+## Hello World for ST-Guide@node "Hello World!</contexte>
+    <contexte numELem="2">', 12);RETURN;
+*END HELLO;
+Back to indexSQL-Oracle
+# Hello World in SQL for OracleSELECT 'Hello World' FROM dual;
+Back to indexSQL
+# Hello World in SQLSELECT 'Hello World';
+Back to indexST-Guide
+## Hello World for ST-Guide@node "Hello World!"Hello World!</contexte>
+    <contexte numELem="2">"Hello World!@endnode
+Back to indexTcl
+#!</contexte>
+    <contexte numELem="2">/usr/local/bin/tclsh
+# Hello World in Tclputs "Hello World!</contexte>
+    <contexte numELem="2">/usr/local/bin/tclsh
+# Hello World in Tclputs "Hello World!"
+Back to indexTeX
+% Hello World in plain \TeX
+\immediate\write16{Hello World!</contexte>
+    <contexte numELem="2">"
+Back to indexTeX
+% Hello World in plain \TeX
+\immediate\write16{Hello World!</contexte>
+    <contexte numELem="2">"
+Back to indexTeX
+% Hello World in plain \TeX
+\immediate\write16{Hello World!}
+\end
+Back to indexTexinfo
+\input texinfo
+@c Hello World for Texinfo@setfilename hello
+@settitle Hello World@node Top, Hello, (dir), (dir)@menu
+* Hello:: Hello World
+@end menu@node Hello, , Top, TopHello World!</contexte>
+    <contexte numELem="2">}
+\end
+Back to indexTexinfo
+\input texinfo
+@c Hello World for Texinfo@setfilename hello
+@settitle Hello World@node Top, Hello, (dir), (dir)@menu
+* Hello:: Hello World
+@end menu@node Hello, , Top, TopHello World!</contexte>
+    <contexte numELem="2">}
+\end
+Back to indexTexinfo
+\input texinfo
+@c Hello World for Texinfo@setfilename hello
+@settitle Hello World@node Top, Hello, (dir), (dir)@menu
+* Hello:: Hello World
+@end menu@node Hello, , Top, TopHello World!</contexte>
+    <contexte numELem="2">}
+\end
+Back to indexTexinfo
+\input texinfo
+@c Hello World for Texinfo@setfilename hello
+@settitle Hello World@node Top, Hello, (dir), (dir)@menu
+* Hello:: Hello World
+@end menu@node Hello, , Top, TopHello World!</contexte>
+    <contexte numELem="2">}
+\end
+Back to indexTexinfo
+\input texinfo
+@c Hello World for Texinfo@setfilename hello
+@settitle Hello World@node Top, Hello, (dir), (dir)@menu
+* Hello:: Hello World
+@end menu@node Hello, , Top, TopHello World!@contents
+@bye
+Back to indexTI-59
+Hello World for the TI-59 with PC-100C thermo printer.</contexte>
+    <contexte numELem="2">@contents
+@bye
+Back to indexTI-59
+Hello World for the TI-59 with PC-100C thermo printer.</contexte>
+    <contexte numELem="2">The output looks like this:+--------------------+ |HELLO WORLD!| || +--------------------+ TI59 Code CommentLBL A Start of program: label A OP 00 Clear the four print registers 23"H" OP 02 Write into print register 2 17"E" 27"L" 27"L" 32"O" 00" " OP 03 Write into print register 3 43"W" 32"O" 35"R" 27"L" 16"D" 73"!</contexte>
+    <contexte numELem="2">" OP 04 Write into print register 4 OP 05 Start printing ADV Line feed (optional) R/S End program
+Back to indexTI-8x
+Hello World for TI 8x/9x basic (tested on a TI-83):ClrHome
+:Disp "HELLO WORLD"
+Back to indexTk
+#!</contexte>
+    <contexte numELem="2">" OP 04 Write into print register 4 OP 05 Start printing ADV Line feed (optional) R/S End program
+Back to indexTI-8x
+Hello World for TI 8x/9x basic (tested on a TI-83):ClrHome
+:Disp "HELLO WORLD"
+Back to indexTk
+#!</contexte>
+    <contexte numELem="2">/usr/local/bin/wish -f
+# Hello World in Tklabel .</contexte>
+    <contexte numELem="2">l -text "Hello World!"
+pack .</contexte>
+    <contexte numELem="2">l
+Back to indexTSO-CLIST
+PROC 0
+/* Hello World in TSO CLIST */
+write Hello World!</contexte>
+    <contexte numELem="2">l
+Back to indexTSO-CLIST
+PROC 0
+/* Hello World in TSO CLIST */
+write Hello World!
+Back to indexTuring
+Hello World as a Turing machine.</contexte>
+    <contexte numELem="2">Back to indexTuring
+Hello World as a Turing machine.</contexte>
+    <contexte numELem="2">/bin/sh
+# Hello World for Unixecho "Hello World!</contexte>
+    <contexte numELem="2">/bin/sh
+# Hello World for Unixecho "Hello World!"
+Back to indexUnrealScript
+// Hello World for UnrealScriptclass HelloWorldHUD extends HudBase;simulated function DrawHudPassC (Canvas C)
+{ C.</contexte>
+    <contexte numELem="2">"
+Back to indexUnrealScript
+// Hello World for UnrealScriptclass HelloWorldHUD extends HudBase;simulated function DrawHudPassC (Canvas C)
+{ C.</contexte>
+    <contexte numELem="2">DrawText("Hello World!");
+}defaultproperties
+{
+}
+Back to indexVatical
++ Hello World in VaticalLITURGY:PRAY "Hello World!</contexte>
+    <contexte numELem="2">");
+}defaultproperties
+{
+}
+Back to indexVatical
++ Hello World in VaticalLITURGY:PRAY "Hello World!</contexte>
+    <contexte numELem="2">");
+}defaultproperties
+{
+}
+Back to indexVatical
++ Hello World in VaticalLITURGY:PRAY "Hello World!"
+AMEN.</contexte>
+    <contexte numELem="2">Back to indexVAX-Macro
+Hello World in VAX Macro.</contexte>
+    <contexte numELem="2">ident/hello world/
+; .</contexte>
+    <contexte numELem="2">ascid/Hello World!/.</contexte>
+    <contexte numELem="2">endhelloworld;
+Back to indexVerilog
+/* Hello World in Verilog.</contexte>
+    <contexte numELem="2">*/module main; initialbegin$display("Hello, World");$finish ;end endmodule
+Back to indexVisualBasic
+REM Hello World in Visual Basic for WindowsVERSION 2.</contexte>
+    <contexte numELem="2">00
+Begin Form Form1Caption = "Form1"ClientHeight= 6096ClientLeft= 936ClientTop = 1572ClientWidth = 6468Height= 6540Left= 876LinkTopic = "Form1"ScaleHeight = 6096ScaleWidth= 6468Top = 1188Width = 6588Begin Label Label1 Caption = "Hello World!" Height= 372 Left= 2760 TabIndex= 0 Top = 2880 Width = 972End
+End
+Option Explicit
+Back to indexVMS
+$ !</contexte>
+    <contexte numELem="2">Hello World for VMS-CLI$ WRITE SYS$OUTPUT "Hello World!</contexte>
+    <contexte numELem="2">Hello World for VMS-CLI$ WRITE SYS$OUTPUT "Hello World!"
+Back to indexVRML
+#VRML V2.</contexte>
+    <contexte numELem="2">0 utf8
+# Hello World in VRMLShape { geometry Text {string "Hello World!</contexte>
+    <contexte numELem="2">0 utf8
+# Hello World in VRMLShape { geometry Text {string "Hello World!"} }
+Back to indexWhitespace
+Hello #World #in #Whitespace	* # #	* # # #
++	*
++ #is #marked #with"#" # #	#with"*"	*line-feed #with #"+"	* #	*so
++it	#would
++be #easier #to #write #again.</contexte>
+    <contexte numELem="2">-- Hello World in XHTML --
+htmlxmlns="http://www.</contexte>
+    <contexte numELem="2">org/1999/xhtml" head title Hello World! /title /head body p Hello World!</contexte>
+    <contexte numELem="2">/title /head body p Hello World! /p /body
+/html
+Back to index
+Credits
+Programs were contributed by:
+Wolfram Roesler: C, Modula-2, Basic, Unix shell, Tcl, Tk, GEM, Curses, Texinfo, InstallScript, C++ (MFC), C++ (ISO), C#, English, German
+Reinhard Hamann: Forth, Prolog, Lisp, 68000 Assembler (Atari)
+Malte Schiphorst, Gino Lucrezi: Pascal
+Stefan Radermacher: TeX
+Marcus Schmidke: Occam, MSDOS batch, Intel Assembler, 6502 Assembler
+Ralf Lenz: Fortran IV, VMS
+Marc Van-Woerkom: C++
+Thomas Menschel: 68008 Assembler
+Heribert Otten: Cobol, PL/1, JCL
+Thomas Piske: BS2000 batch
+Thomas Preymesser: Ada, pocket calculator
+Adrian Nye &amp; Tim O'Reilly: X11-Athena
+Udo Halfmann: ELAN
+Pedro Martins: Portugese
+Stefan Llabres: Postscript
+Volker Wurst: Smalltalk
+Dirk Theisen: Oberon (standard OS)
+Georg Bauer: Rexx (simple version), Erlang, SML, Snobol, Setl2, CAML light, Euphoria
+Michael Glaesner: Perl, awk
+Christian Rosner: Eiffel
+Markus Omers: Presentation Manager
+Thomas Dorner: SPL
+Jochen Kunz: Rexx (window version), HP-48
+Sascha Bendinger: Dylan
+Steffen Pohlen: Visual Basic, Gofer (dialog)
+Andreas Dierks: Algol-60, Algol-68, Fortran, Fortran-77, dBase IV, Logo
+Klaus Mueller: TSO CLIST, OPL
+Jens Kilian: Intercal, Self
+Martin Uebing: Intuition
+Andreas Maeder: Borland Pascal 7
+Stefan Brozinski: Windows, HP-41C
+Jens Schaefers: Beta
+Wolfgang Houben: PDP-11 Assembler
+Pascal Costanza: Oberon (Oberon OS)
+Martin Oefelein: Sather, GynkoSoft
+Ralf Unland: TI-59
+Dan Sanders: English translation of TI-59 program
+Stefan Rupp: Java
+Werner Huber: Informix 4GL
+Lutz Heitmann: Turing machine
+Federico Hernandez-P¸schel: HTML
+Thomas Lattner: OZ
+Gunter Baumann: NewtonScript
+Torsten Landschoff: ST-Guide
+Florian Erhard: Gofer (simple)
+Niels 'Frolic' Froehling: 68000 Assembler (Amiga)
+Michael Sievert: Rexx
+Andy Newman: ici
+Sammy Mitchell: SAL
+Ian Trudel: Icon, Objective C
+Chris Locke: Limbo
+Dmitri Katchalov: BrainF***
+Bora Bali: Assembler IBM 370, IBM Exec, IBM Exec2, ASP (VB-Script and JavaScript), Java Servlet, Turkish, Italian
+Neil L. Burman: VAX Macro
+Thor Kottelin: XHTML
+Roel Adriaans: PHP
+Ad Boerma: TI-8x/9x, PHP
+hugh@raynerdesign.</contexte>
+    <contexte numELem="2">S: Verilog
+Jonas Braathen: mIRC
+David Clesse: POV-Ray
+Peter Hans van den Muijzenberg: Dutch, Frisian, ZX81-Assembler
+Gilson do Nascimento D'Elrei: Clipper
+Marcos Diez: Octave
+Mathias P. Gr‰dler: PureBasic
+Alan Eliasen: Frink
+Thomas Marcks von W¸rtemberg: Q-Basic
+Pan Yongzhi: Shell scripts
+Tynan Sylvester: UnrealScript
+Christian Klauser: Command Script
+Eric Gauvin: DynaMorph
+Daniel Monteiro: Brazilian Portuguese
+Tom Demuyt: Judoscript
+Pawel Dobrzycki: bc
+David Peterson: SIMPLE (submitted by Barry Hitchings)
+curian: MSIL
+BENI Andras: VRML
+Fatty fatty: SQL
+Deepak D: ProgressHello World LinksA Wiki with some interesting languages and additional information.</contexte>
+    <contexte numELem="2">The online encyclopedia Wikipedia on Hello World. Another collection of Hello World programs.</contexte>
+    <contexte numELem="2">Another collection of Hello World programs.</contexte>
+    <contexte numELem="2">The ACM Hello World project.</contexte>
   </contextes>
 </requete>
 

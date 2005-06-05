@@ -17,6 +17,7 @@ import java.util.StringTokenizer;
 import jregex.Matcher;
 import jregex.Pattern;
 import jregex.REFlags;
+import jregex.RETokenizer;
 //import jregex.RETokenizer;
 import jregex.Replacer;
 
@@ -33,9 +34,11 @@ public class OutilsTexte {
 	private final static String URLABBREV="ressources/abbrev";
 	private final static String URLSUFFIX="ressources/suffixes.txt";
 	private final static String URLLATIN1="ressources/Latin-1.txt";
+	private final static String URLSTOPWORDS="ressources/stopwords.en.txt";
 	private static Hashtable abbrev= new Hashtable();
 	private static Hashtable suffix=new Hashtable();
 	private static Hashtable latin1=new Hashtable();
+	private static Hashtable stop_words=new Hashtable();
 	public static boolean init=false;
 	public OutilsTexte(){}
 
@@ -74,6 +77,15 @@ public static void initOutilsTexte() throws IOException{
 		} 
 	in.close();
 	is.close();
+	 is=ClassLoader.getSystemResourceAsStream(URLSTOPWORDS);
+	  	in=new BufferedReader(new InputStreamReader(is));
+	  	word =in.readLine();
+		while(word!=null){
+		   stop_words.put(word,word);
+		   word=in.readLine();
+		}
+		in.close();
+		is.close();
 }
 	
 /**
@@ -189,10 +201,7 @@ public static ArrayList getContext(String reqRegex,String texte) throws InitOuti
 		int start=OutilsTexte.getStartIndexOfSentence(m.start(),texte.toString());
 		int end=OutilsTexte.getEndIndexOfSentence(m.end(),texte.toString());
 		contexte=texte.substring(start,end);
-//		contexte=OutilsTexte.getTexteFromHtml(contexte);
 		contextes.add(contexte);
-//		System.out.println(contexte);
-//		System.out.println((String)contextes.get(contextes.size()-1));
 	}
 return contextes;	
 }
@@ -205,24 +214,17 @@ private static boolean analyseVoisinnageBis(String candidat){
     StringBuffer sb=new StringBuffer(candidat);
     int index;
     if (!m.find()){
- //   		System.out.println(candidat+" : pas de points");
         return false;
     }
-  //  if (candidat.matches("(\\.\\.\\.)|!|\\?")){
-  //  		System.out.println("... ou ! ou  ?");
-  //  		return true;
-  //  }
     if (abbrev.get(candidat)!=null){
   		System.out.println(candidat+" : est une abbreviation");
         	return false;
     }
     if (candidat.matches("(([A-Z0-9]\\.)+)|([a-z0-9]\\.)+")) {
-//    		System.out.println(candidat+" : est un reel ou une abbreviation");
     		return false;
     }
     index=m.start();
     if (index==(candidat.length()-1)){
-//    		System.out.println(candidat+" : est une fin de phrase");
         return true;
     }
     if (index>0)
@@ -232,14 +234,11 @@ private static boolean analyseVoisinnageBis(String candidat){
     suffixe=candidat.substring(index+1,candidat.length());
     String ls=OutilsTexte.getLastSuffix(suffixe);
     if (ls=="."){
-//    		System.out.println(candidat+" : le suffixe est un point c'est une fin de phrase");
         return true;
     }
     if (suffix.get(ls)!=null){
-//    		System.out.println(candidat+" : le suffixe est un extansion connue ce n'est pas une fin de phrase");
         return false;
     }
-//    	System.out.println(candidat+" : je suppose que c'est une fin de phrase ");
      return true;
 }
 
@@ -325,14 +324,14 @@ public static int getEndIndex(int indice,String texte){
 }
 
 /**
- * prend en parametre une chaine de parametre et renvoie une liste de mots et de ponctuation
+ * prend en parametre une chaine de caractere et renvoie une liste de mots et de ponctuation
  * composant cette chaine de caractere
  * @param enonce
  * @return
  */
 public static ArrayList segmenter(String enonce){
 	ArrayList tokens=new ArrayList();
-	Pattern del=new Pattern("\\w+|[?,;.:/%£$&'()!¤\"]");
+	Pattern del=new Pattern("\\w+|[?,;.:/%£$&'-()!¤\"]");
 	Matcher m=del.matcher(enonce);
 	String tmp;
 	while (m.find()){
@@ -341,6 +340,38 @@ public static ArrayList segmenter(String enonce){
 			tokens.add(tmp);
 	}
 return tokens;	
+}
+
+/**
+ * Renvoie vrai si le fragment ne contient que des mots vides.
+ * @param fragment
+ * @return
+ * @throws InitOutilsTexteException
+ */
+public static boolean contientQueMotsVides(String fragment) throws InitOutilsTexteException{
+	if (!init)
+		throw new InitOutilsTexteException("l'initialisation n'a pas ete effectuee");
+	Pattern p=new Pattern("\\W+");
+	RETokenizer rt=new RETokenizer(p,fragment);
+	while (rt.hasMore()){
+		String tmp =rt.nextToken();
+		tmp=tmp.toLowerCase();
+		if (stop_words.get(tmp)==null){
+			//System.out.println("pas que des mots vides :"+fragment);
+			return false; 
+		}
+	}
+	//System.out.println("contient que des mots vides :"+fragment);
+	return true;
+}
+
+public static boolean contientDesGuillements(String fragment){
+	StringBuffer sb=new StringBuffer(fragment);
+	for(int i=0;i<sb.length();i++){
+		if (sb.charAt(i)=='\"') 
+			return true;
+		}
+	return false;
 }
 
 public static void main(String[] args) throws InitOutilsTexteException{
@@ -370,7 +401,10 @@ public static void main(String[] args) throws InitOutilsTexteException{
 	String reqRegex=OutilsTexte.transRequeteRegex(requete,"\\W*");
 	String page=OutilsTexte.getTexteFromHtml(exemple.toString());
 	System.out.println(OutilsTexte.getContext(reqRegex,page));
-	
+	System.out.println(OutilsTexte.contientQueMotsVides("you, are so"));
+	System.out.println(OutilsTexte.contientQueMotsVides("he is black"));
+	System.out.println("contient des guillements");
+	System.out.println(OutilsTexte.contientDesGuillements("he \" is a"));
 }
 
 }

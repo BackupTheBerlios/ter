@@ -1,0 +1,54 @@
+public static void
+generateXMLfile (String requete, Resultat resultat)
+     throws FileNotFoundException, IOException
+     {
+       //l'élément racine est la requête
+       Element racine = new Element ("requete");
+       //on lui ajoute comme attribut l'énoncé en chaîne de caractère
+       Attribute enonce = new Attribute ("enonce", requete);
+         racine.setAttribute (enonce);
+         org.jdom.Document document = new Document (racine);
+       //le premier fils de la racine sont les tokens
+       Element tokens = new Element ("tokens");
+         racine.addContent (tokens);
+       //on tags les differents mots de la requête
+       ArrayList toks = OutilsTexte.segmenter (requete);
+         String[] tags = null;
+         try
+       {
+	 tags = InterfaceTagger.tag (toks);
+       } catch (InitTaggerException e)
+       {
+	 e.printStackTrace ();
+       }
+       // on les ajoute au noeud tokens
+       for (int i = 0; i < toks.size (); i++)
+	 {
+	   Element token = new Element ("token");
+	   //on ajoute les tags en attribut de chaque mot
+	   Attribute tag = new Attribute ("tag", tags[i]);
+	   token.setAttribute (tag);
+	   token.setText ((String) toks.get (i));
+	   tokens.addContent (token);
+	 }
+       //on ajoute à la racine le noeud contextes
+       Element contextes = new Element ("contextes");
+       racine.addContent (contextes);
+       ElementResultat[]elems = resultat.getListeElementsResultat ();
+       //on ajoute au noeud contextes tous les contextes du fragment
+       concern é for (int i = 0; i < elems.length; i++)
+	 {
+	   for (int j = 0; j < elems[i].contexte.size (); j++)
+	     {
+	       Element contexte = new Element ("contexte");
+	       Attribute numElem =
+		 new Attribute ("numELem", String.valueOf (i));
+	       contexte.setAttribute (numElem);
+	       contexte.setText ((String) elems[i].contexte.get (j));
+	       contextes.addContent (contexte);
+	     }
+	 }
+       //on crée le fichier de sortie
+       XMLOutputter sortie = new XMLOutputter (Format.getPrettyFormat ());
+       sortie.output (document, new FileOutputStream ("requete.xml"));
+     }

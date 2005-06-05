@@ -23,7 +23,7 @@ import com.google.soap.search.GoogleSearchResultElement;
  * Preferences - Java - Code Style - Code Templates
  */
 public class RequeteGoogle extends Requete {
-	private static String key;
+	public static String key;
 	private	GoogleSearch search = new GoogleSearch();
 	public ResultatGoogle resultat;
 	/**
@@ -32,7 +32,7 @@ public class RequeteGoogle extends Requete {
 	 */
 
 	RequeteGoogle(){
-	    key="ThsJGMdQFHJv1bi01gu0TtohJFclwDs/";
+	    key="Qb9+l/tQFHKuty97Y+C2FJEnCqNhu+U/";
 	    search.setKey(key);
 	    }
 	
@@ -46,7 +46,7 @@ public class RequeteGoogle extends Requete {
 	}
 	
 	RequeteGoogle(String l,int mResults, String req){
-	    key="ThsJGMdQFHJv1bi01gu0TtohJFclwDs/";
+	    key="Qb9+l/tQFHKuty97Y+C2FJEnCqNhu+U/";
 	    search.setKey(key);
 	    this.langue=l;
 	    this.maxResults=mResults;
@@ -149,7 +149,8 @@ public static String getKey(){
 	
 
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws IOException {
+		OutilsTexte.initOutilsTexte();
 	    if (args.length != 3) {
 	        	System.out.print("pas le bon nombre d'arguments");
 	    }
@@ -188,7 +189,10 @@ try {
 	// TODO Auto-generated catch block
 	e1.printStackTrace();
 }	    
-	 
+BasicScoreGoogle.initCoefficients();
+BasicScoreGoogle score= new BasicScoreGoogle();
+System.out.println("score :"+score.giveScore(requete));
+
 }
 }
 

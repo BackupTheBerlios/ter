@@ -1,0 +1,59 @@
+\noindent
+\ttfamily
+\hlstd{}\hlkwa{public static }\hlstd{}\hlkwb{void}\hspace*{\fill}\\
+\hlstd{generateXMLfile }\hlsym{(}\hlstd{}\hlkwc{String }\hlstd{requete}\hlsym{, }\hlstd{Resultat resultat}\hlsym{)}\hspace*{\fill}\\
+\hlstd{}\hlstd{\ \ \ \ \ }\hlstd{}\hlkwa{throws }\hlstd{}\hlkwc{FileNotFoundException}\hlstd{}\hlsym{, }\hlstd{}\hlkwc{IOException}\hspace*{\fill}\\
+\hlstd{}\hlstd{\ \ \ \ \ }\hlstd{}\hlsym{\{}\hspace*{\fill}\\
+\hlstd{}\hlstd{\ \ \ \ \ \ \ }\hlstd{}\hlslc{//l'élément racine est la requête}\hspace*{\fill}\\
+\hlstd{}\hlstd{\ \ \ \ \ \ \ }\hlstd{}\hlkwc{Element }\hlstd{racine }\hlsym{= }\hlstd{}\hlkwa{new }\hlstd{}\hlkwc{Element }\hlstd{}\hlsym{(}\hlstd{}\hlstr{\dq{}requete\dq{}}\hlstd{}\hlsym{);}\hspace*{\fill}\\
+\hlstd{}\hlstd{\ \ \ \ \ \ \ }\hlstd{}\hlslc{//on lui ajoute comme attribut l'énoncé en chaîne de caractère}\hspace*{\fill}\\
+\hlstd{}\hlstd{\ \ \ \ \ \ \ }\hlstd{}\hlkwc{Attribute }\hlstd{enonce }\hlsym{= }\hlstd{}\hlkwa{new }\hlstd{}\hlkwc{Attribute }\hlstd{}\hlsym{(}\hlstd{}\hlstr{\dq{}enonce\dq{}}\hlstd{}\hlsym{, }\hlstd{requete}\hlsym{);}\hspace*{\fill}\\
+\hlstd{}\hlstd{\ \ \ \ \ \ \ \ \ }\hlstd{racine}\hlsym{.}\hlstd{setAttribute }\hlsym{(}\hlstd{enonce}\hlsym{);}\hspace*{\fill}\\
+\hlstd{}\hlstd{\ \ \ \ \ \ \ \ \ }\hlstd{org}\hlsym{.}\hlstd{jdom}\hlsym{.}\hlstd{}\hlkwc{Document }\hlstd{document }\hlsym{= }\hlstd{}\hlkwa{new }\hlstd{}\hlkwc{Document }\hlstd{}\hlsym{(}\hlstd{racine}\hlsym{);}\hspace*{\fill}\\
+\hlstd{}\hlstd{\ \ \ \ \ \ \ }\hlstd{}\hlslc{//le premier fils de la racine sont les tokens}\hspace*{\fill}\\
+\hlstd{}\hlstd{\ \ \ \ \ \ \ }\hlstd{}\hlkwc{Element }\hlstd{tokens }\hlsym{= }\hlstd{}\hlkwa{new }\hlstd{}\hlkwc{Element }\hlstd{}\hlsym{(}\hlstd{}\hlstr{\dq{}tokens\dq{}}\hlstd{}\hlsym{);}\hspace*{\fill}\\
+\hlstd{}\hlstd{\ \ \ \ \ \ \ \ \ }\hlstd{racine}\hlsym{.}\hlstd{addContent }\hlsym{(}\hlstd{tokens}\hlsym{);}\hspace*{\fill}\\
+\hlstd{}\hlstd{\ \ \ \ \ \ \ }\hlstd{}\hlslc{//on tags les differents mots de la requête}\hspace*{\fill}\\
+\hlstd{}\hlstd{\ \ \ \ \ \ \ }\hlstd{}\hlkwc{ArrayList }\hlstd{toks }\hlsym{= }\hlstd{OutilsTexte}\hlsym{.}\hlstd{segmenter }\hlsym{(}\hlstd{requete}\hlsym{);}\hspace*{\fill}\\
+\hlstd{}\hlstd{\ \ \ \ \ \ \ \ \ }\hlstd{}\hlkwc{String}\hlstd{}\hlsym{{[}{]} }\hlstd{tags }\hlsym{= }\hlstd{null}\hlsym{;}\hspace*{\fill}\\
+\hlstd{}\hlstd{\ \ \ \ \ \ \ \ \ }\hlstd{}\hlkwa{try}\hspace*{\fill}\\
+\hlstd{}\hlstd{\ \ \ \ \ \ \ }\hlstd{}\hlsym{\{}\hspace*{\fill}\\
+\hlstd{}\hlstd{\ \ }\hlstd{tags }\hlsym{= }\hlstd{InterfaceTagger}\hlsym{.}\hlstd{tag }\hlsym{(}\hlstd{toks}\hlsym{);}\hspace*{\fill}\\
+\hlstd{}\hlstd{\ \ \ \ \ \ \ }\hlstd{}\hlsym{\} }\hlstd{}\hlkwa{catch }\hlstd{}\hlsym{(}\hlstd{InitTaggerException e}\hlsym{)}\hspace*{\fill}\\
+\hlstd{}\hlstd{\ \ \ \ \ \ \ }\hlstd{}\hlsym{\{}\hspace*{\fill}\\
+\hlstd{}\hlstd{\ \ }\hlstd{e}\hlsym{.}\hlstd{printStackTrace }\hlsym{();}\hspace*{\fill}\\
+\hlstd{}\hlstd{\ \ \ \ \ \ \ }\hlstd{}\hlsym{\}}\hspace*{\fill}\\
+\hlstd{}\hlstd{\ \ \ \ \ \ \ }\hlstd{}\hlslc{// on les ajoute au noeud tokens}\hspace*{\fill}\\
+\hlstd{}\hlstd{\ \ \ \ \ \ \ }\hlstd{}\hlkwa{for }\hlstd{}\hlsym{(}\hlstd{}\hlkwb{int }\hlstd{i }\hlsym{= }\hlstd{}\hlnum{0}\hlstd{}\hlsym{; }\hlstd{i }\hlsym{$<$ }\hlstd{toks}\hlsym{.}\hlstd{size }\hlsym{(); }\hlstd{i}\hlsym{++)}\hspace*{\fill}\\
+\hlstd{}\hlstd{\ \ }\hlstd{}\hlsym{\{}\hspace*{\fill}\\
+\hlstd{}\hlstd{\ \ \ \ }\hlstd{}\hlkwc{Element }\hlstd{token }\hlsym{= }\hlstd{}\hlkwa{new }\hlstd{}\hlkwc{Element }\hlstd{}\hlsym{(}\hlstd{}\hlstr{\dq{}token\dq{}}\hlstd{}\hlsym{);}\hspace*{\fill}\\
+\hlstd{}\hlstd{\ \ \ \ }\hlstd{}\hlslc{//on ajoute les tags en attribut de chaque mot}\hspace*{\fill}\\
+\hlstd{}\hlstd{\ \ \ \ }\hlstd{}\hlkwc{Attribute }\hlstd{tag }\hlsym{= }\hlstd{}\hlkwa{new }\hlstd{}\hlkwc{Attribute }\hlstd{}\hlsym{(}\hlstd{}\hlstr{\dq{}tag\dq{}}\hlstd{}\hlsym{, }\hlstd{tags}\hlsym{{[}}\hlstd{i}\hlsym{{]});}\hspace*{\fill}\\
+\hlstd{}\hlstd{\ \ \ \ }\hlstd{token}\hlsym{.}\hlstd{setAttribute }\hlsym{(}\hlstd{tag}\hlsym{);}\hspace*{\fill}\\
+\hlstd{}\hlstd{\ \ \ \ }\hlstd{token}\hlsym{.}\hlstd{setText }\hlsym{((}\hlstd{}\hlkwc{String}\hlstd{}\hlsym{) }\hlstd{toks}\hlsym{.}\hlstd{get }\hlsym{(}\hlstd{i}\hlsym{));}\hspace*{\fill}\\
+\hlstd{}\hlstd{\ \ \ \ }\hlstd{tokens}\hlsym{.}\hlstd{addContent }\hlsym{(}\hlstd{token}\hlsym{);}\hspace*{\fill}\\
+\hlstd{}\hlstd{\ \ }\hlstd{}\hlsym{\}}\hspace*{\fill}\\
+\hlstd{}\hlstd{\ \ \ \ \ \ \ }\hlstd{}\hlslc{//on ajoute à la racine le noeud contextes}\hspace*{\fill}\\
+\hlstd{}\hlstd{\ \ \ \ \ \ \ }\hlstd{}\hlkwc{Element }\hlstd{contextes }\hlsym{= }\hlstd{}\hlkwa{new }\hlstd{}\hlkwc{Element }\hlstd{}\hlsym{(}\hlstd{}\hlstr{\dq{}contextes\dq{}}\hlstd{}\hlsym{);}\hspace*{\fill}\\
+\hlstd{}\hlstd{\ \ \ \ \ \ \ }\hlstd{racine}\hlsym{.}\hlstd{addContent }\hlsym{(}\hlstd{contextes}\hlsym{);}\hspace*{\fill}\\
+\hlstd{}\hlstd{\ \ \ \ \ \ \ }\hlstd{ElementResultat}\hlsym{{[}{]}}\hlstd{elems }\hlsym{= }\hlstd{resultat}\hlsym{.}\hlstd{getListeElementsResultat }\hlsym{();}\hspace*{\fill}\\
+\hlstd{}\hlstd{\ \ \ \ \ \ \ }\hlstd{}\hlslc{//on ajoute au noeud contextes tous les contextes du fragment}\hspace*{\fill}\\
+\hlstd{}\hlstd{\ \ \ \ \ \ \ }\hlstd{concern é }\hlkwa{for }\hlstd{}\hlsym{(}\hlstd{}\hlkwb{int }\hlstd{i }\hlsym{= }\hlstd{}\hlnum{0}\hlstd{}\hlsym{; }\hlstd{i }\hlsym{$<$ }\hlstd{elems}\hlsym{.}\hlstd{length}\hlsym{; }\hlstd{i}\hlsym{++)}\hspace*{\fill}\\
+\hlstd{}\hlstd{\ \ }\hlstd{}\hlsym{\{}\hspace*{\fill}\\
+\hlstd{}\hlstd{\ \ \ \ }\hlstd{}\hlkwa{for }\hlstd{}\hlsym{(}\hlstd{}\hlkwb{int }\hlstd{j }\hlsym{= }\hlstd{}\hlnum{0}\hlstd{}\hlsym{; }\hlstd{j }\hlsym{$<$ }\hlstd{elems}\hlsym{{[}}\hlstd{i}\hlsym{{]}.}\hlstd{contexte}\hlsym{.}\hlstd{size }\hlsym{(); }\hlstd{j}\hlsym{++)}\hspace*{\fill}\\
+\hlstd{}\hlstd{\ \ \ \ \ \ }\hlstd{}\hlsym{\{}\hspace*{\fill}\\
+\hlstd{}\hlstd{\ \ \ \ \ \ \ \ }\hlstd{}\hlkwc{Element }\hlstd{contexte }\hlsym{= }\hlstd{}\hlkwa{new }\hlstd{}\hlkwc{Element }\hlstd{}\hlsym{(}\hlstd{}\hlstr{\dq{}contexte\dq{}}\hlstd{}\hlsym{);}\hspace*{\fill}\\
+\hlstd{}\hlstd{\ \ \ \ \ \ \ \ }\hlstd{}\hlkwc{Attribute }\hlstd{numElem }\hlsym{=}\hspace*{\fill}\\
+\hlstd{}\hlstd{\ \ \ }\hlstd{}\hlkwa{new }\hlstd{}\hlkwc{Attribute }\hlstd{}\hlsym{(}\hlstd{}\hlstr{\dq{}numELem\dq{}}\hlstd{}\hlsym{, }\hlstd{}\hlkwc{String}\hlstd{}\hlsym{.}\hlstd{valueOf }\hlsym{(}\hlstd{i}\hlsym{));}\hspace*{\fill}\\
+\hlstd{}\hlstd{\ \ \ \ \ \ \ \ }\hlstd{contexte}\hlsym{.}\hlstd{setAttribute }\hlsym{(}\hlstd{numElem}\hlsym{);}\hspace*{\fill}\\
+\hlstd{}\hlstd{\ \ \ \ \ \ \ \ }\hlstd{contexte}\hlsym{.}\hlstd{setText }\hlsym{((}\hlstd{}\hlkwc{String}\hlstd{}\hlsym{) }\hlstd{elems}\hlsym{{[}}\hlstd{i}\hlsym{{]}.}\hlstd{contexte}\hlsym{.}\hlstd{get }\hlsym{(}\hlstd{j}\hlsym{));}\hspace*{\fill}\\
+\hlstd{}\hlstd{\ \ \ \ \ \ \ \ }\hlstd{contextes}\hlsym{.}\hlstd{addContent }\hlsym{(}\hlstd{contexte}\hlsym{);}\hspace*{\fill}\\
+\hlstd{}\hlstd{\ \ \ \ \ \ }\hlstd{}\hlsym{\}}\hspace*{\fill}\\
+\hlstd{}\hlstd{\ \ }\hlstd{}\hlsym{\}}\hspace*{\fill}\\
+\hlstd{}\hlstd{\ \ \ \ \ \ \ }\hlstd{}\hlslc{//on crée le fichier de sortie}\hspace*{\fill}\\
+\hlstd{}\hlstd{\ \ \ \ \ \ \ }\hlstd{XMLOutputter sortie }\hlsym{= }\hlstd{}\hlkwa{new }\hlstd{XMLOutputter }\hlsym{(}\hlstd{}\hlkwc{Format}\hlstd{}\hlsym{.}\hlstd{getPrettyFormat }\hlsym{());}\hspace*{\fill}\\
+\hlstd{}\hlstd{\ \ \ \ \ \ \ }\hlstd{sortie}\hlsym{.}\hlstd{output }\hlsym{(}\hlstd{document}\hlsym{, }\hlstd{}\hlkwa{new }\hlstd{}\hlkwc{FileOutputStream }\hlstd{}\hlsym{(}\hlstd{}\hlstr{\dq{}requete.xml\dq{}}\hlstd{}\hlsym{));}\hspace*{\fill}\\
+\hlstd{}\hlstd{\ \ \ \ \ }\hlstd{}\hlsym{\}}\hlstd{}\hspace*{\fill}\\
+\mbox{}
+
+\normalfont

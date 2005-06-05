@@ -1,0 +1,50 @@
+\noindent
+\ttfamily
+\hlstd{}\hlslc{//c'est le Thread}\hspace*{\fill}\\
+\hlstd{}\hlkwa{public }\hlstd{}\hlkwb{void}\hspace*{\fill}\\
+\hlstd{run }\hlsym{()}\hspace*{\fill}\\
+\hlstd{}\hlsym{\{}\hspace*{\fill}\\
+\hlstd{}\hlstd{\ \ }\hlstd{statut }\hlsym{= }\hlstd{en\textunderscore cours}\hlsym{;}\hspace*{\fill}\\
+\hlstd{}\hlstd{\ \ }\hlstd{}\hlkwa{try}\hspace*{\fill}\\
+\hlstd{}\hlstd{\ \ }\hlstd{}\hlsym{\{}\hspace*{\fill}\\
+\hlstd{}\hlstd{\ \ \ \ }\hlstd{}\hlslc{//on recupere le code html de la page}\hspace*{\fill}\\
+\hlstd{}\hlstd{\ \ \ \ }\hlstd{codeHTML }\hlsym{= }\hlstd{getHTMLcode }\hlsym{();}\hspace*{\fill}\\
+\hlstd{}\hlstd{\ \ \ \ }\hlstd{}\hlslc{//on enlève les balises HTML pour ne récupérer que le texte}\hspace*{\fill}\\
+\hlstd{}\hlstd{\ \ \ \ }\hlstd{codeHTML }\hlsym{= }\hlstd{OutilsTexte}\hlsym{.}\hlstd{getTexteFromHtml }\hlsym{(}\hlstd{codeHTML}\hlsym{);}\hspace*{\fill}\\
+\hlstd{}\hlstd{\ \ \ \ }\hlstd{}\hlslc{//on extrait tous les contextes du fragment}\hlstd{\ \ }\hlslc{contenu dans la}\hspace*{\fill}\\
+\hlstd{}\hlstd{\ \ \ \ }\hlstd{page eR}\hlsym{.}\hlstd{contexte }\hlsym{= }\hlstd{OutilsTexte}\hlsym{.}\hlstd{getContext }\hlsym{(}\hlstd{req}\hlsym{, }\hlstd{codeHTML}\hlsym{);}\hspace*{\fill}\\
+\hlstd{}\hlstd{\ \ }\hlstd{}\hlsym{\} }\hlstd{}\hlkwa{catch }\hlstd{}\hlsym{(}\hlstd{}\hlkwc{IOException }\hlstd{e}\hlsym{)}\hspace*{\fill}\\
+\hlstd{}\hlstd{\ \ }\hlstd{}\hlsym{\{}\hspace*{\fill}\\
+\hlstd{}\hlstd{\ \ \ \ }\hlstd{e}\hlsym{.}\hlstd{printStackTrace }\hlsym{();}\hspace*{\fill}\\
+\hlstd{}\hlstd{\ \ }\hlstd{}\hlsym{\} }\hlstd{}\hlkwa{catch }\hlstd{}\hlsym{(}\hlstd{}\hlkwc{InterruptedException }\hlstd{e}\hlsym{)}\hspace*{\fill}\\
+\hlstd{}\hlstd{\ \ }\hlstd{}\hlsym{\{}\hspace*{\fill}\\
+\hlstd{}\hlstd{\ \ \ \ }\hlstd{e}\hlsym{.}\hlstd{printStackTrace }\hlsym{();}\hspace*{\fill}\\
+\hlstd{}\hlstd{\ \ }\hlstd{}\hlsym{\} }\hlstd{}\hlkwa{catch }\hlstd{}\hlsym{(}\hlstd{InitOutilsTexteException e}\hlsym{)}\hspace*{\fill}\\
+\hlstd{}\hlstd{\ \ }\hlstd{}\hlsym{\{}\hspace*{\fill}\\
+\hlstd{}\hlstd{\ \ \ \ }\hlstd{e}\hlsym{.}\hlstd{printStackTrace }\hlsym{();}\hspace*{\fill}\\
+\hlstd{}\hlstd{\ \ }\hlstd{}\hlsym{\}}\hspace*{\fill}\\
+\hlstd{}\hlstd{\ \ }\hlstd{statut }\hlsym{= }\hlstd{finis}\hlsym{;}\hspace*{\fill}\\
+\hlstd{}\hlstd{\ \ }\hlstd{}\hlslc{//il s'agit d'un compteur statique initialisé par le nombre de}\hspace*{\fill}\\
+\hlstd{}\hlstd{\ \ }\hlstd{thread et qui est d é cr é ment é\hspace*{\fill}\\
+}\hlstd{\ \ \ \ }\hlstd{}\hlslc{//à la fin du traitement}\hspace*{\fill}\\
+\hlstd{}\hlstd{\ \ \ \ }\hlstd{compteur}\hlsym{{-}{-};}\hspace*{\fill}\\
+\hlstd{}\hlsym{\}}\hspace*{\fill}\\
+\hlstd{\hspace*{\fill}\\
+}\hlstd{\ \ \ }\hlstd{}\hlslc{//méthode qui initialise tous les threads}\hspace*{\fill}\\
+\hlstd{}\hlkwa{public static }\hlstd{}\hlkwb{void}\hspace*{\fill}\\
+\hlstd{getAllContexts }\hlsym{(}\hlstd{Resultat r}\hlsym{, }\hlstd{}\hlkwc{String }\hlstd{reqRegex}\hlsym{)}\hspace*{\fill}\\
+\hlstd{}\hlsym{\{}\hspace*{\fill}\\
+\hlstd{}\hlstd{\ \ }\hlstd{ElementResultat}\hlsym{{[}{]}}\hlstd{elemResult }\hlsym{= }\hlstd{r}\hlsym{.}\hlstd{getListeElementsResultat }\hlsym{();}\hspace*{\fill}\\
+\hlstd{}\hlstd{\ \ }\hlstd{compteur }\hlsym{= }\hlstd{elemResult}\hlsym{.}\hlstd{length}\hlsym{;}\hspace*{\fill}\\
+\hlstd{}\hlstd{\ \ }\hlstd{}\hlslc{//pour chaque éléments résultat on lance un thread}\hspace*{\fill}\\
+\hlstd{}\hlstd{\ \ }\hlstd{}\hlkwa{for }\hlstd{}\hlsym{(}\hlstd{}\hlkwb{int }\hlstd{i }\hlsym{= }\hlstd{}\hlnum{0}\hlstd{}\hlsym{; }\hlstd{i }\hlsym{$<$ }\hlstd{elemResult}\hlsym{.}\hlstd{length}\hlsym{; }\hlstd{i}\hlsym{++)}\hspace*{\fill}\\
+\hlstd{}\hlstd{\ \ \ \ }\hlstd{}\hlsym{\{}\hspace*{\fill}\\
+\hlstd{}\hlstd{\ \ \ \ \ \ }\hlstd{PageHTML p }\hlsym{= }\hlstd{}\hlkwa{new }\hlstd{PageHTML }\hlsym{(}\hlstd{elemResult}\hlsym{{[}}\hlstd{i}\hlsym{{]}, }\hlstd{reqRegex}\hlsym{);}\hspace*{\fill}\\
+\hlstd{}\hlstd{\ \ \ \ \ \ }\hlstd{p}\hlsym{.}\hlstd{start }\hlsym{();}\hspace*{\fill}\\
+\hlstd{}\hlstd{\ \ \ \ }\hlstd{}\hlsym{\}}\hspace*{\fill}\\
+\hlstd{}\hlstd{\ \ }\hlstd{}\hlslc{//tant que le compteur n'est pas nulle alors le programme principal est bloqué}\hspace*{\fill}\\
+\hlstd{}\hlstd{\ \ }\hlstd{}\hlkwa{while }\hlstd{}\hlsym{(}\hlstd{compteur }\hlsym{!= }\hlstd{}\hlnum{0}\hlstd{}\hlsym{);}\hspace*{\fill}\\
+\hlstd{}\hlsym{\}}\hlstd{}\hspace*{\fill}\\
+\mbox{}
+
+\normalfont

@@ -1,0 +1,36 @@
+\noindent
+\ttfamily
+\hlstd{}\hlkwa{public }\hlstd{}\hlkwb{void}\hspace*{\fill}\\
+\hlstd{requeteGoogle }\hlsym{(}\hlstd{}\hlkwc{String }\hlstd{langueRestrict}\hlsym{, }\hlstd{}\hlkwb{int }\hlstd{maxResult}\hlsym{, }\hlstd{}\hlkwc{String }\hlstd{req}\hlsym{)}\hspace*{\fill}\\
+\hlstd{}\hlsym{\{}\hspace*{\fill}\\
+\hlstd{}\hlstd{\ \ }\hlstd{GoogleSearchResult resultatGoogle}\hlsym{;}\hspace*{\fill}\\
+\hlstd{}\hlstd{\ \ }\hlstd{}\hlslc{//initialisation du nombre maximum de résultats retournés}\hspace*{\fill}\\
+\hlstd{}\hlstd{\ \ }\hlstd{search}\hlsym{.}\hlstd{setMaxResults }\hlsym{(}\hlstd{maxResult}\hlsym{);}\hspace*{\fill}\\
+\hlstd{}\hlstd{\ \ }\hlstd{}\hlslc{//initialisation de la chaine de caractère représentant la requête}\hspace*{\fill}\\
+\hlstd{}\hlstd{\ \ }\hlstd{search}\hlsym{.}\hlstd{setQueryString }\hlsym{(}\hlstd{}\hlstr{\dq{}}\hlesc{$\backslash$\dq{}}\hlstr{\dq{}}\hlstd{ }\hlsym{+ }\hlstd{req }\hlsym{+ }\hlstd{}\hlstr{\dq{}}\hlesc{$\backslash$\dq{}}\hlstr{\dq{}}\hlstd{}\hlsym{);}\hspace*{\fill}\\
+\hlstd{}\hlstd{\ \ }\hlstd{}\hlkwa{try}\hspace*{\fill}\\
+\hlstd{}\hlstd{\ \ }\hlstd{}\hlsym{\{}\hspace*{\fill}\\
+\hlstd{}\hlstd{\ \ \ \ }\hlstd{}\hlslc{//lancement de la recherche}\hspace*{\fill}\\
+\hlstd{}\hlstd{\ \ \ \ }\hlstd{resultatGoogle }\hlsym{= }\hlstd{search}\hlsym{.}\hlstd{doSearch }\hlsym{();}\hspace*{\fill}\\
+\hlstd{}\hlstd{\ \ \ \ }\hlstd{resultat }\hlsym{= }\hlstd{}\hlkwa{new }\hlstd{ResultatGoogle }\hlsym{(}\hlstd{maxResult}\hlsym{);}\hspace*{\fill}\\
+\hlstd{}\hlstd{\ \ \ \ }\hlstd{}\hlslc{//initialisation du nombre de résultats obtenus}\hspace*{\fill}\\
+\hlstd{}\hlstd{\ \ \ \ }\hlstd{resultat}\hlsym{.}\hlstd{setNbResultat }\hlsym{(}\hlstd{resultatGoogle}\hlsym{.}\hlstd{getEstimatedTotalResultsCount }\hlsym{());}\hspace*{\fill}\\
+\hlstd{}\hlstd{\ \ \ \ }\hlstd{}\hlslc{//initialisation des éléments résultats retournés par Google}\hspace*{\fill}\\
+\hlstd{}\hlstd{\ \ \ \ \ \ }\hlstd{GoogleSearchResultElement}\hlsym{{[}{]}}\hlstd{elements }\hlsym{=}\hspace*{\fill}\\
+\hlstd{}\hlstd{\ \ \ \ \ \ }\hlstd{resultatGoogle}\hlsym{.}\hlstd{getResultElements }\hlsym{();}\hspace*{\fill}\\
+\hlstd{}\hlstd{\ \ \ \ }\hlstd{}\hlkwa{for }\hlstd{}\hlsym{(}\hlstd{}\hlkwb{int }\hlstd{i }\hlsym{= }\hlstd{}\hlnum{0}\hlstd{}\hlsym{; }\hlstd{i }\hlsym{$<$ }\hlstd{elements}\hlsym{.}\hlstd{length}\hlsym{; }\hlstd{i}\hlsym{++)}\hspace*{\fill}\\
+\hlstd{}\hlstd{\ \ \ \ \ \ }\hlstd{}\hlsym{\{}\hspace*{\fill}\\
+\hlstd{	resultat}\hlsym{.}\hlstd{addElementResultatGoogle }\hlsym{(}\hlstd{elements}\hlsym{{[}}\hlstd{i}\hlsym{{]}, }\hlstd{i}\hlsym{);}\hspace*{\fill}\\
+\hlstd{}\hlstd{\ \ \ \ \ \ }\hlstd{}\hlsym{\}}\hspace*{\fill}\\
+\hlstd{}\hlstd{\ \ }\hlstd{}\hlsym{\} }\hlstd{}\hlkwa{catch }\hlstd{}\hlsym{(}\hlstd{GoogleSearchFault e}\hlsym{)}\hspace*{\fill}\\
+\hlstd{}\hlstd{\ \ }\hlstd{}\hlsym{\{}\hspace*{\fill}\\
+\hlstd{}\hlstd{\ \ \ \ }\hlstd{e}\hlsym{.}\hlstd{printStackTrace }\hlsym{();}\hspace*{\fill}\\
+\hlstd{}\hlstd{\ \ }\hlstd{}\hlsym{\}}\hspace*{\fill}\\
+\hlstd{}\hlstd{\ \ }\hlstd{}\hlslc{//on garde une trace de la requête}\hspace*{\fill}\\
+\hlstd{}\hlstd{\ \ }\hlstd{}\hlkwa{this}\hlstd{}\hlsym{.}\hlstd{requete }\hlsym{= }\hlstd{req}\hlsym{;}\hspace*{\fill}\\
+\hlstd{}\hlstd{\ \ }\hlstd{}\hlslc{//nombre de mots dans la requête}\hspace*{\fill}\\
+\hlstd{}\hlstd{\ \ }\hlstd{}\hlkwa{this}\hlstd{}\hlsym{.}\hlstd{nbMots }\hlsym{= }\hlstd{OutilsTexte}\hlsym{.}\hlstd{countWord }\hlsym{(}\hlstd{req}\hlsym{);}\hspace*{\fill}\\
+\hlstd{}\hlsym{\}}\hlstd{}\hspace*{\fill}\\
+\mbox{}
+
+\normalfont

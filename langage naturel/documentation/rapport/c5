@@ -1,0 +1,19 @@
+public static String[]
+tag (ArrayList enonce)
+     throws InitTaggerException
+     {
+       String[] s = null;
+       if (!init)
+	 {
+	   //erreur si le tagger n'a pas été initialisé
+	   throw new
+	     InitTaggerException
+	     ("il faut d'abord lancer la methode initTagger de la classe InterfaceTagger");
+	 }
+       else
+	 {
+	   //tags les mots de l'énoncé
+	   s = tagger.tag (enonce);
+	 }
+       return s;
+     }

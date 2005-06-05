@@ -1,0 +1,39 @@
+public static void
+constructModel (int n_grammes, StringBuffer sbIn, StringBuffer sbOut)
+     throws InitOutilsTexteException
+     {
+       //expression régulière qui permet de matcher n mots
+       Pattern p = new Pattern ("(\\w+\\W+){" + n_grammes + "}");
+       Matcher m = p.matcher (sbIn.toString ());
+       String tmp = null;
+         try
+       {
+	 //tant qu'on a pas atteint la fin du texte et qu'on à pas
+	 atteint les 900 requ ê tes while (m.find () && compteur_req < 900)
+	   {
+	     tmp = m.group (0);
+	     //si les mots de la requête ne sont pas vides et ne
+	     contient pas de guillemets alors
+	       if (!OutilsTexte.contientQueMotsVides (tmp)
+		   && (!OutilsTexte.contientDesGuillements (tmp)))
+	       {
+		 RequeteGoogle rg = new RequeteGoogle ("lan_en", 1, tmp);
+		 //on lance la requête
+		   rg.requeteGoogle ();
+		   synchronized (sbOut)
+		 {
+		   //on écrit dans un stringBuffer le résultat
+		   sbOut.append (n_grammes + " ");
+		   sbOut.append (rg.resultat.nbResultats + "\n");
+		   compteur_req++;
+		 }
+		 System.out.println (compteur_req + " " + n_grammes + "
+" + rg.resultat.nbResultats + " " + tmp);
+	       }
+	   }
+       }
+       catch (Exception e)
+       {
+	 System.out.println ("problemes google");
+       }
+     }

@@ -1,0 +1,24 @@
+\noindent
+\ttfamily
+\hlstd{}\hlkwa{public static }\hlstd{}\hlkwc{String}\hlstd{}\hlsym{{[}{]}}\hspace*{\fill}\\
+\hlstd{tag }\hlsym{(}\hlstd{}\hlkwc{ArrayList }\hlstd{enonce}\hlsym{)}\hspace*{\fill}\\
+\hlstd{}\hlstd{\ \ \ \ \ }\hlstd{}\hlkwa{throws }\hlstd{InitTaggerException\hspace*{\fill}\\
+}\hlstd{\ \ \ \ \ }\hlstd{}\hlsym{\{}\hspace*{\fill}\\
+\hlstd{}\hlstd{\ \ \ \ \ \ \ }\hlstd{}\hlkwc{String}\hlstd{}\hlsym{{[}{]} }\hlstd{s }\hlsym{= }\hlstd{null}\hlsym{;}\hspace*{\fill}\\
+\hlstd{}\hlstd{\ \ \ \ \ \ \ }\hlstd{}\hlkwa{if }\hlstd{}\hlsym{(!}\hlstd{init}\hlsym{)}\hspace*{\fill}\\
+\hlstd{}\hlstd{\ \ }\hlstd{}\hlsym{\{}\hspace*{\fill}\\
+\hlstd{}\hlstd{\ \ \ \ }\hlstd{}\hlslc{//erreur si le tagger n'a pas été initialisé}\hspace*{\fill}\\
+\hlstd{}\hlstd{\ \ \ \ }\hlstd{}\hlkwa{throw new}\hspace*{\fill}\\
+\hlstd{}\hlstd{\ \ \ \ \ \ }\hlstd{InitTaggerException\hspace*{\fill}\\
+}\hlstd{\ \ \ \ \ \ }\hlstd{}\hlsym{(}\hlstd{}\hlstr{\dq{}il faut d'abord lancer la methode initTagger de la classe InterfaceTagger\dq{}}\hlstd{}\hlsym{);}\hspace*{\fill}\\
+\hlstd{}\hlstd{\ \ }\hlstd{}\hlsym{\}}\hspace*{\fill}\\
+\hlstd{}\hlstd{\ \ \ \ \ \ \ }\hlstd{}\hlkwa{else}\hspace*{\fill}\\
+\hlstd{}\hlstd{\ \ }\hlstd{}\hlsym{\{}\hspace*{\fill}\\
+\hlstd{}\hlstd{\ \ \ \ }\hlstd{}\hlslc{//tags les mots de l'énoncé}\hspace*{\fill}\\
+\hlstd{}\hlstd{\ \ \ \ }\hlstd{s }\hlsym{= }\hlstd{tagger}\hlsym{.}\hlstd{tag }\hlsym{(}\hlstd{enonce}\hlsym{);}\hspace*{\fill}\\
+\hlstd{}\hlstd{\ \ }\hlstd{}\hlsym{\}}\hspace*{\fill}\\
+\hlstd{}\hlstd{\ \ \ \ \ \ \ }\hlstd{}\hlkwa{return }\hlstd{s}\hlsym{;}\hspace*{\fill}\\
+\hlstd{}\hlstd{\ \ \ \ \ }\hlstd{}\hlsym{\}}\hlstd{}\hspace*{\fill}\\
+\mbox{}
+
+\normalfont

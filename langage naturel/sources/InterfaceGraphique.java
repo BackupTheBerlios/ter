@@ -123,6 +123,8 @@ public class InterfaceGraphique extends JFrame implements ActionListener{
     public static void main(String[] args){
     		try {
 				OutilsTexte.initOutilsTexte();
+				InterfaceTagger.initTagger();
+				BasicScoreGoogle.initCoefficients();
 			} catch (IOException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();

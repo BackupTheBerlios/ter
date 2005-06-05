@@ -1,0 +1,328 @@
+This is pdfeTeX, Version 3.141592-1.20a-2.2 (Web2C 7.5.3) (format=pdflatex 2005.4.20)  5 JUN 2005 22:27
+entering extended mode
+\write18 enabled.
+**rapportStage.tex
+(./rapportStage.tex
+LaTeX2e <2003/12/01>
+Babel <v3.8d> and hyphenation patterns for american, french, german, ngerman, d
+utch, italian, norsk, portuges, spanish, swedish, nohyphenation, loaded.
+(/usr/local/teTeX/share/texmf.tetex/tex/latex/base/report.cls
+Document Class: report 2004/02/16 v1.4f Standard LaTeX document class
+(/usr/local/teTeX/share/texmf.tetex/tex/latex/base/size10.clo
+File: size10.clo 2004/02/16 v1.4f Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@chapter=\count80
+\c@section=\count81
+\c@subsection=\count82
+\c@subsubsection=\count83
+\c@paragraph=\count84
+\c@subparagraph=\count85
+\c@figure=\count86
+\c@table=\count87
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+)
+(/usr/local/teTeX/share/texmf.tetex/tex/latex/base/inputenc.sty
+Package: inputenc 2004/02/05 v1.0d Input encoding file
+
+(/usr/local/teTeX/share/texmf.tetex/tex/latex/base/applemac.def
+File: applemac.def 2004/02/05 v1.0d Input encoding file
+))
+(/usr/local/teTeX/share/texmf.tetex/tex/latex/graphics/graphicx.sty
+Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/local/teTeX/share/texmf.tetex/tex/latex/graphics/keyval.sty
+Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
+\KV@toks@=\toks14
+)
+(/usr/local/teTeX/share/texmf.tetex/tex/latex/graphics/graphics.sty
+Package: graphics 2001/07/07 v1.0n Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/local/teTeX/share/texmf.tetex/tex/latex/graphics/trig.sty
+Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
+)
+(/usr/local/teTeX/share/texmf.tetex/tex/latex/graphics/graphics.cfg
+File: graphics.cfg 2005/02/03 v1.3 graphics configuration of teTeX/TeXLive
+)
+Package graphics Info: Driver file: pdftex.def on input line 80.
+
+(/usr/local/teTeX/share/texmf.tetex/tex/latex/graphics/pdftex.def
+File: pdftex.def 2002/06/19 v0.03k graphics/color for pdftex
+\Gread@gobject=\count88
+))
+\Gin@req@height=\dimen103
+\Gin@req@width=\dimen104
+)
+(/usr/local/teTeX/share/texmf.tetex/tex/latex/aeguill/aeguill.sty
+Package: aeguill 2003/08/02 1.02 AE fonts with french guillemets (D. Roegel)
+
+(/usr/local/teTeX/share/texmf.tetex/tex/latex/ae/ae.sty
+Package: ae 2001/02/12 1.3 Almost European Computer Modern
+
+(/usr/local/teTeX/share/texmf.tetex/tex/latex/base/fontenc.sty
+Package: fontenc 2004/02/22 v1.99f Standard LaTeX package
+
+(/usr/local/teTeX/share/texmf.tetex/tex/latex/base/t1enc.def
+File: t1enc.def 2004/02/22 v1.99f Standard LaTeX file
+LaTeX Font Info:    Redeclaring font encoding T1 on input line 43.
+)
+LaTeX Font Info:    Try loading font information for T1+aer on input line 100.
+
+(/usr/local/teTeX/share/texmf.tetex/tex/latex/ae/t1aer.fd
+File: t1aer.fd 1997/11/16 Font definitions for T1/aer.
+)))
+(/usr/local/teTeX/share/texmf.tetex/tex/latex/base/fontenc.sty
+Package: fontenc 2004/02/22 v1.99f Standard LaTeX package
+
+(/usr/local/teTeX/share/texmf.tetex/tex/latex/cyrillic/ot2enc.def
+File: ot2enc.def 2001/08/11 v3.3a Cyrillic encoding definition file
+)
+(/usr/local/teTeX/share/texmf.tetex/tex/latex/base/t1enc.def
+File: t1enc.def 2004/02/22 v1.99f Standard LaTeX file
+LaTeX Font Info:    Redeclaring font encoding T1 on input line 43.
+)))
+(/usr/local/teTeX/share/texmf.tetex/tex/generic/babel/babel.sty
+Package: babel 2004/11/20 v3.8d The Babel package
+
+(/usr/local/teTeX/share/texmf.tetex/tex/generic/babel/frenchb.ldf
+Language: french 2004/04/02 v1.6f French support from the babel system
+
+(/usr/local/teTeX/share/texmf.tetex/tex/generic/babel/babel.def
+File: babel.def 2004/11/20 v3.8d Babel common definitions
+\babel@savecnt=\count89
+\U@D=\dimen105
+)
+Package babel Info: Making : an active character on input line 219.
+Package babel Info: Making ; an active character on input line 220.
+Package babel Info: Making ! an active character on input line 221.
+Package babel Info: Making ? an active character on input line 222.
+LaTeX Font Info:    Redeclaring font encoding T1 on input line 299.
+\parindentFFN=\dimen106
+\std@mcc=\count90
+\dec@mcc=\count91
+
+*************************************
+* Local config file frenchb.cfg used
+*
+(/usr/local/teTeX/share/texmf.tetex/tex/generic/babel/frenchb.cfg)))
+(/usr/local/teTeX/share/texmf.tetex/tex/latex/graphics/color.sty
+Package: color 1999/02/16 v1.0i Standard LaTeX Color (DPC)
+
+(/usr/local/teTeX/share/texmf.tetex/tex/latex/graphics/color.cfg
+File: color.cfg 2005/02/03 v1.3 color configuration of teTeX/TeXLive
+)
+Package color Info: Driver file: pdftex.def on input line 125.
+)
+(/usr/local/teTeX/share/texmf.tetex/tex/latex/base/alltt.sty
+Package: alltt 1997/06/16 v2.0g defines alltt environment
+) (./highlight.sty)
+
+LaTeX Warning: Unused global option(s):
+    [12ptj].
+
+(./rapportStage.aux)
+\openout1 = `rapportStage.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for T1/lmr/m/n on input line 11.
+LaTeX Font Info:    Try loading font information for T1+lmr on input line 11.
+ (/usr/local/teTeX/share/texmf.tetex/tex/latex/lm/t1lmr.fd
+File: t1lmr.fd 2005/02/28 v1.1a Font defs for Latin Modern
+)
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for OT2/cmr/m/n on input line 11.
+LaTeX Font Info:    Try loading font information for OT2+cmr on input line 11.
+(/usr/local/teTeX/share/texmf.tetex/tex/latex/cyrillic/ot2cmr.fd
+File: ot2cmr.fd 2001/08/11 v3.2c Computer Modern Cyrillic font definitions
+)
+LaTeX Font Info:    ... okay on input line 11.
+
+(/usr/local/teTeX/share/texmf.tetex/tex/context/base/supp-pdf.tex
+(/usr/local/teTeX/share/texmf.tetex/tex/context/base/supp-mis.tex
+loading : Context Support Macros / Miscellaneous (2004.10.26)
+\protectiondepth=\count92
+\scratchcounter=\count93
+\scratchtoks=\toks15
+\scratchdimen=\dimen107
+\scratchskip=\skip43
+\scratchmuskip=\muskip10
+\scratchbox=\box26
+\scratchread=\read1
+\scratchwrite=\write3
+\zeropoint=\dimen108
+\onepoint=\dimen109
+\onebasepoint=\dimen110
+\minusone=\count94
+\thousandpoint=\dimen111
+\onerealpoint=\dimen112
+\emptytoks=\toks16
+\nextbox=\box27
+\nextdepth=\dimen113
+\everyline=\toks17
+\!!counta=\count95
+\!!countb=\count96
+\recursecounter=\count97
+)
+loading : Context Support Macros / PDF (2004.03.26)
+\nofMPsegments=\count98
+\nofMParguments=\count99
+\MPscratchCnt=\count100
+\MPscratchDim=\dimen114
+\MPnumerator=\count101
+\everyMPtoPDFconversion=\toks18
+)
+LaTeX Info: Redefining \dots on input line 11.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <12> on input line 16.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 16.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 16.
+ [1
+
+{/usr/local/teTeX/share/texmf.local/fonts/map/pdftex/updmap/pdftex.map}]
+(./rapportStage.toc
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 3.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 3.
+ [1
+
+])
+\tf@toc=\write4
+\openout4 = `rapportStage.toc'.
+
+ [2] [3
+
+]
+Chapitre 1.
+
+Overfull \hbox (12.80359pt too wide) in paragraph at lines 27--28
+[]\T1/aer/m/n/10 La langue ma-ter-nelle est celle que l'en-fant ac-quiert au co
+ntact du mi-lieu fa-mi-lial ou il est élevé.L'apprentissage
+ []
+
+LaTeX Font Info:    Try loading font information for OT2+wncyr on input line 39
+.
+(/usr/local/teTeX/share/texmf.tetex/tex/latex/cyrillic/ot2wncyr.fd
+File: ot2wncyr.fd 1999/12/17 v3.2a Computer Modern Cyrillic font definitions
+) [4
+
+]
+[5] [6] [7] [8]
+Chapitre 2.
+[9
+
+] <diagramme.jpg, id=66, 447.6725pt x 551.05875pt>
+File: diagramme.jpg Graphic file (type jpg)
+ <use diagramme.jpg>
+[10] [11 <./diagramme.jpg>]
+LaTeX Font Info:    Try loading font information for T1+aett on input line 240.
+
+
+(/usr/local/teTeX/share/texmf.tetex/tex/latex/ae/t1aett.fd
+File: t1aett.fd 1997/11/16 Font definitions for T1/aett.
+) [12]
+Overfull \hbox (4.39293pt too wide) in paragraph at lines 274--275
+[]\T1/aer/m/n/10 Pour pou-voir ré-cu-pé-rer ra-pi-de-ment toutes les pages HTML
+ don-nées en ré-sul-tats et les trai-ter, les connexions
+ []
+
+
+Overfull \hbox (27.75957pt too wide) in paragraph at lines 311--311
+[]    \T1/aett/m/n/10 //il s'agit d'un compteur statique initialisé par le nomb
+re de thread et qui est décrémenté[] 
+ []
+
+[13] [14] [15] [16]
+Overfull \hbox (74.91948pt too wide) in paragraph at lines 441--441
+[]    \T1/aett/m/n/10 //si le suffixe est dans la liste des suffixes (com net e
+du...) alors ce n'est pas une fin de phrase[] 
+ []
+
+[17]
+Overfull \hbox (95.87944pt too wide) in paragraph at lines 526--526
+[] \T1/aett/m/n/10 throw new InitTaggerException("il faut d'abord lancer la met
+hode initTagger de la classe InterfaceTagger");[] 
+ []
+
+[18]
+Overfull \hbox (6.7996pt too wide) in paragraph at lines 562--562
+[]\T1/aett/m/n/10 if (!OutilsTexte.contientQueMotsVides(tmp) && (!OutilsTexte.c
+ontientDesGuillements(tmp))) {[] 
+ []
+
+<interfaceGraphique.jpg, id=102, 816.04875pt x 462.72874pt>
+File: interfaceGraphique.jpg Graphic file (type jpg)
+
+<use interfaceGraphique.jpg> [19] [20 <./interfaceGraphique.jpg>]
+Chapitre 3.
+
+Overfull \hbox (8.5332pt too wide) in paragraph at lines 585--597
+[]\T1/aer/m/n/10 On constate que l'API Google ne ren-voie pas les mêmes ré-sul-
+tats que le mo-teur de re-cherche (www.google.fr).
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 585--597
+
+ []
+
+[21
+
+] <courbes_moyennes.jpg, id=115, 402.50375pt x 378.41376pt>
+File: courbes_moyennes.jpg Graphic file (type jpg)
+
+<use courbes_moyennes.jpg> [22]
+Underfull \hbox (badness 10000) in paragraph at lines 690--731
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 690--731
+
+ []
+
+[23 <./courbes_moyennes.jpg>] [24]
+Chapitre 4.
+[25
+
+] [26
+
+] (./rapportStage.aux) ) 
+Here is how much of TeX's memory you used:
+ 2155 strings out of 95217
+ 27452 string characters out of 1184538
+ 2072213 words of memory out of 4527048
+ 5194 multiletter control sequences out of 10000+50000
+ 39572 words of font info for 77 fonts, out of 2000000 for 2000
+ 58 hyphenation exceptions out of 1000
+ 35i,7n,24p,1402b,277s stack positions out of 1500i,500n,5000p,200000b,5000s
+ 131 PDF objects out of 300000
+ 0 named destinations out of 131072
+ 16 words of extra memory for PDF output out of 65536
+</usr/local/teTeX/share/texmf.tetex/fonts/type1/bluesky
+/cm/cmcsc10.pfb></usr/local/teTeX/share/texmf.tetex/fonts/type1/bluesky/cm/cmti
+10.pfb></usr/local/teTeX/share/texmf.tetex/fonts/type1/bluesky/cm/cmtt10.pfb></
+usr/local/teTeX/share/texmf.tetex/fonts/type1/bluesky/cm/cmsy7.pfb></usr/local/
+teTeX/share/texmf.tetex/fonts/type1/bluesky/cm/cmsy10.pfb></usr/local/teTeX/sha
+re/texmf.tetex/fonts/type1/bluesky/cm/cmr7.pfb></usr/local/teTeX/share/texmf.te
+tex/fonts/type1/bluesky/cm/cmmi7.pfb></usr/local/teTeX/share/texmf.tetex/fonts/
+type1/bluesky/cm/cmmi10.pfb></usr/local/teTeX/share/texmf.tetex/fonts/type1/blu
+esky/cyrillic/wncyr10.pfb></usr/local/teTeX/share/texmf.tetex/fonts/type1/blues
+ky/cm/cmr10.pfb></usr/local/teTeX/share/texmf.tetex/fonts/type1/bluesky/cm/cmbx
+10.pfb></usr/local/teTeX/share/texmf.tetex/fonts/type1/bluesky/cm/cmbx12.pfb></
+usr/local/teTeX/share/texmf.tetex/fonts/type1/bluesky/cm/cmr12.pfb></usr/local/
+teTeX/share/texmf.tetex/fonts/type1/bluesky/cm/cmr17.pfb>
+Output written on rapportStage.pdf (27 pages, 299926 bytes).

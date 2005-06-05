@@ -6,6 +6,9 @@
  */
 package sources;
 
+import java.io.FileNotFoundException;
+import java.io.IOException;
+
 /**
  * @author aurelie
  *
@@ -30,14 +33,24 @@ public class InterfaceRequete {
         requete.getContexts(OutilsTexte.transRequeteRegex(req,reqRegex));
         ElementResultatGoogle[] resultats=requete.resultat.listeResultat;
         StringBuffer sb=new StringBuffer("nombre de mots dans la requete : "+requete.nbMots+"\n\nnombre de resultats : "+requete.resultat.nbResultats+"\n\n");
-        
+        BasicScoreGoogle score=new BasicScoreGoogle();
         for (int i=0;i<resultats.length;i++){
             sb.append("URL : "+resultats[i].url+"\n\n");
             sb.append("RESUME : "+resultats[i].resume+"\n\n");
         for (int j=0;j<resultats[i].contexte.size();j++)
             sb.append("CONTEXTE : "+(String)resultats[i].contexte.get(j)+"\n\n");
         }
-        return sb.toString();
+        		sb.append("SCORE :"+score.giveScore((requete))+"%");
+    try {
+    	FichierXML.generateXMLfile(requete.requete,requete.resultat);
+    } catch (FileNotFoundException e1) {
+    	// TODO Auto-generated catch block
+    	e1.printStackTrace();
+    } catch (IOException e1) {
+    	// TODO Auto-generated catch block
+    	e1.printStackTrace();
+    }	
+    return sb.toString();
         };
         
     public void launchRequeteYahoo(){}

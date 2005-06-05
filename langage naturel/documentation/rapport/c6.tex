@@ -1,0 +1,44 @@
+\noindent
+\ttfamily
+\hlstd{}\hlkwa{public static }\hlstd{}\hlkwb{void}\hspace*{\fill}\\
+\hlstd{constructModel }\hlsym{(}\hlstd{}\hlkwb{int }\hlstd{n\textunderscore grammes}\hlsym{, }\hlstd{}\hlkwc{StringBuffer }\hlstd{sbIn}\hlsym{, }\hlstd{}\hlkwc{StringBuffer }\hlstd{sbOut}\hlsym{)}\hspace*{\fill}\\
+\hlstd{}\hlstd{\ \ \ \ \ }\hlstd{}\hlkwa{throws }\hlstd{InitOutilsTexteException\hspace*{\fill}\\
+}\hlstd{\ \ \ \ \ }\hlstd{}\hlsym{\{}\hspace*{\fill}\\
+\hlstd{}\hlstd{\ \ \ \ \ \ \ }\hlstd{}\hlslc{//expression régulière qui permet de matcher n mots}\hspace*{\fill}\\
+\hlstd{}\hlstd{\ \ \ \ \ \ \ }\hlstd{}\hlkwc{Pattern }\hlstd{p }\hlsym{= }\hlstd{}\hlkwa{new }\hlstd{}\hlkwc{Pattern }\hlstd{}\hlsym{(}\hlstd{}\hlstr{\dq{}(}\hlesc{$\backslash$$\backslash$}\hlstr{w+}\hlesc{$\backslash$$\backslash$}\hlstr{W+)\{\dq{}}\hlstd{ }\hlsym{+ }\hlstd{n\textunderscore grammes }\hlsym{+ }\hlstd{}\hlstr{\dq{}\}\dq{}}\hlstd{}\hlsym{);}\hspace*{\fill}\\
+\hlstd{}\hlstd{\ \ \ \ \ \ \ }\hlstd{}\hlkwc{Matcher }\hlstd{m }\hlsym{= }\hlstd{p}\hlsym{.}\hlstd{matcher }\hlsym{(}\hlstd{sbIn}\hlsym{.}\hlstd{toString }\hlsym{());}\hspace*{\fill}\\
+\hlstd{}\hlstd{\ \ \ \ \ \ \ }\hlstd{}\hlkwc{String }\hlstd{tmp }\hlsym{= }\hlstd{null}\hlsym{;}\hspace*{\fill}\\
+\hlstd{}\hlstd{\ \ \ \ \ \ \ \ \ }\hlstd{}\hlkwa{try}\hspace*{\fill}\\
+\hlstd{}\hlstd{\ \ \ \ \ \ \ }\hlstd{}\hlsym{\{}\hspace*{\fill}\\
+\hlstd{}\hlstd{\ \ }\hlstd{}\hlslc{//tant qu'on a pas atteint la fin du texte et qu'on à pas}\hspace*{\fill}\\
+\hlstd{}\hlstd{\ \ }\hlstd{atteint les }\hlnum{900 }\hlstd{requ ê tes }\hlkwa{while }\hlstd{}\hlsym{(}\hlstd{m}\hlsym{.}\hlstd{find }\hlsym{() \&\& }\hlstd{compteur\textunderscore req }\hlsym{$<$ }\hlstd{}\hlnum{900}\hlstd{}\hlsym{)}\hspace*{\fill}\\
+\hlstd{}\hlstd{\ \ \ \ }\hlstd{}\hlsym{\{}\hspace*{\fill}\\
+\hlstd{}\hlstd{\ \ \ \ \ \ }\hlstd{tmp }\hlsym{= }\hlstd{m}\hlsym{.}\hlstd{group }\hlsym{(}\hlstd{}\hlnum{0}\hlstd{}\hlsym{);}\hspace*{\fill}\\
+\hlstd{}\hlstd{\ \ \ \ \ \ }\hlstd{}\hlslc{//si les mots de la requête ne sont pas vides et ne}\hspace*{\fill}\\
+\hlstd{}\hlstd{\ \ \ \ \ \ }\hlstd{contient pas de guillemets alors\hspace*{\fill}\\
+}\hlstd{\ \ \ \ \ \ \ \ }\hlstd{}\hlkwa{if }\hlstd{}\hlsym{(!}\hlstd{OutilsTexte}\hlsym{.}\hlstd{contientQueMotsVides }\hlsym{(}\hlstd{tmp}\hlsym{)}\hspace*{\fill}\\
+\hlstd{}\hlstd{\ \ \ \ \ }\hlstd{}\hlsym{\&\& (!}\hlstd{OutilsTexte}\hlsym{.}\hlstd{contientDesGuillements }\hlsym{(}\hlstd{tmp}\hlsym{)))}\hspace*{\fill}\\
+\hlstd{}\hlstd{\ \ \ \ \ \ \ \ }\hlstd{}\hlsym{\{}\hspace*{\fill}\\
+\hlstd{}\hlstd{\ \ \ }\hlstd{RequeteGoogle rg }\hlsym{= }\hlstd{}\hlkwa{new }\hlstd{RequeteGoogle }\hlsym{(}\hlstd{}\hlstr{\dq{}lan\textunderscore en\dq{}}\hlstd{}\hlsym{, }\hlstd{}\hlnum{1}\hlstd{}\hlsym{, }\hlstd{tmp}\hlsym{);}\hspace*{\fill}\\
+\hlstd{}\hlstd{\ \ \ }\hlstd{}\hlslc{//on lance la requête}\hspace*{\fill}\\
+\hlstd{}\hlstd{\ \ \ \ \ }\hlstd{rg}\hlsym{.}\hlstd{requeteGoogle }\hlsym{();}\hspace*{\fill}\\
+\hlstd{}\hlstd{\ \ \ \ \ }\hlstd{}\hlkwa{synchronized }\hlstd{}\hlsym{(}\hlstd{sbOut}\hlsym{)}\hspace*{\fill}\\
+\hlstd{}\hlstd{\ \ \ }\hlstd{}\hlsym{\{}\hspace*{\fill}\\
+\hlstd{}\hlstd{\ \ \ \ \ }\hlstd{}\hlslc{//on écrit dans un stringBuffer le résultat}\hspace*{\fill}\\
+\hlstd{}\hlstd{\ \ \ \ \ }\hlstd{sbOut}\hlsym{.}\hlstd{append }\hlsym{(}\hlstd{n\textunderscore grammes }\hlsym{+ }\hlstd{}\hlstr{\dq{} \dq{}}\hlstd{}\hlsym{);}\hspace*{\fill}\\
+\hlstd{}\hlstd{\ \ \ \ \ }\hlstd{sbOut}\hlsym{.}\hlstd{append }\hlsym{(}\hlstd{rg}\hlsym{.}\hlstd{resultat}\hlsym{.}\hlstd{nbResultats }\hlsym{+ }\hlstd{}\hlstr{\dq{}}\hlesc{$\backslash$n}\hlstr{\dq{}}\hlstd{}\hlsym{);}\hspace*{\fill}\\
+\hlstd{}\hlstd{\ \ \ \ \ }\hlstd{compteur\textunderscore req}\hlsym{++;}\hspace*{\fill}\\
+\hlstd{}\hlstd{\ \ \ }\hlstd{}\hlsym{\}}\hspace*{\fill}\\
+\hlstd{}\hlstd{\ \ \ }\hlstd{}\hlkwc{System}\hlstd{}\hlsym{.}\hlstd{out}\hlsym{.}\hlstd{println }\hlsym{(}\hlstd{compteur\textunderscore req }\hlsym{+ }\hlstd{}\hlstr{\dq{} \dq{}}\hlstd{ }\hlsym{+ }\hlstd{n\textunderscore grammes }\hlsym{+ }\hlstd{}\hlstr{\dq{}}\hspace*{\fill}\\
+\hlstr{\dq{}}\hlstd{ }\hlsym{+ }\hlstd{rg}\hlsym{.}\hlstd{resultat}\hlsym{.}\hlstd{nbResultats }\hlsym{+ }\hlstd{}\hlstr{\dq{} \dq{}}\hlstd{ }\hlsym{+ }\hlstd{tmp}\hlsym{);}\hspace*{\fill}\\
+\hlstd{}\hlstd{\ \ \ \ \ \ \ \ }\hlstd{}\hlsym{\}}\hspace*{\fill}\\
+\hlstd{}\hlstd{\ \ \ \ }\hlstd{}\hlsym{\}}\hspace*{\fill}\\
+\hlstd{}\hlstd{\ \ \ \ \ \ \ }\hlstd{}\hlsym{\}}\hspace*{\fill}\\
+\hlstd{}\hlstd{\ \ \ \ \ \ \ }\hlstd{}\hlkwa{catch }\hlstd{}\hlsym{(}\hlstd{}\hlkwc{Exception }\hlstd{e}\hlsym{)}\hspace*{\fill}\\
+\hlstd{}\hlstd{\ \ \ \ \ \ \ }\hlstd{}\hlsym{\{}\hspace*{\fill}\\
+\hlstd{}\hlstd{\ \ }\hlstd{}\hlkwc{System}\hlstd{}\hlsym{.}\hlstd{out}\hlsym{.}\hlstd{println }\hlsym{(}\hlstd{}\hlstr{\dq{}problemes google\dq{}}\hlstd{}\hlsym{);}\hspace*{\fill}\\
+\hlstd{}\hlstd{\ \ \ \ \ \ \ }\hlstd{}\hlsym{\}}\hspace*{\fill}\\
+\hlstd{}\hlstd{\ \ \ \ \ }\hlstd{}\hlsym{\}}\hlstd{}\hspace*{\fill}\\
+\mbox{}
+
+\normalfont

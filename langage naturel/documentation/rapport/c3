@@ -1,0 +1,45 @@
+//c'est le Thread
+public void
+run ()
+{
+  statut = en_cours;
+  try
+  {
+    //on recupere le code html de la page
+    codeHTML = getHTMLcode ();
+    //on enlève les balises HTML pour ne récupérer que le texte
+    codeHTML = OutilsTexte.getTexteFromHtml (codeHTML);
+    //on extrait tous les contextes du fragment  contenu dans la
+    page eR.contexte = OutilsTexte.getContext (req, codeHTML);
+  } catch (IOException e)
+  {
+    e.printStackTrace ();
+  } catch (InterruptedException e)
+  {
+    e.printStackTrace ();
+  } catch (InitOutilsTexteException e)
+  {
+    e.printStackTrace ();
+  }
+  statut = finis;
+  //il s'agit d'un compteur statique initialisé par le nombre de
+  thread et qui est d é cr é ment é
+    //à la fin du traitement
+    compteur--;
+}
+
+   //méthode qui initialise tous les threads
+public static void
+getAllContexts (Resultat r, String reqRegex)
+{
+  ElementResultat[]elemResult = r.getListeElementsResultat ();
+  compteur = elemResult.length;
+  //pour chaque éléments résultat on lance un thread
+  for (int i = 0; i < elemResult.length; i++)
+    {
+      PageHTML p = new PageHTML (elemResult[i], reqRegex);
+      p.start ();
+    }
+  //tant que le compteur n'est pas nulle alors le programme principal est bloqué 
+  while (compteur != 0);
+}
